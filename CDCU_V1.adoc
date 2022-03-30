@@ -1,1 +1,25 @@
+= SAE 2.01 - Cahier des charges 
+Jolas Alex; Poda Nicolas; Dang Hai Son; Narayanin Noa
+:toc:
 
+== Contexte du projet
+[.lead]
+Alors que les néo-banques spécialisées dans les fintech arrivent sur le marché depuis quelques années, il devient de plus en plus nécessaire pour les banques "traditionnelles" de proposer des services et applications plus performants pour rivaliser avec la concurrence.
+
+C'est dans le contexte de la restructuration de ses services bancaires que la banque DailyBank fait appel à des développeurs afin de mettre à jour l'application existante avant de la déployer dans les 100 agences que compte son réseau. 
+
+== Objectif du projet 
+L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
+
+== Description fonctionnelle des besoins
+* Un guichetier doit pouvoir modifier les infos clients 
+* Un guichetier doit pouvoir créer un nouveau client
+* Un guichetier doit pouvoir consulter un compte
+* Un guichetier doit pouvoir débiter un compte
+* Un chef d'agence doit pouvoir rendre un client inactif 
+
+== Enveloppe budgétaire
+Nous ne disposons pas des informations nécessaires nous permettant d'établir l'enveloppe budgétaire du projet.
+
+== Délais (date de réalisation attendus)
+* Semaine 24, 13 Juin 2022
