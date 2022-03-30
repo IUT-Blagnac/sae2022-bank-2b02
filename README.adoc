@@ -3,17 +3,17 @@
 
 == Description générale du projet 
 
+Dans ce projet, notre objectif sera de développer une application JAVA-Oracle de geston des comptes clients pour remplacer plusieurs outils obsolètes. Nous travaillerons à partir d'une application existante "Daily bank" que nous adapterons aux nouveaux besoins de la banque.
 
-Dans ce projet, notre objectif sera de développer une application JAVA-Oracle de geston des comptes clients pour remplacer plusieurs outils obsolètes.
+== Participants
 
-
+JOLAS Alex, NARAYANIN Noa, DANG Hai Son, PODA Nicolas
 
 
 == Statut du projet 
 
-Modifications prévues :  Pour l'instant, rien n'a été réalisé
+Projet en initialisation. 
 
-== Langage utilisé 
 
 == Instrcution pour l'installation et l'utilisation 
 
@@ -21,11 +21,14 @@ Modifications prévues :  Pour l'instant, rien n'a été réalisé
 
 == Liste de technologies utilisées 
 
-Eclipse IDE for Java Developers
+* Eclipse IDE for Java Developers
+* Microsoft project
+* Discord
+* Visual Studio Code
 
 == Bugs connus et éventuelles corrections apportées
 
-...
+Aucun bu n'est connu sur l'application que nous comptons réaliser.
 
 == FAQ 
 
