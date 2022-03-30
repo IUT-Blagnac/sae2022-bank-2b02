@@ -1,1 +1,38 @@
+= Projet SAÉ 2.01- 2.05
+:toc:
+
+== Description générale du projet 
+
+
+Dans ce projet, notre objectif sera de développer une application JAVA-Oracle de geston des comptes clients pour remplacer plusieurs outils obsolètes.
+
+
+
+
+== Statut du projet 
+
+Modifications prévues :  Pour l'instant, rien n'a été réalisé
+
+== Langage utilisé 
+
+== Instrcution pour l'installation et l'utilisation 
+
+...
+
+== Liste de technologies utilisées 
+
+Eclipse IDE for Java Developers
+
+== Bugs connus et éventuelles corrections apportées
+
+...
+
+== FAQ 
+
+...
+
+== Droits d'auteurs et infomations sur la licence
+
+...
+
 
