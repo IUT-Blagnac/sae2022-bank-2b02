@@ -1,23 +1,28 @@
-= Projet SAÉ 2.01- 2.05
+= Projet de la SAÉ 2.01- 2.05
+
 :toc:
 
 == Description générale du projet 
 
 Dans ce projet, notre objectif sera de développer une application JAVA-Oracle de geston des comptes clients pour remplacer plusieurs outils obsolètes. Nous travaillerons à partir d'une application existante "Daily bank" que nous adapterons aux nouveaux besoins de la banque.
 
-== Participants
+Liste des participants :
 
-JOLAS Alex, NARAYANIN Noa, DANG Hai Son, PODA Nicolas
+* JOLAS Alex
+* NARAYANIN Noa
+* DANG Hai Son
+* PODA Nicolas
 
+Ce projet a été réalisé dans le cadre d'une SAÉ à l'IUT de Blagnac.
 
 == Statut du projet 
 
-Projet en initialisation. 
+Projet en cours de réalisation. 
 
 
 == Instrcution pour l'installation et l'utilisation 
 
-...
+Le projet est en cours de réalisation, il est donc pour le moment impossible d'installer ou d'utiliser quoi que ce soit.
 
 == Liste de technologies utilisées 
 
@@ -28,7 +33,7 @@ Projet en initialisation.
 
 == Bugs connus et éventuelles corrections apportées
 
-Aucun bu n'est connu sur l'application que nous comptons réaliser.
+Le projet est en cours de réalisation.
 
 == FAQ 
 
