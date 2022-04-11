@@ -37,6 +37,44 @@ Le projet est en cours de réalisation.
 
 == FAQ 
 
+
+== Livrables
+
+[cols="1,2,2,5",options=header]
+|===
+| Date    | Nom         |  Lien                             | Retour
+| 03/04   | Gantt V1    |                                                              | 
+|         | CdC V1      |                                   |   
+|         | Suivi Projet |                                   |             
+| 22/04  | CdC V2/V3 final|                                     |  
+|         | Gantt V2    |                               |     
+|         | Gantt V3 |         |     
+|         | Doc. Tec. V1 |        |    
+|         | Doc User V1    |        |
+|         | Recette V1  |                      | 
+|         | Suivi projet|   | 
+| 22/05   | Gantt V2  à jour    |       | 
+|         | Doc. Util. V1 |         |         
+|         | Doc. Tec. V1 |                |     
+|         | Code V1     |                     | 
+|         | Recette V1 |                      | 
+|         | Gantt V3 à jour   |                      | 
+|         | `jar` projet |    | 
+| 05/06   | Gantt V3 à Jour  |    |  
+|         | Doc. Util. V2 |         |           
+|         | Doc. Tec. V2 |    |     
+|         | Code V2     |                       |
+|         | Recette V2  |   |
+|         | `jar` projet |     |
+|12/06   | Gantt V3 à Jour  |    |  
+|         | Doc. Util. V3 |         |           
+|         | Doc. Tec. V3 |    |     
+|         | Code V3     |                       |
+|         | Recette V3  |   |
+|         | `jar` projet |     |
+|===
+
+
 ...
 
 == Droits d'auteurs et infomations sur la licence
