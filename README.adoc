@@ -44,7 +44,7 @@ Le projet est en cours de réalisation.
 |===
 | Date    | Nom         |  Lien                             | Retour
 | 03/04   | Gantt V1    |                                                              | https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Retour%20CDCU.adoc
-|         | CdC V1      |                                   |   
+|         | CdC V1      |                                   |   https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Retour%20CDCU.adoc
 |         | Suivi Projet |                                   |             
 | 22/04  | CdC V2/V3 final|                                     |  
 |         | Gantt V2    |                               |     
