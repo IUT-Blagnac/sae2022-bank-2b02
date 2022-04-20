@@ -1,6 +1,14 @@
 = SAE 2.01 - Cahier des charges 
-Jolas Alex; Poda Nicolas; Dang Hai Son; Narayanin Noa
 :toc:
+
+*Équipe :* Jolas Alex - Poda Nicolas - Dang Hai Son - Narayanin Noa
+
+*Version :* 2.0
+
+*Date :* 20/04/2022
+
+*Client :* DailyBank
+
 
 == Contexte du projet
 [.lead]
@@ -11,14 +19,73 @@ C'est dans le contexte de la restructuration de ses services bancaires que la ba
 == Objectif du projet 
 L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
 
-Le client : le client utilisant l'application serait un reponsable d'agence bancaire, ayant la reponsabilité globale d'une agence. Grâce à l'application, il gèrerait et contrôlerait l'activité de son établisssement en tenant compte des objectifs et de la stratégie définis par sa direction de manière plus optimale grâce à l'application que nous allons créer.
+Utilisateur : l'utilisateur de l'application serait un reponsable d'agence bancaire, ayant la reponsabilité globale d'une agence. Grâce à l'application, il gèrerait et contrôlerait l'activité de son établisssement en tenant compte des objectifs et de la stratégie définis par sa direction de manière plus optimale grâce à l'application que nous allons créer.
 
 == Description fonctionnelle des besoins
-* Un guichetier doit pouvoir modifier les infos clients 
-* Un guichetier doit pouvoir créer un nouveau client
-* Un guichetier doit pouvoir consulter un compte
-* Un guichetier doit pouvoir débiter un compte
-* Un chef d'agence doit pouvoir rendre un client inactif 
+
+=== Version 1
+
+* Guichetier 
+** Modifier les infos clients 
+** Créer un nouveau client
+** Consulter un compte
+** Débiter/Créditer un compte
+** Créer un compte
+** Effectuer un virement de compte à compte
+** Clôturer un compte
+
+* Chef d'agence
+** Rendre inactif un client
+** Gérer les employés (guichetier et chef d’agence)
+
+=== Version 2
+
+* Guichetier 
+** Modifier les infos clients 
+** Créer un nouveau client
+** Consulter un compte
+** Débiter/Créditer un compte
+** Créer un compte
+** Effectuer un virement de compte à compte
+** Clôturer un compte
+** Générer un relevé mensuel d’un compte en PDF
+** Gérer les prélèvements automatiques
+
+* Chef d'agence
+** Rendre inactif un client
+** Gérer les employés (guichetier et chef d’agence)
+** Effectuer un Débit exceptionnel
+** Simuler un emprunt
+** Simuler une assurance d’emprunt
+
+=== Version 3
+
+* Guichetier 
+** Modifier les infos clients 
+** Créer un nouveau client
+** Consulter un compte
+** Débiter/Créditer un compte
+** Créer un compte
+** Effectuer un virement de compte à compte
+** Clôturer un compte
+** Générer un relevé mensuel d’un compte en PDF
+** Gérer les prélèvements automatiques
+
+* Chef d'agence
+** Rendre inactif un client
+** Gérer les employés (guichetier et chef d’agence)
+** Effectuer un Débit exceptionnel
+** Simuler un emprunt
+** Simuler une assurance d’emprunt
+** Les spécifications finalisées de la version 2
+** Supers options pour les tops …
+** Fonctionnalités optionnels...
+
+* Batch
+** Générer les relevés mensuels en PDF
+** Exécuter les prélèvements automatiques
+
+== Analyse de l'existant
 
 == Enveloppe budgétaire
 Nous ne disposons pas des informations nécessaires nous permettant d'établir l'enveloppe budgétaire du projet.
