@@ -1,0 +1,54 @@
+@startuml
+!theme reddress-lightblue
+hide circle
+hide empty members
+hide empty methods
+
+left to right direction
+skinparam classAttributeIconSize 0
+skinparam actorStyle awesome
+skinparam roundcorner 5
+
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+
+skinparam arrow {
+    MessageAlign center
+}
+
+
+
+usecase 1 as "Consulter un compte"
+usecase 2 as "Modifier infos client"
+usecase 3 as "Rendre un client inactif"
+usecase 4 as "Créer un nouveau client"
+usecase 5 as "Débiter un compte"
+usecase 6 as "Clôturer un compte"
+usecase 7 as "Effectuer un virement de compte à compte"
+usecase 8 as "Gérer les employés"
+
+
+ 
+
+actor ChefAgence
+actor Guichetier
+
+Guichetier -> 1
+Guichetier -> 2
+Guichetier -> 4
+Guichetier -> 5
+Guichetier -> 3
+Guichetier -> 6
+Guichetier -> 7
+
+ChefAgence -> 8
+
+
+
+@enduml
