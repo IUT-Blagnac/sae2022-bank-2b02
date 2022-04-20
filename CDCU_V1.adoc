@@ -11,6 +11,8 @@ C'est dans le contexte de la restructuration de ses services bancaires que la ba
 == Objectif du projet 
 L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
 
+Le client :
+
 == Description fonctionnelle des besoins
 * Un guichetier doit pouvoir modifier les infos clients 
 * Un guichetier doit pouvoir créer un nouveau client
