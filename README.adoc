@@ -48,7 +48,7 @@ Le projet est en cours de réalisation.
 |         | Suivi Projet |                                   |    bons types de fichiers ok
 pour d'arborescence ... Il faut peut être y réfléchir.   Les issues sont affectées mais pareil que sur le gantt pas assez détaillés pas de priorité mais possible dans l'état actuel.      
 | 22/04  | CdC V2/V3 final| https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/CDCU_V2-V3.adoc[CdC V2 V3] |  
-|         | Gantt V2    |                               |     
+|         | Gantt V2    | https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Gantt_V2.pdf |     
 |         | Gantt V3 |         |     
 |         | Doc. Tec. V1 |        |    
 |         | Doc User V1    |        |
