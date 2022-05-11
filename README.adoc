@@ -47,7 +47,15 @@ Le projet est en cours de réalisation.
 |         | CdC V1      |                                   |   https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Retour%20CDCU.adoc
 |         | Suivi Projet |                                   |    bons types de fichiers ok
 pour d'arborescence ... Il faut peut être y réfléchir.   Les issues sont affectées mais pareil que sur le gantt pas assez détaillés pas de priorité mais possible dans l'état actuel.      
-| 22/04  | CdC V2/V3 final| https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/CDCU_V2-V3.adoc[CdC V2 V3] |  
+| 22/04  | CdC V2/V3 final| https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/CDCU_V2-V3.adoc[CdC V2 V3] |  2/2	
+0,5/2	Retard, numeroter les paragraphes
+3/4	Il y a une phrase incomplète dans le contexte ! Relisez-vous
+1,5/4	Il faut expliquer le rôle des utilisateurs ! Donner le UC V0 de l'appli , les aspects techniques !
+1,5/4	Il manque les UC, la priorisation des objectifs et les règles de gestion. Expliquer BATCH et CRUD. J'ai un copier coller de l'énoncé !
+1,5/4	Un peu léger les contraintes !! Il manque les livrables attendus, les contraintes juridiques … Les règles de gestion.
+	
+10/20	
+
 |         | Gantt V2    | https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Gantt_V2.pdf[GANTT V2] |     
 |         | Gantt V3 | https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Gantt_V3.pdf[GANTT V3]        |     
 |         | Doc. Tec. V1 | https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Doc-Tec-V1.adoc[Doc. Tec. V1] |    
