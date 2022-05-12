@@ -14,20 +14,20 @@
 
 == Contexte du projet
 [.lead]
-Alors que les néo-banques spécialisées dans les fintech arrivent sur le marché depuis quelques années, il devient de plus en plus nécessaire pour les banques "traditionnelles" de proposer des services et applications plus performants pour rivaliser avec la concurrence. Des exemples chez nos conccurrents montrent la volonté de moderniser leurs services en ligne et de s'investir dans les fintechs.
+Alors que les néo-banques spécialisées dans les fintechs arrivent sur le marché depuis quelques années, il devient de plus en plus nécessaire pour les banques "traditionnelles" de proposer des services et applications plus performants pour rivaliser avec la concurrence. Des exemples chez nos concurrents montrent la volonté de moderniser leurs services en ligne et de s'investir dans les fintechs.
 
 C'est dans le contexte de la restructuration de ses services bancaires que la banque DailyBank fait appel à des développeurs afin de mettre à jour l'application existante avant de la déployer dans les 100 agences que compte son réseau. 
 
 == Objectif du projet 
 L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. Elle devra permettre de débiter, créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
 
-Utilisateur : l'utilisateur de l'application serait un reponsable d'agence bancaire, ayant la reponsabilité globale d'une agence. Grâce à l'application, il gèrerait et contrôlerait l'activité de son établisssement en tenant compte des objectifs et de la stratégie définis par sa direction de manière plus optimale grâce à l'application que nous allons créer.
+Utilisateur : l'utilisateur de l'application serait un responsable d'agence bancaire, ayant la responsabilité globale d'une agence. Grâce à l'application, il gérerait et contrôlerait l'activité de son établissement en tenant compte des objectifs et de la stratégie définis par sa direction de manière plus optimale grâce à l'application que nous allons créer.
 
 == Contraintes
 === Contraintes technique
-Ce projet nécéssitera l'utilisation d'une base de donnée et la mise en place d'une relation entre celle-ci et l'application. De plus, l'application sera réalisé Java et sera livré avec une interface graphique réalisé à l'aide de javafx. Le projet sera réalisé par une équipe de 4 membres : Jolas Alex, Poda Nicolas, Dang Hai Son et Narayanin Noa.
+Ce projet nécessitera l'utilisation d'une base de données et la mise en place d'une relation entre celle-ci et l'application. De plus, l'application sera réalisée en Java et sera livrée avec une interface graphique réalisé à l'aide de javafx. Le projet sera réalisé par une équipe de 4 membres : Jolas Alex, Poda Nicolas, Dang Hai Son et Narayanin Noa.
 
-=== Dates de rendue 
+=== Dates de rendu
 * Version 1 : semaine 22
 * Version 2 et 3 : semaine 23
 
@@ -35,10 +35,10 @@ Ce projet nécéssitera l'utilisation d'une base de donnée et la mise en place 
 
 === Version actuelle 
 
-La version actuelle du logiciel ne permet pas de remplacer efficacement les logiciels obsoletes précedemment utilisés 
+La version actuelle du logiciel ne permet pas de remplacer efficacement les logiciels obsolètes précédemment utilisés.
 
 * Guichetier
-** Modifier informations client (adresse, téléphone, …)
+** Modifier informations clientes (adresse, téléphone, …)
 ** Créer un nouveau client
 ** Consulter un compte
 ** Débiter un compte (BD)
@@ -51,7 +51,7 @@ La version actuelle du logiciel ne permet pas de remplacer efficacement les logi
 === Version 1
 
 * Guichetier 
-** Modifier les infos clients 
+** Modifier les infos clientes 
 ** Créer un nouveau client
 ** Consulter un compte
 ** Débiter/Créditer un compte
@@ -66,7 +66,7 @@ La version actuelle du logiciel ne permet pas de remplacer efficacement les logi
 === Version 2
 
 * Guichetier 
-** Modifier les infos clients 
+** Modifier les infos clientes 
 ** Créer un nouveau client
 ** Consulter un compte
 ** Débiter/Créditer un compte
@@ -86,7 +86,7 @@ La version actuelle du logiciel ne permet pas de remplacer efficacement les logi
 === Version 3
 
 * Guichetier 
-** Modifier les infos clients 
+** Modifier les infos clientes 
 ** Créer un nouveau client
 ** Consulter un compte
 ** Débiter/Créditer un compte
@@ -111,10 +111,10 @@ La version actuelle du logiciel ne permet pas de remplacer efficacement les logi
 ** Exécuter les prélèvements automatiques
 
 == Gains
-Les mises à jours successive de l'application répartie en 3 versions ont pour vocations d'améliorer grandements les possibilités offerte par l'application en terme de gestion de compte bancaire. Ces mises à jour du système d'information permettront une efficacité considérablement accrue de nos équipes quant à la gestion des comptes clients.
+Les mises à jour successives de l'application répartie en 3 versions ont pour vocations d'améliorer grandement les possibilités offertes par l'application en terme de gestion de compte bancaire. Ces mises à jour du système d'information permettront une efficacité considérablement accrue de nos équipes quant à la gestion des comptes clients.
 
 == Risques
 Perte de la stabilité de la version en place 
 
 == Enveloppe budgétaire
-A raison de 24h de travail au total, à un taux horaire de 30€/h et étant donné que notre équipe est composé de 4 membres, la réalisation du projet peut s'estimer à environ 3000€
+À raison de 24 h de travail au total, à un taux horaire de 30€/h et étant donné que notre équipe est composé de 4 membres, la réalisation du projet peut s'estimer à environ 3 000 €
