@@ -14,7 +14,7 @@
 
 == Contexte du projet
 [.lead]
-Alors que les néo-banques spécialisées dans les fintech arrivent sur le marché depuis quelques années, il devient de plus en plus nécessaire pour les banques "traditionnelles" de proposer des services et applications plus performants pour rivaliser avec la concurrence. Des exemples chez nos conccurrents montrent 
+Alors que les néo-banques spécialisées dans les fintech arrivent sur le marché depuis quelques années, il devient de plus en plus nécessaire pour les banques "traditionnelles" de proposer des services et applications plus performants pour rivaliser avec la concurrence. Des exemples chez nos conccurrents montrent la volonté de moderniser leurs services en ligne et de s'investir dans les fintechs.
 
 C'est dans le contexte de la restructuration de ses services bancaires que la banque DailyBank fait appel à des développeurs afin de mettre à jour l'application existante avant de la déployer dans les 100 agences que compte son réseau. 
 
