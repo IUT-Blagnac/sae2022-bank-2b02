@@ -3,6 +3,6 @@
 
 *Équipe :* Jolas Alex - Poda Nicolas - Dang Hai Son - Narayanin Noa
 
-*Version :* 1.0
+*Version :* 0.0
 
-*Date :* 09/05/2022
+*Date :* 16/05/2022
