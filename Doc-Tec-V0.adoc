@@ -16,9 +16,24 @@
 
 
 * Equipe
-* Description du projet
+ ** DANG Hai Son
+ ** JOLAS Alex
+ ** NARAYANIN Noa
+ ** PODA Nicolas
+ 
+* Contexte du projet
+
+Le projet "Daily Bank" est un projet informatique de taille moyenne qui compte 4 personnes. Notre équipe travaille à l'IUT de Blagnac dans le but de restructurer les services bancaires de la banque DailyBank.
+
+* Objectifs du projet 
+
+La demande de la banque DailyBank est de ...
+
+Il y a plusieurs tâches à effectuer : ...
 
 === Plan
+
+
 
 == Diagramme des Use Cases
 
