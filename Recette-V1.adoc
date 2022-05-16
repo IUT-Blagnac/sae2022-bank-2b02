@@ -1,4 +1,5 @@
- = SAE 2.01 - Recette 
+= SAE 2.01 - Recette 
+:toc:
 
 
 *Équipe :* Jolas Alex - Poda Nicolas - Dang Hai Son - Narayanin Noa
