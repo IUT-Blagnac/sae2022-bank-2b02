@@ -13,6 +13,9 @@
 
 === Description du projet
 
+DailyBank est une application bancaire permettant au personnel d'une agence bancaire d'effectuer des actions courantes. 
+Les utilisateurs de l'applications sont répartis en deux catégories, les guichetiers et les chefs d'agences. 
+
 === Plan
 
 == Diagramme des Use Cases
@@ -28,9 +31,32 @@
 == Maquettes d'écran
  
 === Écran d'accueil
- 
+Lors du lancement de l'application, la page suivante se présente face à vous.
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/images_doc_utilisateur/page_principale.png[Page principale]
+
+==== ? -> Aide
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/images_doc_utilisateur/page_principale_barre_aide.png[Barre Aide]
+
+En cliquant sur ? puis sur Aide, un pop-up apparaît.
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/images_doc_utilisateur/pop-up_aide.png[Barre Aide]
+
+==== Connexion
+
+Il existe deux manières d'accéder à la page de connexion. Tout d'abord en cliquant sur le bouton de connexion en bas de la fenêtre.
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/images_doc_utilisateur/page_principale_btn_connexion.png[Bouton Connexion]
+
+Un autre moyen de se connecter est de cliquer sur Utilisateur puis sur connexion.
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/images_doc_utilisateur/page_principale_barre_connexion.png[Utilisateur Connexion]
+
+
 === Clic sur un serveur
  
 === Survol souris diagramme
- 
+
+=== Quitter 
  
