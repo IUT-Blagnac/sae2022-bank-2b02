@@ -13,6 +13,11 @@
 
 === Description du projet
 
+
+
+* Equipe
+* Description du projet
+
 === Plan
 
 == Diagramme des Use Cases
