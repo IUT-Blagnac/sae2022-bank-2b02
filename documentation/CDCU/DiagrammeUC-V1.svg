@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="786px" preserveAspectRatio="none" style="width:355px;height:786px;background:#FFFFFF;" version="1.1" viewBox="0 0 355 786" width="355px" zoomAndPan="magnify"><defs/><g><g id="elem_1"><ellipse cx="212.0882" cy="762.5808" fill="#CCCCCC" rx="75.904" ry="17.5808" style="stroke:#AAAAAA;stroke-width:0.5;"/><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="119" x="152.5882" y="764.3889">Consulter un compte</text></g><g id="elem_2"><ellipse cx="212.0167" cy="692.3665" fill="#CCCCCC" rx="72.3325" ry="16.8665" style="stroke:#AAAAAA;stroke-width:0.5;"/><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="111" x="156.5167" y="694.1746">Modifier infos client</text></g><g id="elem_3"><ellipse cx="211.9798" cy="478.2591" fill="#CCCCCC" rx="81.7956" ry="18.7591" style="stroke:#AAAAAA;stroke-width:0.5;"/><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="132" x="145.9798" y="480.0672">Rendre un client inactif</text></g><g id="elem_4"><ellipse cx="212.1903" cy="620.4012" fill="#CCCCCC" rx="85.0061" ry="19.4012" style="stroke:#AAAAAA;stroke-width:0.5;"/><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="139" x="142.6903" y="622.2093">Créer un nouveau client</text></g><g id="elem_5"><ellipse cx="212.1897" cy="549.6011" fill="#CCCCCC" rx="71.0055" ry="16.6011" style="stroke:#AAAAAA;stroke-width:0.5;"/><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="108" x="158.1897" y="551.4092">Débiter un compte</text></g><g id="elem_6"><ellipse cx="212.0736" cy="407.2779" fill="#CCCCCC" rx="71.8894" ry="16.7779" style="stroke:#AAAAAA;stroke-width:0.5;"/><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="110" x="157.0736" y="409.086">Clôturer un compte</text></g><g id="elem_7"><ellipse cx="212.0387" cy="325.4709" fill="#CCCCCC" rx="137.8546" ry="29.9709" style="stroke:#AAAAAA;stroke-width:0.5;"/><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="250" x="87.0387" y="327.279">Effectuer un virement de compte à compte</text></g><g id="elem_8"><ellipse cx="212.2967" cy="132.7225" fill="#CCCCCC" rx="74.1126" ry="17.2225" style="stroke:#AAAAAA;stroke-width:0.5;"/><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="115" x="154.7967" y="134.5306">Gérer les employés</text></g><!--MD5=[a25b679e2c3745d01341cf1cc013f759]
+entity ChefAgence--><g id="elem_ChefAgence"><ellipse cx="212.1842" cy="22" fill="#2A86E2" rx="16" ry="16" style="stroke:#1A66C2;stroke-width:1.5;"/><path d="M212.1842,42 C216.1842,42 219.1842,42 223.1842,38 C231.1842,38 239.1842,46 239.1842,54 L239.1842,58 C239.1842,62 235.1842,66 231.1842,66 L193.1842,66 C189.1842,66 185.1842,62 185.1842,58 L185.1842,54 C185.1842,46 193.1842,38 201.1842,38 C205.1842,42 208.1842,42 212.1842,42 " fill="#2A86E2" style="stroke:#1A66C2;stroke-width:1.5;"/><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="71" x="176.6842" y="77.7104">ChefAgence</text></g><!--MD5=[34413ead84916979ab18eea1b2c854c1]
+entity Guichetier--><g id="elem_Guichetier"><ellipse cx="212.1842" cy="202" fill="#2A86E2" rx="16" ry="16" style="stroke:#1A66C2;stroke-width:1.5;"/><path d="M212.1842,222 C216.1842,222 219.1842,222 223.1842,218 C231.1842,218 239.1842,226 239.1842,234 L239.1842,238 C239.1842,242 235.1842,246 231.1842,246 L193.1842,246 C189.1842,246 185.1842,242 185.1842,238 L185.1842,234 C185.1842,226 193.1842,218 201.1842,218 C205.1842,222 208.1842,222 212.1842,222 " fill="#2A86E2" style="stroke:#1A66C2;stroke-width:1.5;"/><text fill="#000000" font-family="Verdana" font-size="11" lengthAdjust="spacing" textLength="59" x="182.6842" y="257.7104">Guichetier</text></g><!--MD5=[1afaefaeab32146b43caa56d988eb282]
+link Guichetier to 1--><g id="link_Guichetier_1"><path d="M182.4042,224.978 C142.1732,230.16 72.2683,246.105 44.1847,295 C21.2739,334.889 21.2739,669.111 44.1847,709 C61.7671,739.6117 97.6035,753.5001 131.6782,759.5202 " fill="none" id="Guichetier-to-1" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="136.6912,760.3524,128.4675,754.9329,131.7586,759.5338,127.1577,762.825,136.6912,760.3524" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[c7a5b8548792c7e56ce454203d0d82b6]
+link Guichetier to 2--><g id="link_Guichetier_2"><path d="M182.4042,224.978 C142.1732,230.16 72.2683,246.105 44.1847,295 C6,361.481 6,573.519 44.1847,640 C62.2448,671.443 99.6588,685.017 134.6042,690.5313 " fill="none" id="Guichetier-to-2" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="139.7392,691.2876,131.4181,686.0188,134.7925,690.559,130.2524,693.9335,139.7392,691.2876" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[cb0aaff206d3582dc82213e4e1147b20]
+link Guichetier to 4--><g id="link_Guichetier_4"><path d="M182.4042,224.978 C142.1732,230.16 72.2683,246.105 44.1847,295 C14.1903,347.221 14.1903,513.779 44.1847,566 C60.4208,594.268 92.145,608.456 123.6932,615.384 " fill="none" id="Guichetier-to-4" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="128.7532,616.435,120.755,610.6879,123.8577,615.4179,119.1277,618.5206,128.7532,616.435" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[7a2f83e68a44122d2327adc8da1d24b5]
+link Guichetier to 5--><g id="link_Guichetier_5"><path d="M182.4042,224.978 C142.1732,230.16 72.2683,246.105 44.1847,295 C21.8273,333.925 21.8273,458.075 44.1847,497 C62.4624,528.822 100.5632,542.341 135.8662,547.727 " fill="none" id="Guichetier-to-5" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="141.0512,548.464,132.7029,543.2385,136.1008,547.7611,131.5782,551.159,141.0512,548.464" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[ead67df82673af83ab35ce3909a62693]
+link Guichetier to 3--><g id="link_Guichetier_3"><path d="M182.4042,224.978 C142.1732,230.16 72.2683,246.105 44.1847,295 C15.6292,344.716 15.6292,374.284 44.1847,424 C60.8557,453.025 93.8556,467.206 126.2282,473.925 " fill="none" id="Guichetier-to-3" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="131.4152,474.941,123.3522,469.2852,126.5084,473.9797,121.814,477.1359,131.4152,474.941" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[02505a0919ee62f9cfb66f7cb1b05ba9]
+link Guichetier to 6--><g id="link_Guichetier_6"><path d="M182.4042,224.978 C142.1732,230.16 72.2683,246.105 44.1847,295 C30.9031,318.124 30.9031,331.876 44.1847,355 C62.3174,386.57 99.9597,400.126 135.0252,405.597 " fill="none" id="Guichetier-to-6" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="140.1772,406.347,131.8469,401.0929,135.2293,405.6271,130.695,409.0095,140.1772,406.347" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[e7d0dbf36e87b42c37f78d776e04d268]
+link Guichetier to 7--><g id="link_Guichetier_7"><path d="M212.1842,260.619 C212.1842,270.47 212.1842,280.321 212.1842,290.173 " fill="none" id="Guichetier-to-7" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="212.1842,295.324,216.1842,286.324,212.1842,290.324,208.1842,286.324,212.1842,295.324" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[ea51be308bf4c6de5a207a53fc9627d8]
+link ChefAgence to 8--><g id="link_ChefAgence_8"><path d="M212.1842,80.592 C212.1842,90.437 212.1842,100.281 212.1842,110.125 " fill="none" id="ChefAgence-to-8" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="212.1842,115.273,216.1842,106.273,212.1842,110.273,208.1842,106.273,212.1842,115.273" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[56f2a9f4144e70adf9c65bd974d3b89c]
+@startuml
+!theme reddress-lightblue
+hide circle
+hide empty members
+hide empty methods
+
+left to right direction
+skinparam classAttributeIconSize 0
+skinparam actorStyle awesome
+skinparam roundcorner 5
+
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+
+skinparam arrow {
+    MessageAlign center
+}
+
+
+
+usecase 1 as "Consulter un compte"
+usecase 2 as "Modifier infos client"
+usecase 3 as "Rendre un client inactif"
+usecase 4 as "Créer un nouveau client"
+usecase 5 as "Débiter un compte"
+usecase 6 as "Clôturer un compte"
+usecase 7 as "Effectuer un virement de compte à compte"
+usecase 8 as "Gérer les employés"
+
+
+ 
+
+actor ChefAgence
+actor Guichetier
+
+Guichetier -> 1
+Guichetier -> 2
+Guichetier -> 4
+Guichetier -> 5
+Guichetier -> 3
+Guichetier -> 6
+Guichetier -> 7
+
+ChefAgence -> 8
+@enduml
+
+@startuml
+
+
+
+skinparam stereotypeCBackgroundColor 1a66c2
+skinparam backgroundColor fff
+
+
+
+
+
+
+
+skinparam circledCharacter {
+  radius 8
+  fontSize 11
+  fontName Verdana
+}
+
+skinparam class {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+    arrowColor 000
+  arrowFontName Verdana
+  arrowFontColor 333
+  arrowFontSize 11
+
+  attributeFontColor 333
+  attributeFontSize 11
+  attributeIconSize 11
+}
+
+
+skinparam actor {
+    backgroundColor 2a86e2
+  borderColor 1a66c2
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam participant {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam collections {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam SequenceBox{
+    backgroundColor e0e0e0
+  borderColor cccccc
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+
+skinparam interface {
+    backgroundColor 2a86e2
+  borderColor 1a66c2
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam component {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam node {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam database {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam queue {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+
+skinparam usecase {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+    arrowColor 000
+  arrowFontName Verdana
+  arrowFontColor 333
+  arrowFontSize 11
+}
+
+skinparam activity {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+    arrowColor 000
+  arrowFontName Verdana
+  arrowFontColor 333
+  arrowFontSize 11
+}
+
+skinparam sequence {
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+    arrowColor 000
+  arrowFontName Verdana
+  arrowFontColor 333
+  arrowFontSize 11
+
+  lifeLineBorderColor 2a86e2
+  lifeLineBackgroundColor e0e0e0
+}
+
+skinparam boundary {
+    backgroundColor 2a86e2
+  borderColor 1a66c2
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam control {
+    backgroundColor 2a86e2
+  borderColor 1a66c2
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam entity {
+    backgroundColor 2a86e2
+  borderColor 1a66c2
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+
+skinparam state {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+    arrowColor 000
+  arrowFontName Verdana
+  arrowFontColor 333
+  arrowFontSize 11
+  startColor 2a86e2
+  endColor 1a66c2
+}
+
+
+skinparam object {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+    arrowColor 000
+  arrowFontName Verdana
+  arrowFontColor 333
+  arrowFontSize 11
+}
+
+
+skinparam note {
+    backgroundColor 2a86e2
+  borderColor 1a66c2
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam cloud {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+    arrowColor 000
+  arrowFontName Verdana
+  arrowFontColor 333
+  arrowFontSize 11
+}
+
+skinparam rectangle {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+
+skinparam storage {
+    backgroundColor ccc
+  borderColor aaa
+    fontColor 000
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor 333
+  stereotypeFontSize 11
+}
+hide circle
+hide empty members
+hide empty methods
+
+left to right direction
+skinparam classAttributeIconSize 0
+skinparam actorStyle awesome
+skinparam roundcorner 5
+
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+
+skinparam arrow {
+    MessageAlign center
+}
+
+
+
+usecase 1 as "Consulter un compte"
+usecase 2 as "Modifier infos client"
+usecase 3 as "Rendre un client inactif"
+usecase 4 as "Créer un nouveau client"
+usecase 5 as "Débiter un compte"
+usecase 6 as "Clôturer un compte"
+usecase 7 as "Effectuer un virement de compte à compte"
+usecase 8 as "Gérer les employés"
+
+
+ 
+
+actor ChefAgence
+actor Guichetier
+
+Guichetier -> 1
+Guichetier -> 2
+Guichetier -> 4
+Guichetier -> 5
+Guichetier -> 3
+Guichetier -> 6
+Guichetier -> 7
+
+ChefAgence -> 8
+@enduml
+
+PlantUML version 1.2022.4beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
