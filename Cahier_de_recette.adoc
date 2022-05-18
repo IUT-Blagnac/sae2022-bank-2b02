@@ -1,0 +1,28 @@
+= SAE 2.01 - Cahier de recette 
+:toc:
+
+*Équipe :* Jolas Alex - Poda Nicolas - Dang Hai Son - Narayanin Noa
+
+*Version :* 0.0
+
+*Date :* 16/05/2022
+
+|===
+|Version |Date |Description des évolutions |Auteurs 
+|Colonne 1, ligne 1
+|Colonne 2, ligne 1
+
+|===
+
+
+
+
+
+*Contexte :*
+
+La banque DailyBank veut créer une application JAVA-Oracle  de gestion de comptes. 
+On travaille à partir d'une appliation déjà existante du nom de "DailyBank", qu'on adaptera en fonction des besoins de la banque. 
+
+L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. 
+Elle devra permettre de débiter, 
+créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
