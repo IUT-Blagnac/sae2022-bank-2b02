@@ -64,7 +64,7 @@ public class ComptesManagement {
 	}
 
 	/*
-	 * Permet de g�rer les op�rations qui sont effectu�es sur un compte
+	 * Permet de g�rer les op�rations qui sont effectu�es sur un compte
 	 * @param cpt : le compte courant
 	 */
 	public void gererOperations(CompteCourant cpt) {
@@ -73,7 +73,7 @@ public class ComptesManagement {
 	}
 
 	/*
-	 * Permet de cr�er un compte courant
+	 * Permet de cr�er un compte courant
 	 * @return le compte courant
 	 */
 	public CompteCourant creerCompte() {
@@ -82,14 +82,9 @@ public class ComptesManagement {
 		compte = cep.doCompteEditorDialog(this.clientDesComptes, null, EditionMode.CREATION);
 		if (compte != null) {
 			try {
-				// Temporaire jusqu'à implémentation
-				compte = null;
-				AlertUtilities.showAlert(this.primaryStage, "En cours de développement", "Non implémenté",
-						"Enregistrement réel en BDD du compe non effectué\nEn cours de développement", AlertType.ERROR);
-
-				// TODO : enregistrement du nouveau compte en BDD (la BDD donne de nouvel id
-				// dans "compte")
-
+				AccessCompteCourant acc = new AccessCompteCourant();
+				
+				acc.insertCompte(compte);
 				// if JAMAIS vrai
 				// existe pour compiler les catchs dessous
 				if (Math.random() < -1) {

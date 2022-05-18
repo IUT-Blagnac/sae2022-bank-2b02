@@ -45,7 +45,7 @@ public class ClientEditorPane {
 	}
 
 	/*
-	 * Permet de retourner les informations d'un client
+	 * Permet de retourner les informations d'un cessaye de mon côté lient
 	 * @param client : le client
 	 * @param em : le mode éditeur
 	 */

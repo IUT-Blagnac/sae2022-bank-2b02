@@ -9,7 +9,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.data.AgenceBancaire;
+import model.data.Employe;
 import model.orm.AccessAgenceBancaire;
+import model.orm.AccessEmploye;
 import model.orm.LogToDatabase;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
@@ -40,7 +42,7 @@ public class DailyBankMainFrame extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Fenêtre Principale");
 
-			/*
+			
 			// En mise au point :
 			// Forcer une connexion existante pour rentrer dans l'appli en mode connecté
 
@@ -79,7 +81,7 @@ public class DailyBankMainFrame extends Application {
 					ed.doExceptionDialog();
 				}
 			}
-			*/
+			
 
 			DailyBankMainFrameController dbmc = loader.getController();
 			dbmc.initContext(primaryStage, this, this.dbs);
