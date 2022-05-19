@@ -3,14 +3,14 @@
 
 *Équipe :* Jolas Alex - Poda Nicolas - Dang Hai Son - Narayanin Noa
 
-*Version :* 0.0
+*Version :* 1.0
 
 *Date :* 16/05/2022
 
 |===
 |Version |Date |Description des évolutions |Auteurs 
-|Colonne 1, ligne 1
-|Colonne 2, ligne 1
+|  0.0 | 18/05/2022|première création | Narayanin Noa 
+|  1.0 | 19/05/2022 | ajout des tests | Narayanin Noa |
 
 |===
 
@@ -26,3 +26,16 @@ On travaille à partir d'une appliation déjà existante du nom de "DailyBank", 
 L’application doit permettre de gérer des comptes bancaires de dépôt pour des clients préalablement créés. 
 Elle devra permettre de débiter, 
 créditer un compte soit par virement c’est à dire un échange d’argent entre deux comptes distincts mais domiciliés dans le réseau bancaire, soit par une personne physique se présentant devant un guichet.
+
+
+*Série de test de l'application :*
+
+Nous avons donc effectué plusieurs tests de l'application et nous avons réitéré ses tests à chaque version de l'application. 
+Ici nous allons commencé par la base en effectuant des tests avec la version V0 de l'application. 
+
+* V0
+** La V0 est représenté ainsi  
+** Elle possède déjà une interface permettant de guider l'utilisateur, on peut y voir plusieurs bouttons avec lesquelles on peut intéragir afin de pouvoir accéder à certaines requêtes. On peut modifier les informations d'un client, consulter un compte et le débiter, créer un nouveau client ou en débiter un, 
+** L'application est déjà relié à une base oracle, qui elle aussi est fonctionnelle. 
+** Néanmoins certaines fonctionnalités ne sont pas encore présente comme le fait de clôturer un compte ou encore d'en créer un, créditer un compte et gérer les employés. 
+
