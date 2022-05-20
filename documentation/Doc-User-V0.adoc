@@ -1,4 +1,4 @@
-= SAE 2.01 - Document technique
+= SAE 2.01 - Document Utilisateur
 :toc:
 
 *Équipe :* Jolas Alex - Poda Nicolas - Dang Hai Son - Narayanin Noa
