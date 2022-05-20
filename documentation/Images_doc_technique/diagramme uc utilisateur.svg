@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="227px" preserveAspectRatio="none" style="width:750px;height:227px;background:#FFFFFF;" version="1.1" viewBox="0 0 750 227" width="750px" zoomAndPan="magnify"><defs/><g><!--MD5=[db8075859b8dc6afee89c0188a9ca649]
+entity Utilisateur--><g id="elem_Utilisateur"><ellipse cx="444.5" cy="81" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M444.5,89 L444.5,116 M431.5,97 L457.5,97 M444.5,116 L431.5,131 M444.5,116 L457.5,131 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="408" y="145.4951">Utilisateur</text></g><g id="elem_S'identifier"><ellipse cx="444.42" cy="21.484" fill="#F1F1F1" rx="65.42" ry="15.484" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="401.42" y="25.2316">S'identifier</text></g><g id="elem_Fermer la fenêtre"><ellipse cx="444.5656" cy="202.6131" fill="#F1F1F1" rx="83.5656" ry="19.1131" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="380.6623" y="205.5974">Fermer la fenêtre</text></g><g id="elem_Intéragir avec l'interface via des clics"><ellipse cx="153.3682" cy="110.3736" fill="#F1F1F1" rx="147.3682" ry="31.8736" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="265" x="20.8682" y="113.2203">Intéragir avec l'interface via des clics</text></g><g id="elem_Se déconnecter"><ellipse cx="666.1551" cy="110.531" fill="#F1F1F1" rx="78.1551" ry="18.031" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="606.7659" y="114.1166">Se déconnecter</text></g><!--MD5=[984d4ace0152cca47472173c1a39cadf]
+reverse link S'identifier to Utilisateur--><g id="link_S'identifier_Utilisateur"><path d="M444.5,42.542 C444.5,52.447 444.5,62.352 444.5,72.258 " fill="none" id="S'identifier-backto-Utilisateur" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="444.5,37.362,440.5,46.362,444.5,42.362,448.5,46.362,444.5,37.362" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8c8f06abc19b9acd9b1a32fb97a96fba]
+link Utilisateur to Fermer la fenêtre--><g id="link_Utilisateur_Fermer la fenêtre"><path d="M444.5,148.6864 C444.5,158.5551 444.5,168.4238 444.5,178.2924 " fill="none" id="Utilisateur-to-Fermer la fenêtre" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="444.5,183.4531,448.5,174.4531,444.5,178.4531,440.5,174.4531,444.5,183.4531" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4d423b9072c82e4eba5a860cbc491136]
+reverse link Intéragir avec l'interface via des clics to Utilisateur--><g id="link_Intéragir avec l'interface via des clics_Utilisateur"><path d="M306.248,110.5 C344.318,110.5 381.716,110.5 407.836,110.5 " fill="none" id="Intéragir avec l'interface via des clics-backto-Utilisateur" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="301.117,110.5,310.117,114.5,306.117,110.5,310.117,106.5,301.117,110.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b1b653d224f1322b0333b0a9c24f76b7]
+link Utilisateur to Se déconnecter--><g id="link_Utilisateur_Se déconnecter"><path d="M481.255,110.5 C508.696,110.5 547.69,110.5 582.701,110.5 " fill="none" id="Utilisateur-to-Se déconnecter" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="587.836,110.5,578.836,106.5,582.836,110.5,578.836,114.5,587.836,110.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0813a1457e9b5f1fc1dfa9d98b81ee17]
+@startuml
+left to right direction
+:Utilisateur: -left-> (S'identifier)
+:Utilisateur: -right-> (Fermer la fenêtre)
+:Utilisateur: -up-> (Intéragir avec l'interface via des clics)
+:Utilisateur: -down-> (Se déconnecter)
+@enduml
+
+PlantUML version 1.2022.6beta1(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
