@@ -1,4 +1,4 @@
-= SAE 2.01 - Document technique 
+= SAE 2.01 - Document technique
 :toc:
 
 *Équipe :* Jolas Alex - Poda Nicolas - Dang Hai Son - Narayanin Noa
@@ -11,9 +11,9 @@
 
 == Description du projet
 
-DailyBank est une application bancaire permettant au personnel d'une agence bancaire d'effectuer des actions courantes. 
-Les utilisateurs de l'applications sont répartis en deux catégories, les guichetiers et les chefs d'agences. 
- 
+DailyBank est une application bancaire permettant au personnel d'une agence bancaire d'effectuer des actions courantes.
+Les utilisateurs de l'application sont répartis en deux catégories, les guichetiers et les chefs d'agences.
+
 
 
 == Écran d'accueil
@@ -22,9 +22,9 @@ Lors du lancement de l'application, la page suivante se présente face à vous.
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_principale.png[Page principale]
 
-=== ? -> Aide
+=== Aide
 
-En cliquant sur ? puis sur Aide, un pop-up apparaît.
+En cliquant sûr *? -> Aide*, un pop-up apparaît.
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_principale_barre_aide.png[Barre Aide]
 
@@ -44,17 +44,17 @@ Un pop-up de connexion ou vous êtes invité à rentrer votre login et votre mot
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/pop-up_connexion.png[Connexion]
 
-Si ceux-ci sont incorrects, un message d'erreur apparraît.
+Si ceux-ci sont incorrects, un message d'erreur apparaît.
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/pop-up_connexion_erreur.png[Connexion erreur]
 
-Si les identifiants sont correct, vous serez rediriger vers la page d'utilisateur connecté (voir "Une fois connecté").
+Si les identifiants sont corrects, vous serez redirigé vers la page d'utilisateur connecté (voir "Une fois connectée").
 
 == Une fois connecté
 
 Une fois connecté, vous vous trouverez face aux informations de l'employé connecté.
 
-image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_connecte.png[Page connecté]
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_connecte.png[Page connectée]
 
 === Gestion clients
 
@@ -62,7 +62,7 @@ En passant par la *barre d'outils -> Gestion -> Clients* vous pourrez accéder �
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_connecte_barre_clients.png[Gestion clients]
 
-Vous serez rediriger vers la page de gestion clients.
+Vous serez redirigé vers la page de gestion clients.
 
 === Afficher les clients
 
@@ -72,21 +72,21 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 === Rechercher un client
 
-Le compte de JOLAS Alex existe. En entrant le nom "JOLAS" avant d'appuyer sur le bouton *rechercher*, il est possible d'afficher le ou les comptes appartennant au client de nom "JOLAS".
+Le compte de JOLAS Alex existe. En entrant le nom "JOLAS" avant d'appuyer sur le bouton *rechercher*, il est possible d'afficher le ou les comptes appartenants au client de nom "JOLAS".
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_gestion_rechercher_jolas.png[Gestion rechercher "JOLAS"]
 
 === Créer un client
 
-À l'aide du bouton *nouveau client*, il est possible de créer un nouveau client de l'agence bancaire. Un pop-up pour rentrer les informations du clients apparaît.
+À l'aide du bouton *nouveau client*, il est possible de créer un nouveau client de l'agence bancaire. Un pop-up pour rentrer les informations du client apparaît.
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_gestion_ajout.png[Ajout client]
 
-Si les informations ne sont pas valide, un message d'erreur précisant l'information érroné ou manquante apparraît.
+Si les informations ne sont pas valide, un message d'erreur précisant l'information erroné ou manquante apparaît.
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_gestion_ajout_erreur.png[Ajout client erreur]
 
-Si les informations sont correcte,le pop-up disparaît et le client apparaît alors dans la liste.
+Si les informations sont correctes, le pop-up disparaît et le client apparaît alors dans la liste.
 
 === Modifier un client
 
@@ -94,7 +94,7 @@ Il est possible de modifier les informations d'un client en le sélectionnant et
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_gestion_modifier.png[Modifier client]
 
-La page pop-up de modification apparaît avec les même caractéristiques que la page de création d'un client.
+La page pop-up de modification apparaît avec les mêmes caractéristiques que la page de création d'un client.
 
 === Déconnexion
 
@@ -106,12 +106,11 @@ Un autre moyen de se déconnecter est de cliquer sur Utilisateur puis sur décon
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_connecte_barre_deconnexion.png[Bouton déconnexion]
 
-Après la déconnexion, la page se trouve dans son état initiale (voir "Écran d'accueil")
+Après la déconnexion, la page se trouve dans son état initial. (voir "Écran d'accueil")
 
-== Quitter 
+== Quitter
 
-Vous pouvez à tout moment quitter l'application. Il est possible d'appuyer sur la croix en haut à droite de la fenêtre ou
-d'aller dans la *Barre d'outils -> Utilisateur -> Quitter*. 
+Vous pouvez à tout moment quitter l'application. Il est possible d'appuyer sur la croix en haut à droite de la fenêtre ou d'aller dans la *Barre d'outils -> Utilisateur -> Quitter*.
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_principale_barre_quitter.png[Bouton quitter]
 
@@ -119,7 +118,4 @@ Dans tous les cas une fenêtre pop-up de confirmation apparaît.
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/pop-up_quitter.png[Quitter]
 
-Vous avez quitter l'application avec succés.
-
-
- 
+Vous avez quitté l'application avec succès.
