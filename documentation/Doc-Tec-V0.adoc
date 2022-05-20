@@ -54,6 +54,7 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 ** Une seconde qui est l'affichage des informations liées à l'agence bancaire, avec les fonctionnalités demandées par le client (avec possibilité de se déconnecter).
 
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/diagramme%20sequences%20syst%C3%A8me.svg[Diagramme Sequence Système]
 == SNI
 
 == Maquettes d'écran
