@@ -39,6 +39,8 @@ Il y a plusieurs tâches à effectuer : ...
 
 === Diagramme des Use Cases utilisateur
 
+
+
 === Diagramme des Use Case interface
 
 == Diagramme de Séquence Système
