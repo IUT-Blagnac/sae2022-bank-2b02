@@ -57,12 +57,5 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/diagramme%20sequences%20syst%C3%A8me.svg[Diagramme Sequence Système]
 == SNI
 
-== Maquettes d'écran
- 
-=== Écran d'accueil
- 
-=== Clic sur un serveur
- 
-=== Survol souris diagramme
- 
+
  
