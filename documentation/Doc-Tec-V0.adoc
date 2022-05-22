@@ -61,4 +61,6 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 == Maquettes d'écran
 
+Les maquettes d'écran sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V0.adoc[le document utilisateur]
+
  
