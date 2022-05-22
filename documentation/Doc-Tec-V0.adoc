@@ -27,9 +27,9 @@ Le projet "Daily Bank" est un projet informatique de taille moyenne qui compte 4
 
 * Objectifs du projet 
 
-La demande de la banque DailyBank est de ...
+La demande de la banque DailyBank est de rendre fonctionnelle leur application en implémentant tout ce qui est nécessaire.
 
-Il y a plusieurs tâches à effectuer : ...
+Il y a plusieurs tâches à effectuer : il faut  donner la possibilité au guichetier de créditer, débiter, créer ou clôturer un compte. Il faut aussi que le guichetier puisse effectuer un virement de compte à compte. Il faut aussi donner la possibilité au chef d'agence de gérer les employés. 
 
 === Plan
 
@@ -57,5 +57,8 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/diagramme%20sequences%20syst%C3%A8me.svg[Diagramme Sequence Système]
 == SNI
 
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/SNI%20V0.png[SNI V0]
+
+== Maquettes d'écran
 
  
