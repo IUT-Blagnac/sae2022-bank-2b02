@@ -48,7 +48,7 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 == Diagramme de Séquence Système
 
-* Voici le diagramme de séquence système. Il contient deux acteurs: l'Utilisateur et l'Interface. Il se découpe en deux parties :
+* Voici le diagramme de séquence système. Il contient deux acteurs : l'Utilisateur et l'Interface. Il se découpe en deux parties :
 
 ** Une première qui est l'initialisation, avec l'identification de l'utilisateur
 
