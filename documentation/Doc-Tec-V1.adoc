@@ -44,7 +44,7 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 === Diagramme des Use Case interface
 
-image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/diagramme%20uc%20interface.svg[Diagramme UC Interface]
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/diagramme_uc_interface.svg[Diagramme UC Interface]
 
 == Diagramme de Séquence Système
 
