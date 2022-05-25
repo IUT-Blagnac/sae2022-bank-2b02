@@ -10,3 +10,57 @@
 :toc:
 
 == Sommaire
+
+=== Description du projet
+
+
+
+* Equipe
+ ** DANG Hai Son
+ ** JOLAS Alex
+ ** NARAYANIN Noa
+ ** PODA Nicolas
+ 
+* Contexte du projet
+
+Le projet "Daily Bank" est un projet informatique de taille moyenne qui compte 4 personnes. Notre équipe travaille à l'IUT de Blagnac dans le but de restructurer les services bancaires de la banque DailyBank.
+
+* Objectifs du projet 
+
+La demande de la banque DailyBank est de rendre fonctionnelle leur application en implémentant tout ce qui est nécessaire.
+
+Il y a plusieurs tâches à effectuer : il faut donner la possibilité au guichetier de générer un relevé mensuel d'un compte en PDF, et de gérer les prélèvements automatiques. Il faut donner la possibilité au chef d'agence d'effectuer un débit exceptionnel, simuler un emprunt, et simuler une assurance d'emprunt.
+
+=== Plan
+
+
+
+== Diagramme des Use Cases
+
+=== Diagramme des Use Cases utilisateur
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/diagramme%20uc%20utilisateur.svg[Diagramme UC Utilisateur]
+
+
+=== Diagramme des Use Case interface
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/diagramme%20uc%20interface.svg[Diagramme UC Interface]
+
+== Diagramme de Séquence Système
+
+* Voici le diagramme de séquence système. Il contient deux acteurs : l'Utilisateur et l'Interface. Il se découpe en deux parties :
+
+** Une première qui est l'initialisation, avec l'identification de l'utilisateur
+
+** Une seconde qui est l'affichage des informations liées à l'agence bancaire, avec les fonctionnalités demandées par le client (avec possibilité de se déconnecter).
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/diagramme%20sequences%20syst%C3%A8me.svg[Diagramme Sequence Système]
+== SNI
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/SNI%20V0.png[SNI V0]
+
+== Maquettes d'écran
+
+Les maquettes d'écran sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V0.adoc[le document utilisateur]
+
+ 
