@@ -42,7 +42,7 @@ Il y a plusieurs tâches à effectuer : il faut donner la possibilité au guiche
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/diagramme%20uc%20utilisateur.svg[Diagramme UC Utilisateur]
 
 
-=== Diagramme des Use Case interface
+=== Diagramme des Use Cases interface
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/diagramme_uc_interface.svg[Diagramme UC Interface]
 
