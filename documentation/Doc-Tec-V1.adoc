@@ -48,16 +48,7 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 == Diagramme de Séquence Système
 
-* Voici le diagramme de séquence système. Il contient deux acteurs : l'Utilisateur et l'Interface. Il se découpe en deux parties :
-
-** Une première qui est l'initialisation, avec l'identification de l'utilisateur
-
-** Une seconde qui est l'affichage des informations liées à l'agence bancaire, avec les fonctionnalités demandées par le client (avec possibilité de se déconnecter).
-
-image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/diagramme%20sequences%20syst%C3%A8me.svg[Diagramme Sequence Système]
 == SNI
-
-image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/SNI%20V0.png[SNI V0]
 
 == Maquettes d'écran
 
