@@ -94,9 +94,11 @@ public class ComptesManagement {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 				ed.doExceptionDialog();
 				this.primaryStage.close();
+				return null;
 			} catch (ApplicationException ae) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
 				ed.doExceptionDialog();
+				return null;
 			}
 		}
 		return compte;

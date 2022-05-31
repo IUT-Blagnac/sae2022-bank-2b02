@@ -1,5 +1,6 @@
 package model.orm;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -166,49 +167,37 @@ public class AccessCompteCourant {
 	 * @throws RowNotFoundOrTooManyRowsException
 	 * @throws DataAccessException
 	 * @throws DatabaseConnexionException
+	 * @throws ManagementRuleViolation 
 	 */
 	public void insertCompte(CompteCourant cc)
-			throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
+			throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException, ManagementRuleViolation {
 		try {
-
 			Connection con = LogToDatabase.getConnexion();
+			CallableStatement call;
 
-			String query = "INSERT INTO COMPTECOURANT VALUES (seq_id_numcompte.NEXTVAL, ?, ?, ?, ?)";
-			
-			PreparedStatement pst = con.prepareStatement(query);
-			
-			pst.setInt(1, cc.debitAutorise);
-			pst.setDouble(2, cc.solde);
-			pst.setInt(3, cc.idNumCli);
-			pst.setString(4, cc.estCloture);
+			String q = "{call CreerCompte (?, ?, ?, ?)}";
+			// les ? correspondent aux paramètres : cf. déf procédure (4 paramètres)
+			call = con.prepareCall(q);
+			// Paramètres in
+			cc.debitAutorise = - cc.debitAutorise;
+			call.setInt(1, cc.debitAutorise);
+			// 1 -> valeur du premier paramètre, cf. déf procédure
+			call.setDouble(2, cc.solde);
+			call.setInt(3, cc.idNumCli);
+			// Paramètres out
+			call.registerOutParameter(4, java.sql.Types.INTEGER);
+			// 4 type du quatrième paramètre qui est déclaré en OUT, cf. déf procédure
 
-			System.err.println(query);
+			call.execute();
 
-			int result = pst.executeUpdate();
-			pst.close();
+			int res = call.getInt(4);
 
-			if (result != 1) {
-				con.rollback();
-				throw new RowNotFoundOrTooManyRowsException(Table.CompteCourant, Order.INSERT,
-						"Insert anormal (insert de moins ou plus d'une ligne)", null, result);
+			if (res == -1) { // Erreur applicative
+				throw new ManagementRuleViolation(Table.Operation, Order.INSERT,
+						"Erreur de compte: le solde doit être superieur à 50", null);
 			}
-
-			query = "SELECT seq_id_client.CURRVAL from DUAL";
-
-			System.err.println(query);
-			PreparedStatement pst2 = con.prepareStatement(query);
-
-			ResultSet rs = pst2.executeQuery();
-			rs.next();
-			int numCliBase = rs.getInt(1);
-
-			con.commit();
-			rs.close();
-			pst2.close();
-
-			cc.idNumCli = numCliBase;
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.INSERT, "Erreur accès", e);
+			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);
 		}
 	}
 }
