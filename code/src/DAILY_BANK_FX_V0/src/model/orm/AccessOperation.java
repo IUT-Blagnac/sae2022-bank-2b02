@@ -156,6 +156,51 @@ public class AccessOperation {
 			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);
 		}
 	}
+	
+	public void insertCredit(int idNumCompte, double montant, String typeOp)
+			throws DatabaseConnexionException, ManagementRuleViolation, DataAccessException, RowNotFoundOrTooManyRowsException {
+		try {
+
+			Connection con = LogToDatabase.getConnexion();
+
+			String query = "INSERT INTO OPERATION (idOperation, idNumCompte, montant, idTypeOp)  VALUES (seq_id_operation.NEXTVAL, ?, ?, ?)";
+			PreparedStatement pst = con.prepareStatement(query);
+			pst.setInt(1, idNumCompte);
+			pst.setDouble(2, montant);
+			pst.setString(3, typeOp);
+			
+
+			System.err.println(query);
+
+			int result = pst.executeUpdate();
+			pst.close();
+
+			if (result != 1) {
+				con.rollback();
+				throw new RowNotFoundOrTooManyRowsException(Table.Operation, Order.INSERT,
+						"Insert anormal (insert de moins ou plus d'une ligne)", null, result);
+			}
+
+			query = "SELECT seq_id_operation.CURRVAL from DUAL";
+
+			System.err.println(query);
+			PreparedStatement pst2 = con.prepareStatement(query);
+
+			ResultSet rs = pst2.executeQuery();
+			rs.next();
+			
+
+			con.commit();
+			rs.close();
+			pst2.close();
+
+			
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.Client, Order.INSERT, "Erreur accès", e);
+		}
+	}
+	
+	
 
 	/**
 	 * Fonction utilitaire qui retourne un ordre sql "to_date" pour mettre une date

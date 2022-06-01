@@ -47,7 +47,7 @@ public class OperationsManagementController implements Initializable {
 	}
 
 	/*
-	 * Permet de configurer la fenÍtre
+	 * Permet de configurer la fenÔøΩtre
 	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
@@ -90,7 +90,7 @@ public class OperationsManagementController implements Initializable {
 	}
 
 	/*
-	 * Permt de fermer la fenÍtre de management des opÈrations
+	 * Permt de fermer la fenÔøΩtre de management des opÔøΩrations
 	 */
 	@FXML
 	private void doCancel() {
@@ -98,7 +98,7 @@ public class OperationsManagementController implements Initializable {
 	}
 
 	/*
-	 * Permet d'enregistrer un dÈbit
+	 * Permet d'enregistrer un dÔøΩbit
 	 */
 	@FXML
 	private void doDebit() {
@@ -111,14 +111,20 @@ public class OperationsManagementController implements Initializable {
 	}
 
 	/*
-	 * Permet d'enregistrer un crÈdit
+	 * Permet d'enregistrer un crÔøΩdit
 	 */
 	@FXML
 	private void doCredit() {
+		
+		Operation op = this.om.enregistrerCredit();
+		if (op != null) {
+			this.updateInfoCompteClient();
+			this.validateComponentState();
+		}
 	}
 
 	/*
-	 * Permet d'enregistrer une autre opÈration
+	 * Permet d'enregistrer une autre opÔøΩration
 	 */
 	@FXML
 	private void doAutre() {
@@ -126,7 +132,7 @@ public class OperationsManagementController implements Initializable {
 
 	private void validateComponentState() {
 		// Non impl√©ment√© => d√©sactiv√©
-		this.btnCredit.setDisable(true);
+		this.btnCredit.setDisable(false);
 		this.btnDebit.setDisable(false);
 	}
 

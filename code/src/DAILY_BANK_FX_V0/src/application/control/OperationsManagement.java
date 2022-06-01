@@ -59,15 +59,15 @@ public class OperationsManagement {
 	}
 
 	/*
-	 * Permet de créer une boite de dialogue liée aux opérations de management
+	 * Permet de crï¿½er une boite de dialogue liï¿½e aux opï¿½rations de management
 	 */
 	public void doOperationsManagementDialog() {
 		this.omc.displayDialog();
 	}
 
 	/*
-	 * Permet d'enregistrer un débit
-	 * @return l'opération en question
+	 * Permet d'enregistrer un dï¿½bit
+	 * @return l'opï¿½ration en question
 	 */
 	public Operation enregistrerDebit() {
 
@@ -92,10 +92,34 @@ public class OperationsManagement {
 		}
 		return op;
 	}
+	
+	public Operation enregistrerCredit() {
+
+		OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dbs);
+		Operation op = oep.doOperationEditorDialog(this.compteConcerne, CategorieOperation.CREDIT);
+		if (op != null) {
+			try {
+				AccessOperation ao = new AccessOperation();
+
+				ao.insertCredit(this.compteConcerne.idNumCompte, op.montant, op.idTypeOp);
+
+			} catch (DatabaseConnexionException e) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+				ed.doExceptionDialog();
+				this.primaryStage.close();
+				op = null;
+			} catch (ApplicationException ae) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+				ed.doExceptionDialog();
+				op = null;
+			}
+		}
+		return op;
+	}
 
 	/*
-	 * Permet de récupérer un compte courant, ainsi que les opérations qui ont été effectuées sur ce compte
-	 * @return une PairsOfValue contenant le compte courant et une ArrayList d'opérations 
+	 * Permet de rï¿½cupï¿½rer un compte courant, ainsi que les opï¿½rations qui ont ï¿½tï¿½ effectuï¿½es sur ce compte
+	 * @return une PairsOfValue contenant le compte courant et une ArrayList d'opï¿½rations 
 	 */
 	public PairsOfValue<CompteCourant, ArrayList<Operation>>  operationsEtSoldeDunCompte() {
 		ArrayList<Operation> listeOP = new ArrayList<>();
