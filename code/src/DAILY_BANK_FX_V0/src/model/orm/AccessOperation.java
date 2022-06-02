@@ -158,45 +158,33 @@ public class AccessOperation {
 	}
 	
 	public void insertCredit(int idNumCompte, double montant, String typeOp)
-			throws DatabaseConnexionException, ManagementRuleViolation, DataAccessException, RowNotFoundOrTooManyRowsException {
+			throws DatabaseConnexionException, ManagementRuleViolation, DataAccessException {
 		try {
-
 			Connection con = LogToDatabase.getConnexion();
+			CallableStatement call;
 
-			String query = "INSERT INTO OPERATION (idOperation, idNumCompte, montant, idTypeOp)  VALUES (seq_id_operation.NEXTVAL, ?, ?, ?)";
-			PreparedStatement pst = con.prepareStatement(query);
-			pst.setInt(1, idNumCompte);
-			pst.setDouble(2, montant);
-			pst.setString(3, typeOp);
-			
+			String q = "{call Debiter (?, ?, ?, ?)}";
+			// les ? correspondent aux paramètres : cf. déf procédure (4 paramètres)
+			call = con.prepareCall(q);
+			// Paramètres in
+			call.setInt(1, idNumCompte);
+			// 1 -> valeur du premier paramètre, cf. déf procédure
+			call.setDouble(2, -montant);
+			call.setString(3, typeOp);
+			// Paramètres out
+			call.registerOutParameter(4, java.sql.Types.INTEGER);
+			// 4 type du quatrième paramètre qui est déclaré en OUT, cf. déf procédure
 
-			System.err.println(query);
+			call.execute();
 
-			int result = pst.executeUpdate();
-			pst.close();
+			int res = call.getInt(4);
 
-			if (result != 1) {
-				con.rollback();
-				throw new RowNotFoundOrTooManyRowsException(Table.Operation, Order.INSERT,
-						"Insert anormal (insert de moins ou plus d'une ligne)", null, result);
+			if (res != 0) { // Erreur applicative
+				throw new ManagementRuleViolation(Table.Operation, Order.INSERT,
+						"Erreur de règle de gestion : découvert autorisé dépassé", null);
 			}
-
-			query = "SELECT seq_id_operation.CURRVAL from DUAL";
-
-			System.err.println(query);
-			PreparedStatement pst2 = con.prepareStatement(query);
-
-			ResultSet rs = pst2.executeQuery();
-			rs.next();
-			
-
-			con.commit();
-			rs.close();
-			pst2.close();
-
-			
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.INSERT, "Erreur accès", e);
+			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);
 		}
 	}
 	
