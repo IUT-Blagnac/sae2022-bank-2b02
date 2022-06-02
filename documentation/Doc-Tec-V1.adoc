@@ -67,7 +67,12 @@ Il y a aussi différents packages liés aux "modèles".
 === Éléments essentiels à connaître, spécificités nécessaires à la mise en oeuvre du développement
 
 
-== Fonctionnalités
+
+
+
+== Fonctionnalités de la v1
+
+
 
 
 
