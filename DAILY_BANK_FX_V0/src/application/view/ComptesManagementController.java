@@ -18,6 +18,10 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.data.Client;
 import model.data.CompteCourant;
+import model.orm.exception.DataAccessException;
+import model.orm.exception.DatabaseConnexionException;
+import model.orm.exception.ManagementRuleViolation;
+import model.orm.exception.RowNotFoundOrTooManyRowsException;
 
 public class ComptesManagementController implements Initializable {
 
@@ -42,7 +46,7 @@ public class ComptesManagementController implements Initializable {
 	}
 
 	/*
-	 * Permet de configurer la fen�tre
+	 * Permet de configurer la fen�tre
 	 */
 	private void configure() {
 		String info;
@@ -114,8 +118,15 @@ public class ComptesManagementController implements Initializable {
 	}
 
 	@FXML
-	private void doSupprimerCompte() {
+	private void doSupprimerCompte() throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException, ManagementRuleViolation {
+		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			this.cm.supprimerCompteCourant(olCompteCourant.get(selectedIndice));
+			loadList();
+			System.out.println(1);
+		}
 	}
+	
 
 	@FXML
 	private void doNouveauCompte() {
@@ -138,13 +149,17 @@ public class ComptesManagementController implements Initializable {
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnModifierCompte.setDisable(true);
-		this.btnSupprCompte.setDisable(true);
+		//this.btnSupprCompte.setDisable(true);
 
 		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			this.btnVoirOpes.setDisable(false);
+			this.btnSupprCompte.setDisable(false);
+
 		} else {
 			this.btnVoirOpes.setDisable(true);
+			this.btnSupprCompte.setDisable(true);
+
 		}
 	}
 }

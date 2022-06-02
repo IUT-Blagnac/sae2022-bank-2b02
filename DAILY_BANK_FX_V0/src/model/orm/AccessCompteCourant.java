@@ -200,4 +200,32 @@ public class AccessCompteCourant {
 			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);
 		}
 	}
+	
+	public void deleteCompte(CompteCourant cc)
+			throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException, ManagementRuleViolation {
+			try {
+
+				Connection con = LogToDatabase.getConnexion();
+				System.out.println(3);
+				String query = "UPDATE CompteCourant SET estCloture = 'O' WHERE idNumCompte = ?";
+				PreparedStatement pst = con.prepareStatement(query);
+				pst.setInt(1, cc.idNumCompte);
+
+				System.err.println(query);
+
+				int result = pst.executeUpdate();
+				pst.close();
+
+				if (result != 1) {
+					con.rollback();
+					throw new RowNotFoundOrTooManyRowsException(Table.CompteCourant, Order.DELETE,
+							"Erreur lors de la cloturation du compte", null, result);
+				}
+
+				con.commit();
+
+			} catch (SQLException e) {
+				throw new DataAccessException(Table.CompteCourant, Order.DELETE, "Erreur accès", e);
+			}
+	}
 }

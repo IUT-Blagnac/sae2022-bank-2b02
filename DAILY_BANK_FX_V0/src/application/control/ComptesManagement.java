@@ -18,8 +18,11 @@ import model.data.Client;
 import model.data.CompteCourant;
 import model.orm.AccessCompteCourant;
 import model.orm.exception.ApplicationException;
+import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
+import model.orm.exception.ManagementRuleViolation;
 import model.orm.exception.Order;
+import model.orm.exception.RowNotFoundOrTooManyRowsException;
 import model.orm.exception.Table;
 
 public class ComptesManagement {
@@ -125,5 +128,13 @@ public class ComptesManagement {
 			listeCpt = new ArrayList<>();
 		}
 		return listeCpt;
+	}
+	
+	public void supprimerCompteCourant(CompteCourant compte) throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException, ManagementRuleViolation {
+		if (compte != null) {	
+			AccessCompteCourant acc = new AccessCompteCourant();
+			System.out.println(2);
+			acc.deleteCompte(compte);
+		}
 	}
 }
