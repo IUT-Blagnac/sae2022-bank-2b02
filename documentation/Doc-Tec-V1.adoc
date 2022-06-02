@@ -56,6 +56,14 @@ Au sein de l'application, il y a différents packages. Un package nommé "applic
 
 * application.tools : c'est le package qui contient les outils nécessaires pour développer le programme, tels que les catégories d'opérations, les différents modes d'édition, les messages d'alerte
 
+Il y a aussi différents packages liés aux "modèles". 
+
+* model.data : c'est le package dans lequel les classes principales, telles que le client, l'agence bancaire, le compte courant, l'employé, l'opération et le type d'opération sont stockés. Dans chaque classe, il y a les constrcuteurs, ainsi qu'une méthode "toString".
+
+* model.orm : c'est le package qui permet le lien entre la base de données Oracle et le code Java. Au sein de celui-ci, sont contenues les classes nous permettant de réaliser des sélections, des insertions, ou encore des appels de méthode dans la base de données Oracle.
+
+* model.orm.exception : c'est dans ce package que toutes les exceptions liées à la relation entre le code et la base de données sont stockés. Par exemple, les erreurs d'accès à la base de données.
+
 === Éléments essentiels à connaître, spécificités nécessaires à la mise en oeuvre du développement
 
 
