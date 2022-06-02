@@ -28,6 +28,7 @@ public class OperationsManagement {
 	private OperationsManagementController omc;
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
+	private CompteCourant compteConcerne2;
 
 	public OperationsManagement(Stage _parentStage, DailyBankState _dbstate, Client client, CompteCourant compte) {
 
@@ -102,6 +103,8 @@ public class OperationsManagement {
 				AccessOperation ao = new AccessOperation();
 
 				ao.insertCredit(this.compteConcerne.idNumCompte, op.montant, op.idTypeOp);
+				System.out.println(this.compteConcerne.toString());
+				
 
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
@@ -116,6 +119,33 @@ public class OperationsManagement {
 		}
 		return op;
 	}
+	
+	public Operation enregistrerVirement() {
+
+		OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dbs);
+		Operation op = oep.doOperationEditorDialog(this.compteConcerne, CategorieOperation.VIREMENT);
+		if (op != null) {
+			try {
+				AccessOperation ao = new AccessOperation();
+
+				ao.insertDebit(this.compteConcerne.idNumCompte, op.montant, op.idTypeOp);
+				ao.insertCredit(this.compteConcerne2.idNumCompte, op.montant, op.idTypeOp);
+
+			} catch (DatabaseConnexionException e) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+				ed.doExceptionDialog();
+				this.primaryStage.close();
+				op = null;
+			} catch (ApplicationException ae) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+				ed.doExceptionDialog();
+				op = null;
+			}
+		}
+		return op;
+	}
+	
+	
 
 	/*
 	 * Permet de r�cup�rer un compte courant, ainsi que les op�rations qui ont �t� effectu�es sur ce compte
