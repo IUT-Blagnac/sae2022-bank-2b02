@@ -47,7 +47,14 @@ Il y a plusieurs tâches à effectuer : il faut donner la possibilité au guiche
 
 === Ressources externes utilisées et rôles (.jar, ...)
 
-=== Struvcutration et packages de l'application documentée. Principes retenus pour cette structuration
+=== Structuration en packages de l'application documentée. Principes retenus pour cette structuration
+
+Au sein de l'application, il y a différents packages. Un package nommé "application", représente le package principal. Au sein de celui-ci, il a d'autres packages :
+
+* application.control : c'est le package dans lequel les sous-programmes utiles, qui sont appelés dans la vue, sont stockés. 
+* application.view : c'est le package qui représente la vue de l'application. Au sein de celui-ci, il y a tous les "controllers", c'est-à-dire les classes qui nous permettent de contrôler le contenu de chaque fenêtre. Il y a aussi les fichiers FXML, qui nous permettent de gérer le design de chaque fenêtre.
+
+* application.tools : c'est le package qui contient les outils nécessaires pour développer le programme, tels que les catégories d'opérations, les différents modes d'édition, les messages d'alerte
 
 === Éléments essentiels à connaître, spécificités nécessaires à la mise en oeuvre du développement
 
