@@ -35,23 +35,30 @@ Il y a plusieurs tâches à effectuer : il faut donner la possibilité au guiche
 
 
 
-== Diagramme des Use Cases
+== Présentation rapide de l'application
 
-=== Diagramme des Use Cases utilisateur
+=== Use case global
 
-image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_technique/diagramme%20uc%20utilisateur.svg[Diagramme UC Utilisateur]
+=== Diagramme de classe des données global
+
+== Architecture
+
+=== Architecture générale en termes de sous-systèmes (poste client, serveurs, ...) et rôle de chaque élément
+
+=== Ressources externes utilisées et rôles (.jar, ...)
+
+=== Struvcutration et packages de l'application documentée. Principes retenus pour cette structuration
+
+=== Éléments essentiels à connaître, spécificités nécessaires à la mise en oeuvre du développement
 
 
-=== Diagramme des Use Cases interface
+== Fonctionnalités
 
-image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/diagramme_uc_interface.svg[Diagramme UC Interface]
 
-== Diagramme de Séquence Système
 
-== SNI
 
 == Maquettes d'écran
 
-Les maquettes d'écran sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V0.adoc[le document utilisateur]
+Les maquettes d'écran sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[le document utilisateur]
 
  
