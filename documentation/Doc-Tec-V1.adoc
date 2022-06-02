@@ -43,6 +43,7 @@ image:: https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation
 
 === Diagramme de classe des données global
 
+image:: https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/diagramme_classes_v1.svg[diagramme de classes v1]
 
 == Architecture
 
