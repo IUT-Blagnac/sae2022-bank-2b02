@@ -123,7 +123,7 @@ public class OperationsManagement {
 	public Operation enregistrerVirement() {
 
 		OperationEditorPane oep = new OperationEditorPane(this.primaryStage, this.dbs);
-		Operation op = oep.doOperationEditorDialog(this.compteConcerne, CategorieOperation.VIREMENT);
+		Operation op = oep.doOperationEditorDialog(this.compteConcerne, CategorieOperation.CREDIT);
 		if (op != null) {
 			try {
 				AccessOperation ao = new AccessOperation();
