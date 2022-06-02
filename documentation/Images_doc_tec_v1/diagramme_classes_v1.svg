@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="981px" preserveAspectRatio="none" style="width:613px;height:981px;background:#FFFFFF;" version="1.1" viewBox="0 0 613 981" width="613px" zoomAndPan="magnify"><defs/><g><!--MD5=[9a2897d96cfcc917fe91044b2ccff0ad]
+class Employe--><g id="elem_Employe"><rect codeLine="1" fill="#F1F1F1" height="129.4844" id="Employe" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="81.7536" y="416"/><ellipse cx="96.7536" cy="432" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M99.0973,427.6719 C98.1598,427.2344 97.5661,427.0938 96.6911,427.0938 C94.0661,427.0938 92.0661,429.1719 92.0661,431.8906 L92.0661,433.0156 C92.0661,435.5938 94.1755,437.4844 97.0661,437.4844 C98.2848,437.4844 99.4411,437.1875 100.1911,436.6406 C100.7692,436.2344 101.0973,435.7813 101.0973,435.3906 C101.0973,434.9375 100.7067,434.5469 100.238,434.5469 C100.0192,434.5469 99.8161,434.625 99.6286,434.8125 C99.1755,435.2969 99.1755,435.2969 98.988,435.3906 C98.5661,435.6563 97.8786,435.7813 97.113,435.7813 C95.0661,435.7813 93.7692,434.6875 93.7692,432.9844 L93.7692,431.8906 C93.7692,430.1094 95.0192,428.7969 96.7536,428.7969 C97.3317,428.7969 97.9411,428.9531 98.4098,429.2031 C98.8942,429.4844 99.0661,429.7031 99.1598,430.1094 C99.2223,430.5156 99.2536,430.6406 99.3942,430.7656 C99.5348,430.9063 99.7692,431.0156 99.988,431.0156 C100.2536,431.0156 100.5192,430.875 100.6911,430.6563 C100.8005,430.5 100.8317,430.3125 100.8317,429.8906 L100.8317,428.4688 C100.8317,428.0313 100.8161,427.9063 100.7223,427.75 C100.5661,427.4844 100.2848,427.3438 99.988,427.3438 C99.6911,427.3438 99.488,427.4375 99.2692,427.75 L99.0973,427.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="110.7536" y="436.8467">Employe</text><line style="stroke:#181818;stroke-width:0.5;" x1="82.7536" x2="175.7536" y1="448" y2="448"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="87.7536" y="464.9951">nom</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="87.7536" y="481.292">prenom</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="87.7536" y="497.5889">droitAcces</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="87.7536" y="513.8857">login</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="87.7536" y="530.1826">motPasse</text><line style="stroke:#181818;stroke-width:0.5;" x1="82.7536" x2="175.7536" y1="537.4844" y2="537.4844"/></g><!--MD5=[60c39ebf345a01ad47d2efce4ef038e5]
+class AgenceBancaire--><g id="elem_AgenceBancaire"><rect codeLine="9" fill="#F1F1F1" height="80.5938" id="AgenceBancaire" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="148" x="126.2532" y="894"/><ellipse cx="141.2532" cy="910" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M143.5969,905.6719 C142.6594,905.2344 142.0657,905.0938 141.1907,905.0938 C138.5657,905.0938 136.5657,907.1719 136.5657,909.8906 L136.5657,911.0156 C136.5657,913.5938 138.6751,915.4844 141.5657,915.4844 C142.7844,915.4844 143.9407,915.1875 144.6907,914.6406 C145.2688,914.2344 145.5969,913.7813 145.5969,913.3906 C145.5969,912.9375 145.2063,912.5469 144.7376,912.5469 C144.5188,912.5469 144.3157,912.625 144.1282,912.8125 C143.6751,913.2969 143.6751,913.2969 143.4876,913.3906 C143.0657,913.6563 142.3782,913.7813 141.6126,913.7813 C139.5657,913.7813 138.2688,912.6875 138.2688,910.9844 L138.2688,909.8906 C138.2688,908.1094 139.5188,906.7969 141.2532,906.7969 C141.8313,906.7969 142.4407,906.9531 142.9094,907.2031 C143.3938,907.4844 143.5657,907.7031 143.6594,908.1094 C143.7219,908.5156 143.7532,908.6406 143.8938,908.7656 C144.0344,908.9063 144.2688,909.0156 144.4876,909.0156 C144.7532,909.0156 145.0188,908.875 145.1907,908.6563 C145.3001,908.5 145.3313,908.3125 145.3313,907.8906 L145.3313,906.4688 C145.3313,906.0313 145.3157,905.9063 145.2219,905.75 C145.0657,905.4844 144.7844,905.3438 144.4876,905.3438 C144.1907,905.3438 143.9876,905.4375 143.7688,905.75 L143.5969,905.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="155.2532" y="914.8467">AgenceBancaire</text><line style="stroke:#181818;stroke-width:0.5;" x1="127.2532" x2="273.2532" y1="926" y2="926"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="132.2532" y="942.9951">nomAg</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="132.2532" y="959.292">adressePostaleAg</text><line style="stroke:#181818;stroke-width:0.5;" x1="127.2532" x2="273.2532" y1="966.5938" y2="966.5938"/></g><!--MD5=[ed6624c6556d5e7b1bd23032162d20b7]
+class Client--><g id="elem_Client"><rect codeLine="14" fill="#F1F1F1" height="145.7813" id="Client" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="120" x="411.2532" y="7"/><ellipse cx="446.5032" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M448.8469,18.6719 C447.9094,18.2344 447.3157,18.0938 446.4407,18.0938 C443.8157,18.0938 441.8157,20.1719 441.8157,22.8906 L441.8157,24.0156 C441.8157,26.5938 443.9251,28.4844 446.8157,28.4844 C448.0344,28.4844 449.1907,28.1875 449.9407,27.6406 C450.5188,27.2344 450.8469,26.7813 450.8469,26.3906 C450.8469,25.9375 450.4563,25.5469 449.9876,25.5469 C449.7688,25.5469 449.5657,25.625 449.3782,25.8125 C448.9251,26.2969 448.9251,26.2969 448.7376,26.3906 C448.3157,26.6563 447.6282,26.7813 446.8626,26.7813 C444.8157,26.7813 443.5188,25.6875 443.5188,23.9844 L443.5188,22.8906 C443.5188,21.1094 444.7688,19.7969 446.5032,19.7969 C447.0813,19.7969 447.6907,19.9531 448.1594,20.2031 C448.6438,20.4844 448.8157,20.7031 448.9094,21.1094 C448.9719,21.5156 449.0032,21.6406 449.1438,21.7656 C449.2844,21.9063 449.5188,22.0156 449.7376,22.0156 C450.0032,22.0156 450.2688,21.875 450.4407,21.6563 C450.5501,21.5 450.5813,21.3125 450.5813,20.8906 L450.5813,19.4688 C450.5813,19.0313 450.5657,18.9063 450.4719,18.75 C450.3157,18.4844 450.0344,18.3438 449.7376,18.3438 C449.4407,18.3438 449.2376,18.4375 449.0188,18.75 L448.8469,18.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="465.0032" y="27.8467">Client</text><line style="stroke:#181818;stroke-width:0.5;" x1="412.2532" x2="530.2532" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="417.2532" y="55.9951">nom</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="417.2532" y="72.292">prenom</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="417.2532" y="88.5889">adressePostale</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="417.2532" y="104.8857">email</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="417.2532" y="121.1826">telephone</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="417.2532" y="137.4795">estInactif</text><line style="stroke:#181818;stroke-width:0.5;" x1="412.2532" x2="530.2532" y1="144.7813" y2="144.7813"/></g><!--MD5=[ebfdca7f475abcc805c7ccf297fa0985]
+class CompteCourant--><g id="elem_CompteCourant"><rect codeLine="23" fill="#F1F1F1" height="96.8906" id="CompteCourant" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="148" x="212.2532" y="432"/><ellipse cx="227.2532" cy="448" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M229.5969,443.6719 C228.6594,443.2344 228.0657,443.0938 227.1907,443.0938 C224.5657,443.0938 222.5657,445.1719 222.5657,447.8906 L222.5657,449.0156 C222.5657,451.5938 224.6751,453.4844 227.5657,453.4844 C228.7844,453.4844 229.9407,453.1875 230.6907,452.6406 C231.2688,452.2344 231.5969,451.7813 231.5969,451.3906 C231.5969,450.9375 231.2063,450.5469 230.7376,450.5469 C230.5188,450.5469 230.3157,450.625 230.1282,450.8125 C229.6751,451.2969 229.6751,451.2969 229.4876,451.3906 C229.0657,451.6563 228.3782,451.7813 227.6126,451.7813 C225.5657,451.7813 224.2688,450.6875 224.2688,448.9844 L224.2688,447.8906 C224.2688,446.1094 225.5188,444.7969 227.2532,444.7969 C227.8313,444.7969 228.4407,444.9531 228.9094,445.2031 C229.3938,445.4844 229.5657,445.7031 229.6594,446.1094 C229.7219,446.5156 229.7532,446.6406 229.8938,446.7656 C230.0344,446.9063 230.2688,447.0156 230.4876,447.0156 C230.7532,447.0156 231.0188,446.875 231.1907,446.6563 C231.3001,446.5 231.3313,446.3125 231.3313,445.8906 L231.3313,444.4688 C231.3313,444.0313 231.3157,443.9063 231.2219,443.75 C231.0657,443.4844 230.7844,443.3438 230.4876,443.3438 C230.1907,443.3438 229.9876,443.4375 229.7688,443.75 L229.5969,443.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="241.2532" y="452.8467">CompteCourant</text><line style="stroke:#181818;stroke-width:0.5;" x1="213.2532" x2="359.2532" y1="464" y2="464"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="218.2532" y="480.9951">idNumCompte</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="218.2532" y="497.292">debitAutorise = 0</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="218.2532" y="513.5889">/solde</text><line style="stroke:#181818;stroke-width:0.5;" x1="213.2532" x2="359.2532" y1="520.8906" y2="520.8906"/></g><!--MD5=[cca5d97aaf46870920fae66c9bd85cdd]
+class Operation--><g id="elem_Operation"><rect codeLine="38" fill="#F1F1F1" height="96.8906" id="Operation" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="105" x="395.7532" y="432"/><ellipse cx="410.7532" cy="448" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M413.0969,443.6719 C412.1594,443.2344 411.5657,443.0938 410.6907,443.0938 C408.0657,443.0938 406.0657,445.1719 406.0657,447.8906 L406.0657,449.0156 C406.0657,451.5938 408.1751,453.4844 411.0657,453.4844 C412.2844,453.4844 413.4407,453.1875 414.1907,452.6406 C414.7688,452.2344 415.0969,451.7813 415.0969,451.3906 C415.0969,450.9375 414.7063,450.5469 414.2376,450.5469 C414.0188,450.5469 413.8157,450.625 413.6282,450.8125 C413.1751,451.2969 413.1751,451.2969 412.9876,451.3906 C412.5657,451.6563 411.8782,451.7813 411.1126,451.7813 C409.0657,451.7813 407.7688,450.6875 407.7688,448.9844 L407.7688,447.8906 C407.7688,446.1094 409.0188,444.7969 410.7532,444.7969 C411.3313,444.7969 411.9407,444.9531 412.4094,445.2031 C412.8938,445.4844 413.0657,445.7031 413.1594,446.1094 C413.2219,446.5156 413.2532,446.6406 413.3938,446.7656 C413.5344,446.9063 413.7688,447.0156 413.9876,447.0156 C414.2532,447.0156 414.5188,446.875 414.6907,446.6563 C414.8001,446.5 414.8313,446.3125 414.8313,445.8906 L414.8313,444.4688 C414.8313,444.0313 414.8157,443.9063 414.7219,443.75 C414.5657,443.4844 414.2844,443.3438 413.9876,443.3438 C413.6907,443.3438 413.4876,443.4375 413.2688,443.75 L413.0969,443.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="424.7532" y="452.8467">Operation</text><line style="stroke:#181818;stroke-width:0.5;" x1="396.7532" x2="499.7532" y1="464" y2="464"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="401.7532" y="480.9951">montant</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="401.7532" y="497.292">dateOp</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="401.7532" y="513.5889">dateValeur</text><line style="stroke:#181818;stroke-width:0.5;" x1="396.7532" x2="499.7532" y1="520.8906" y2="520.8906"/></g><!--MD5=[30c294c048888fe19ad7bfbd9b4b7579]
+class TypeOperation--><g id="elem_TypeOperation"><rect codeLine="44" fill="#F1F1F1" height="48" id="TypeOperation" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="141" x="363.7532" y="684"/><ellipse cx="378.7532" cy="700" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M381.0969,695.6719 C380.1594,695.2344 379.5657,695.0938 378.6907,695.0938 C376.0657,695.0938 374.0657,697.1719 374.0657,699.8906 L374.0657,701.0156 C374.0657,703.5938 376.1751,705.4844 379.0657,705.4844 C380.2844,705.4844 381.4407,705.1875 382.1907,704.6406 C382.7688,704.2344 383.0969,703.7813 383.0969,703.3906 C383.0969,702.9375 382.7063,702.5469 382.2376,702.5469 C382.0188,702.5469 381.8157,702.625 381.6282,702.8125 C381.1751,703.2969 381.1751,703.2969 380.9876,703.3906 C380.5657,703.6563 379.8782,703.7813 379.1126,703.7813 C377.0657,703.7813 375.7688,702.6875 375.7688,700.9844 L375.7688,699.8906 C375.7688,698.1094 377.0188,696.7969 378.7532,696.7969 C379.3313,696.7969 379.9407,696.9531 380.4094,697.2031 C380.8938,697.4844 381.0657,697.7031 381.1594,698.1094 C381.2219,698.5156 381.2532,698.6406 381.3938,698.7656 C381.5344,698.9063 381.7688,699.0156 381.9876,699.0156 C382.2532,699.0156 382.5188,698.875 382.6907,698.6563 C382.8001,698.5 382.8313,698.3125 382.8313,697.8906 L382.8313,696.4688 C382.8313,696.0313 382.8157,695.9063 382.7219,695.75 C382.5657,695.4844 382.2844,695.3438 381.9876,695.3438 C381.6907,695.3438 381.4876,695.4375 381.2688,695.75 L381.0969,695.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="392.7532" y="704.8467">TypeOperation</text><line style="stroke:#181818;stroke-width:0.5;" x1="364.7532" x2="503.7532" y1="716" y2="716"/><line style="stroke:#181818;stroke-width:0.5;" x1="364.7532" x2="503.7532" y1="724" y2="724"/></g><g id="elem_GMN576265"><path d="M324.7532,793 L324.7532,833.2656 A0,0 0 0 0 324.7532,833.2656 L517.7532,833.2656 A0,0 0 0 0 517.7532,833.2656 L517.7532,803 L507.7532,793 L427.6822,793 L431.3362,732.115 L419.6822,793 L324.7532,793 A0,0 0 0 0 324.7532,793 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M507.7532,793 L507.7532,803 L517.7532,803 L507.7532,793 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="330.7532" y="810.0669">cheque, retrait CB,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="334.7532" y="825.1997">paiement CB, virement, ...</text></g><!--MD5=[8cd595a7e5ed4faabe86713542de6752]
+link Employe to AgenceBancaire--><g id="link_Employe_AgenceBancaire"><path codeLine="46" d="M119.2812,545.223 C119.9612,566.872 121.2532,591.219 121.2532,613.5 C121.2532,613.5 121.2532,613.5 121.2532,814 C121.2532,842.865 135.6832,871.691 152.5282,893.7983 " fill="none" id="Employe-AgenceBancaire" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="6" y="565.6204">ChefAgence 0..1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="135.9612" y="882.9264">1</text></g><!--MD5=[8cd595a7e5ed4faabe86713542de6752]
+link Employe to AgenceBancaire--><g id="link_Employe_AgenceBancaire"><path codeLine="47" d="M152.3772,545.223 C154.9612,566.872 156.2532,591.219 156.2532,613.5 C156.2532,613.5 156.2532,613.5 156.2532,814 C156.2532,842.865 170.6832,871.691 183.5982,893.7983 " fill="none" id="Employe-AgenceBancaire-1" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83" x="159.8493" y="565.6204">Guichetiers *</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="172.1772" y="882.9264">1</text></g><!--MD5=[4467a8c9ada92e790db41fa5f8613df6]
+link Client to AgenceBancaire--><g id="link_Client_AgenceBancaire"><path codeLine="48" d="M531.4432,130.117 C552.6222,152.934 571.2532,182.078 571.2532,214 C571.2532,214 571.2532,214 571.2532,814 C571.2532,875.7475 382.7062,910.1881 274.4392,924.8745 " fill="none" id="Client-AgenceBancaire" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="33" x="572.2532" y="485.0669">Avoir</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="539.2843" y="131.8644">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="282.1356" y="920.2821">1</text></g><!--MD5=[f067a251af9eeeb5fcefb13f76264d56]
+link Client to CompteCourant--><g id="link_Client_CompteCourant"><path codeLine="49" d="M411.0972,130.85 C390.3662,153.592 372.2532,182.481 372.2532,214 C372.2532,214 372.2532,214 372.2532,355 C372.2532,383.634 356.6622,410.455 338.7572,431.816 " fill="none" id="Client-CompteCourant" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="373.2532" y="289.0669">Posséder</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="395.2782" y="133.2216">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="321.5234" y="420.999">1..*</text></g><!--MD5=[6c8b2fc5f9ab48af8498adbc85ac05b7]
+link CompteCourant to AgenceBancaire--><g id="link_CompteCourant_AgenceBancaire"><path codeLine="50" d="M268.4012,529.063 C260.6262,553.865 253.2532,584.917 253.2532,613.5 C253.2532,613.5 253.2532,613.5 253.2532,814 C253.2532,842.369 240.6172,871.525 227.6852,893.9358 " fill="none" id="CompteCourant-AgenceBancaire" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="254.2532" y="712.5669">Gérer</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="258.3986" y="549.0308">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="223.7126" y="882.788">1</text></g><!--MD5=[4a688682a53a4e6a6ef6310df10ea53e]
+reverse link CompteCourant to Operation--><g id="link_CompteCourant_Operation"><path codeLine="51" d="M373.5642,480.5 C380.9372,480.5 388.3102,480.5 395.6832,480.5 " fill="none" id="CompteCourant-backto-Operation" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="360.2922,480.5,366.2922,484.5,372.2922,480.5,366.2922,476.5,360.2922,480.5" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="380.7983" y="476.5292">*</text></g><!--MD5=[972cd2cb5f7f88bd0b2b244a1a3172fc]
+link Operation to TypeOperation--><g id="link_Operation_TypeOperation"><path codeLine="52" d="M445.3012,529.047 C442.3492,576.599 437.9332,647.726 435.6832,683.973 " fill="none" id="Operation-TypeOperation" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="33" x="442.2532" y="619.0669">Avoir</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="437.3939" y="549.0125">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="427.0246" y="672.9781">1</text></g><!--MD5=[7e6b5b73e5783ffbe4b1a6182aeb944f]
+@startuml
+class Employe {
+  nom
+  prenom
+  droitAcces
+  login
+  motPasse
+}
+
+class AgenceBancaire {
+  nomAg
+  adressePostaleAg
+}
+
+Class Client {
+  nom
+  prenom
+  adressePostale
+  email
+  telephone
+  estInactif
+}
+
+class CompteCourant {
+  idNumCompte
+  debitAutorise = 0
+  /solde
+  !ifdef v1
+  estCloturé
+  !endif
+}
+
+!ifdef v1
+note left of CompteCourant::estCloturé
+V1
+end note
+!endif
+
+Class Operation {
+  montant
+  dateOp
+  dateValeur
+}
+
+class TypeOperation 
+
+Employe "ChefAgence 0..1" - - - - - "1" AgenceBancaire
+Employe "Guichetiers *" - - - - - "1" AgenceBancaire
+Client "1..*" - - - - - "1" AgenceBancaire : Avoir
+Client "1" - - - - - "1..*" CompteCourant : Posséder
+CompteCourant "*" - - - - - "1" AgenceBancaire : Gérer
+CompteCourant *- "*" Operation
+Operation "*" - - - "1" TypeOperation : Avoir
+
+note bottom of TypeOperation : cheque, retrait CB, \n paiement CB, virement, ...
+@enduml
+
+@startuml
+class Employe {
+  nom
+  prenom
+  droitAcces
+  login
+  motPasse
+}
+
+class AgenceBancaire {
+  nomAg
+  adressePostaleAg
+}
+
+Class Client {
+  nom
+  prenom
+  adressePostale
+  email
+  telephone
+  estInactif
+}
+
+class CompteCourant {
+  idNumCompte
+  debitAutorise = 0
+  /solde
+}
+
+
+Class Operation {
+  montant
+  dateOp
+  dateValeur
+}
+
+class TypeOperation 
+
+Employe "ChefAgence 0..1" - - - - - "1" AgenceBancaire
+Employe "Guichetiers *" - - - - - "1" AgenceBancaire
+Client "1..*" - - - - - "1" AgenceBancaire : Avoir
+Client "1" - - - - - "1..*" CompteCourant : Posséder
+CompteCourant "*" - - - - - "1" AgenceBancaire : Gérer
+CompteCourant *- "*" Operation
+Operation "*" - - - "1" TypeOperation : Avoir
+
+note bottom of TypeOperation : cheque, retrait CB, \n paiement CB, virement, ...
+@enduml
+
+PlantUML version 1.2022.6beta5(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
