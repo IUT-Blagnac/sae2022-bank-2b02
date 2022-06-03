@@ -84,7 +84,7 @@ Dans le use case, un cas s'utilisation nommé "Créditer un compte" a été cré
 
 ** Partie du diagramme de classe de données nécessaires 
 
-Les parties du diagramme de classe de données nécessaires sont la classe CompteCourant ainsi que de la classe Operation
+Les parties du diagramme de classe de données nécessaires sont la classe CompteCourant, la classe Operation et la classe TypeOperation.
 
 ** Copies écrans principales de la fonctionnalité 
 
@@ -101,6 +101,8 @@ Dans le use case, un cas s'utilisation nommé "Débiter un compte" a été cré�
 
 ** Partie du diagramme de classe de données nécessaires 
 
+Les parties du diagramme de classe de données nécessaires sont la classe CompteCourant, la classe Operation et la classe TypeOperation.
+
 ** Copies écrans principales de la fonctionnalité 
 
 ** Classes impliquées dans chaque package 
@@ -115,6 +117,8 @@ Dans le use case, un cas s'utilisation nommé "Créer un compte" a été créé.
 
 
 ** Partie du diagramme de classe de données nécessaires 
+
+La partie du diagramme de classe de données nécessaire est la classe CompteCourant.
 
 ** Copies écrans principales de la fonctionnalité 
 
@@ -131,6 +135,8 @@ Dans le use case, un cas s'utilisation nommé "Effectuer un virement de compte �
 
 ** Partie du diagramme de classe de données nécessaires 
 
+Les parties du diagramme de classe de données nécessaires sont la classe CompteCourant, la classe Operation et la classe TypeOperation.
+
 ** Copies écrans principales de la fonctionnalité 
 
 ** Classes impliquées dans chaque package 
@@ -143,7 +149,9 @@ Dans le use case, un cas s'utilisation nommé "Effectuer un virement de compte �
 
 Dans le use case, un cas s'utilisation nommé "Clôturer un compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
-** Partie du diagramme de classe de données nécessaires 
+** Partie du diagramme de classe de données nécessaires
+
+La partie du diagramme de classe de données nécéssaire est la classe CompteCourant.
 
 ** Copies écrans principales de la fonctionnalité 
 
@@ -158,7 +166,10 @@ Dans le use case, un cas s'utilisation nommé "Clôturer un compte" a été cré
 Dans le use case, un cas s'utilisation nommé "Gérer les employés" a été créé. Il a été relié à l'acteur "Chef d'agence".
 
 
-** Partie du diagramme de classe de données nécessaires 
+** Partie du diagramme de classes de données nécessaires 
+
+La partie du diagramme de classes de données nécessaire est la classe Employe. 
+
 
 ** Copies écrans principales de la fonctionnalité 
 
