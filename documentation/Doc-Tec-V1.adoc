@@ -84,6 +84,8 @@ Dans le use case, un cas s'utilisation nommé "Créditer un compte" a été cré
 
 ** Partie du diagramme de classe de données nécessaires 
 
+Les parties du diagramme de classe de données nécessaires sont la classe CompteCourant ainsi que de la classe Operation
+
 ** Copies écrans principales de la fonctionnalité 
 
 ** Classes impliquées dans chaque package 
