@@ -76,13 +76,94 @@ Il y a aussi différents packages liés aux "modèles".
 
 == Fonctionnalités de la v1
 
+* Créditer un compte
+
+** Partie de use case réalisé
+
+Dans le use case, un cas s'utilisation nommé "Créditer un compte" a été créé. Il a été relié à l'acteur "Guichetier".
+
+** Partie du diagramme de classe de données nécessaires 
+
+** Copies écrans principales de la fonctionnalité 
+
+** Classes impliquées dans chaque package 
+
+** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+
+* Débiter un compte
+
+** Partie de use case réalisé
+
+Dans le use case, un cas s'utilisation nommé "Débiter un compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
 
+** Partie du diagramme de classe de données nécessaires 
+
+** Copies écrans principales de la fonctionnalité 
+
+** Classes impliquées dans chaque package 
+
+** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+
+* Créer un compte
+
+** Partie de use case réalisé
+
+Dans le use case, un cas s'utilisation nommé "Créer un compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
 
+** Partie du diagramme de classe de données nécessaires 
 
-== Maquettes d'écran
+** Copies écrans principales de la fonctionnalité 
 
-Les maquettes d'écran sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[le document utilisateur]
+** Classes impliquées dans chaque package 
+
+** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+
+* Effectuer un virement de compte à compte
+
+** Partie de use case réalisé
+
+Dans le use case, un cas s'utilisation nommé "Effectuer un virement de compte à compte" a été créé. Il a été relié à l'acteur "Guichetier".
+
+
+** Partie du diagramme de classe de données nécessaires 
+
+** Copies écrans principales de la fonctionnalité 
+
+** Classes impliquées dans chaque package 
+
+** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+
+* Clôturer un compte
+
+** Partie de use case réalisé
+
+Dans le use case, un cas s'utilisation nommé "Clôturer un compte" a été créé. Il a été relié à l'acteur "Guichetier".
+
+** Partie du diagramme de classe de données nécessaires 
+
+** Copies écrans principales de la fonctionnalité 
+
+** Classes impliquées dans chaque package 
+
+** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+
+* Gérer les employés
+
+** Partie de use case réalisé
+
+Dans le use case, un cas s'utilisation nommé "Gérer les employés" a été créé. Il a été relié à l'acteur "Chef d'agence".
+
+
+** Partie du diagramme de classe de données nécessaires 
+
+** Copies écrans principales de la fonctionnalité 
+
+** Classes impliquées dans chaque package 
+
+** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+
+
 
  
