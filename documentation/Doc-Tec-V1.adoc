@@ -31,9 +31,6 @@ La demande de la banque DailyBank est de rendre fonctionnelle leur application e
 
 Il y a plusieurs tâches à effectuer : il faut donner la possibilité au guichetier de générer un relevé mensuel d'un compte en PDF, et de gérer les prélèvements automatiques. Il faut donner la possibilité au chef d'agence d'effectuer un débit exceptionnel, simuler un emprunt, et simuler une assurance d'emprunt.
 
-=== Plan
-
-
 
 == Présentation rapide de l'application
 
@@ -49,108 +46,171 @@ image:: https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation
 
 === Architecture générale en termes de sous-systèmes (poste client, serveurs, ...) et rôle de chaque élément
 
+. 
+
 === Ressources externes utilisées et rôles (.jar, ...)
 
 === Structuration en packages de l'application documentée. Principes retenus pour cette structuration
 
 Au sein de l'application, il y a différents packages. Un package nommé "application", représente le package principal. Au sein de celui-ci, il a d'autres packages :
 
-* application.control : c'est le package dans lequel les sous-programmes utiles, qui sont appelés dans la vue, sont stockés. 
-* application.view : c'est le package qui représente la vue de l'application. Au sein de celui-ci, il y a tous les "controllers", c'est-à-dire les classes qui nous permettent de contrôler le contenu de chaque fenêtre. Il y a aussi les fichiers FXML, qui nous permettent de gérer le design de chaque fenêtre.
+* *application.control* : c'est le package dans lequel les sous-programmes utiles, qui sont appelés dans la vue, sont stockés. 
+* *application.view* : c'est le package qui représente la vue de l'application. Au sein de celui-ci, il y a tous les "controllers", c'est-à-dire les classes qui nous permettent de contrôler le contenu de chaque fenêtre. Il y a aussi les fichiers FXML, qui nous permettent de gérer le design de chaque fenêtre.
 
-* application.tools : c'est le package qui contient les outils nécessaires pour développer le programme, tels que les catégories d'opérations, les différents modes d'édition, les messages d'alerte
+* *application.tools* : c'est le package qui contient les outils nécessaires pour développer le programme, tels que les catégories d'opérations, les différents modes d'édition, les messages d'alerte
 
 Il y a aussi différents packages liés aux "modèles". 
 
-* model.data : c'est le package dans lequel les classes principales, telles que le client, l'agence bancaire, le compte courant, l'employé, l'opération et le type d'opération sont stockés. Dans chaque classe, il y a les constrcuteurs, ainsi qu'une méthode "toString".
+* *model.data* : c'est le package dans lequel les classes principales, telles que le client, l'agence bancaire, le compte courant, l'employé, l'opération et le type d'opération sont stockés. Dans chaque classe, il y a les constrcuteurs, ainsi qu'une méthode "toString".
 
-* model.orm : c'est le package qui permet le lien entre la base de données Oracle et le code Java. Au sein de celui-ci, sont contenues les classes nous permettant de réaliser des sélections, des insertions, ou encore des appels de méthode dans la base de données Oracle.
+* *model.orm* : c'est le package qui permet le lien entre la base de données Oracle et le code Java. Au sein de celui-ci, sont contenues les classes nous permettant de réaliser des sélections, des insertions, ou encore des appels de méthode dans la base de données Oracle.
 
-* model.orm.exception : c'est dans ce package que toutes les exceptions liées à la relation entre le code et la base de données sont stockés. Par exemple, les erreurs d'accès à la base de données.
+* *model.orm.exception* : c'est dans ce package que toutes les exceptions liées à la relation entre le code et la base de données sont stockés. Par exemple, les erreurs d'accès à la base de données.
+
 
 === Éléments essentiels à connaître, spécificités nécessaires à la mise en oeuvre du développement
 
 
-
-
-
 == Fonctionnalités de la v1
 
-* Créditer un compte
+=== Créditer un compte
 
-** Partie de use case réalisé
+* *Partie de use case réalisé*
 
 Dans le use case, un cas s'utilisation nommé "Créditer un compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
-** Partie du diagramme de classe de données nécessaires
+* *Partie du diagramme de classe de données nécessaires*
 
 Les parties du diagramme de classe de données nécessaires sont la classe CompteCourant, la classe Operation et la classe TypeOperation.
 
-** Copies écrans principales de la fonctionnalité 
-..
 
-** Classes impliquées dans chaque package 
-..
+* *Copies écrans principales de la fonctionnalité* 
 
-** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
-..
+Les copies écrans sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[le document utilisateur]
+
+* *Classes impliquées dans chaque package* 
+
+Package application.control : OperationEditorPane, OperationsManagement
+
+Package application.tools : CategorieOperation, ConstantesIHM
+
+Package application.view : OperationEditorPaneController, OperationsManagementController
+
+Package model.data : Operation, TypeOperation
+
+Package model.orm : AccessOperation, AccessTypeOperation, LogToDatabase
+
+Package model.orm.exception : toutes les classes sont impliquées
+
+* *Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement*
 
 
-** Débiter un compte
-..
 
-* Partie de use case réalisé
+===  Débiter un compte
+
+
+* *Partie de use case réalisé*
+
+
 
 Dans le use case, un cas s'utilisation nommé "Débiter un compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
 
-** Partie du diagramme de classe de données nécessaires 
+* *Partie du diagramme de classe de données nécessaires* 
 
 Les parties du diagramme de classe de données nécessaires sont la classe CompteCourant, la classe Operation et la classe TypeOperation.
 
-** Copies écrans principales de la fonctionnalité 
-..
+* *Copies écrans principales de la fonctionnalité* 
 
-** Classes impliquées dans chaque package 
-..
+Les copies écrans sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[le document utilisateur]
 
-** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
-..
 
-* Créer un compte
+* *Classes impliquées dans chaque package* 
 
-** Partie de use case réalisé
+Package application.control : OperationEditorPane, OperationsManagement
+
+Package application.tools : CategorieOperation, ConstantesIHM
+
+Package application.view : OperationEditorPaneController, OperationsManagementController
+
+Package model.data : Operation, TypeOperation
+
+Package model.orm : AccessOperation, AccessTypeOperation, LogToDatabase
+
+Package model.orm.exception : toutes les classes sont impliquées
+
+
+* *Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement*
+
+Aucune spécificité n'a été nécessaire à la mise en oeuvre du développement.
+
+
+=== Créer un compte
+
+* *Partie de use case réalisé*
 
 Dans le use case, un cas s'utilisation nommé "Créer un compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
-* Partie du diagramme de classe de données nécessaires 
+* *Partie du diagramme de classe de données nécessaires* 
 
 La partie du diagramme de classe de données nécessaire est la classe CompteCourant.
 
-* Copies écrans principales de la fonctionnalité 
+* *Copies écrans principales de la fonctionnalité* 
 
-* Classes impliquées dans chaque package 
+Les copies écrans sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[le document utilisateur]
 
-* Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+* *Classes impliquées dans chaque package* 
 
-* Effectuer un virement de compte à compte
+Package application.control : CompteEditorPane, ComptesManagement
 
-** Partie de use case réalisé
+Package application.view : CompteEditorPaneController, ComptesManagementController
+
+Package model.data : CompteCourant
+
+Package model.orm : AccessCompteCourant, LogToDatabase
+
+Package model.orm.exception : toutes les classes sont impliquées
+
+* *Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement*
+
+Aucune spécificité n'a été nécessaire à la mise en oeuvre du développement.
+
+=== Effectuer un virement de compte à compte
+
+* *Partie de use case réalisé*
 
 Dans le use case, un cas s'utilisation nommé "Effectuer un virement de compte à compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
 
-** Partie du diagramme de classe de données nécessaires 
+* *Partie du diagramme de classe de données nécessaire* 
 
 Les parties du diagramme de classe de données nécessaires sont la classe CompteCourant, la classe Operation et la classe TypeOperation.
 
-** Copies écrans principales de la fonctionnalité 
+* *Copies écrans principales de la fonctionnalité*
 
-** Classes impliquées dans chaque package 
+Les copies écrans sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[le document utilisateur]
 
-** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
 
-* Clôturer un compte
+* *Classes impliquées dans chaque package* 
+
+Package application.control : OperationEditorPane, OperationsManagement
+
+Package application.tools : CategorieOperation, ConstantesIHM
+
+Package application.view : OperationEditorPaneController, OperationsManagementController
+
+Package model.data : Operation, TypeOperation
+
+Package model.orm : AccessOperation, AccessTypeOperation, LogToDatabase
+
+Package model.orm.exception : toutes les classes sont impliquées
+
+
+* *Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement*
+
+Aucune spécificité 
+
+* *Clôturer un compte*
 
 ** Partie de use case réalisé
 
@@ -162,11 +222,24 @@ La partie du diagramme de classe de données nécéssaire est la classe CompteCo
 
 ** Copies écrans principales de la fonctionnalité 
 
+Les copies écrans sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[le document utilisateur]
+
+
 ** Classes impliquées dans chaque package 
+
+Package application.control : ComptesManagement
+
+Package application.view : ComptesManagementController
+
+Package model.data : CompteCourant
+
+Package model.orm : AccessCompteCourant, LogToDatabase
+
+Package model.orm.exception : toutes les classes sont impliquées
 
 ** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
 
-* Gérer les employés
+* *Gérer les employés*
 
 ** Partie de use case réalisé
 
@@ -180,7 +253,21 @@ La partie du diagramme de classes de données nécessaire est la classe Employe.
 
 ** Copies écrans principales de la fonctionnalité 
 
+Les copies écrans sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[le document utilisateur]
+
+
 ** Classes impliquées dans chaque package 
+
+Package application.control : LoginDialog
+
+Package application.view : LoginDialogController
+
+Package model.data : Employe
+
+Package model.orm : AccessEmploye, LogToDatabase
+
+Package model.orm.exception : toutes les classes sont impliquées
+
 
 ** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
 
