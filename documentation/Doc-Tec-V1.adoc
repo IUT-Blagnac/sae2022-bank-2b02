@@ -82,19 +82,24 @@ Il y a aussi différents packages liés aux "modèles".
 
 Dans le use case, un cas s'utilisation nommé "Créditer un compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
-** Partie du diagramme de classe de données nécessaires 
+** Partie du diagramme de classe de données nécessaires
 
 Les parties du diagramme de classe de données nécessaires sont la classe CompteCourant, la classe Operation et la classe TypeOperation.
 
 ** Copies écrans principales de la fonctionnalité 
+..
 
 ** Classes impliquées dans chaque package 
+..
 
 ** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+..
 
-* Débiter un compte
 
-** Partie de use case réalisé
+** Débiter un compte
+..
+
+* Partie de use case réalisé
 
 Dans le use case, un cas s'utilisation nommé "Débiter un compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
@@ -104,10 +109,13 @@ Dans le use case, un cas s'utilisation nommé "Débiter un compte" a été cré�
 Les parties du diagramme de classe de données nécessaires sont la classe CompteCourant, la classe Operation et la classe TypeOperation.
 
 ** Copies écrans principales de la fonctionnalité 
+..
 
 ** Classes impliquées dans chaque package 
+..
 
 ** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+..
 
 * Créer un compte
 
@@ -115,16 +123,15 @@ Les parties du diagramme de classe de données nécessaires sont la classe Compt
 
 Dans le use case, un cas s'utilisation nommé "Créer un compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
-
-** Partie du diagramme de classe de données nécessaires 
+* Partie du diagramme de classe de données nécessaires 
 
 La partie du diagramme de classe de données nécessaire est la classe CompteCourant.
 
-** Copies écrans principales de la fonctionnalité 
+* Copies écrans principales de la fonctionnalité 
 
-** Classes impliquées dans chaque package 
+* Classes impliquées dans chaque package 
 
-** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+* Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
 
 * Effectuer un virement de compte à compte
 
