@@ -45,9 +45,21 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 === Architecture générale en termes de sous-systèmes (poste client, serveurs, ...) et rôle de chaque élément
 
-. 
+* *Poste client*
 
-=== Ressources externes utilisées et rôles (.jar, ...)
+Un poste client correspond à un ordinateur utilisé par un employé de l'agence bancaire. Son rôle est de peremettre à l'employé de gérer les données relatives aux clients, aux comptes, etc. 
+
+* *Serveurs*
+
+Le serveur de base de données permet de stocker, extraire et gérer toutes les informations relatives aux clients, à leurs comptes, aux opérations effectuées, etc.
+
+Il permet aussi de gérer la mise à jour des données, et donne un accès à cette base de données aux programmeurs.
+
+=== Ressources externes utilisées et rôles 
+
+Lorsque le développement de la version finale aura été réalisé, un fichier *.jar*, permettant de lancer l'application, sera généré. Grâce à celui-ci, tous les fichiers liés au projet créé, seront stockés. Il suffira alors d'exécuter une ligne de commandes pour lancer l'application.
+
+De plus, la librairie *"ojdbc6.jar"* sera utilisée. Elle permet d'établir une connexion entre la base de données Oracle, et le code Java.
 
 === Structuration en packages de l'application documentée. Principes retenus pour cette structuration
 
