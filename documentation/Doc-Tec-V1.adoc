@@ -36,12 +36,11 @@ Il y a plusieurs tâches à effectuer : il faut donner la possibilité au guiche
 
 === Use case global
 
-image:: https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/diagramme_uc.svg[diagramme des uc v1]
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/diagramme_uc.svg[diagramme des uc v1]
 
 === Diagramme de classe des données global
 
-image:: https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/diagramme_classes_v1.svg[diagramme de classes v1]
-
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/diagramme_classes_v1.svg[Diagramme de classes]
 == Architecture
 
 === Architecture générale en termes de sous-systèmes (poste client, serveurs, ...) et rôle de chaque élément
