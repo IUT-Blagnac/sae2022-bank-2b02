@@ -3,9 +3,9 @@
 
 *Équipe :* Jolas Alex - Poda Nicolas - Dang Hai Son - Narayanin Noa
 
-*Version :* 1.0
+*Version :* 2.0
 
-*Date :* 25/05/2022
+*Date :* 04/06/2022
 
 :toc:
 
@@ -40,7 +40,8 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 === Diagramme de classe des données global
 
-image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/diagramme_classes_v1.svg[Diagramme de classes]
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_tec_v2/dc-initialv2.svg[diagramme_classesv2]
+
 == Architecture
 
 === Architecture générale en termes de sous-systèmes (poste client, serveurs, ...) et rôle de chaque élément
@@ -84,9 +85,9 @@ Il y a aussi différents packages liés aux "modèles".
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/sequence_systeme_global.svg[Diagramme de séquence]
 
 
-== Fonctionnalités de la v1
+== Fonctionnalités de la v2
 
-=== Créditer un compte
+=== Générer un relevé mensuel d'un compte en PDF
 
 * *Partie de use case réalisé*
 
