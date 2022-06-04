@@ -70,6 +70,8 @@ Il y a aussi différents packages liés aux "modèles".
 
 === Éléments essentiels à connaître, spécificités nécessaires à la mise en oeuvre du développement
 
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/sequence_systeme_global.svg[Diagramme de séquence]
+
 
 == Fonctionnalités de la v1
 
