@@ -105,6 +105,8 @@ Package model.orm.exception : toutes les classes sont impliquées
 
 * *Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement*
 
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/sequence_crediter.svg[sequance_crediter]
+
 
 
 ===  Débiter un compte
