@@ -176,7 +176,7 @@ Package model.orm.exception : toutes les classes sont impliquées
 
 * *Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement*
 
-Aucune spécificité n'a été nécessaire à la mise en oeuvre du développement.
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/sequence_creer_compte.svg[sequence_creer_compte]
 
 === Effectuer un virement de compte à compte
 
@@ -213,22 +213,22 @@ Package model.orm.exception : toutes les classes sont impliquées
 
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/sequence_virement.svg[sequence_virement] 
 
-* *Clôturer un compte*
+=== Clôturer un compte
 
-** Partie de use case réalisé
+* *Partie de use case réalisé*
 
 Dans le use case, un cas s'utilisation nommé "Clôturer un compte" a été créé. Il a été relié à l'acteur "Guichetier".
 
-** Partie du diagramme de classe de données nécessaires
+* *Partie du diagramme de classe de données nécessaires*
 
 La partie du diagramme de classe de données nécéssaire est la classe CompteCourant.
 
-** Copies écrans principales de la fonctionnalité 
+* *Copies écrans principales de la fonctionnalité* 
 
 Les copies écrans sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[le document utilisateur]
 
 
-** Classes impliquées dans chaque package 
+* *Classes impliquées dans chaque package* 
 
 Package application.control : ComptesManagement
 
@@ -240,26 +240,28 @@ Package model.orm : AccessCompteCourant, LogToDatabase
 
 Package model.orm.exception : toutes les classes sont impliquées
 
-** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+* *Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement*
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Images_doc_tec_v1/sequence_cloturer_compte.svg[sequence_cloturer_compte]
 
 === Gérer les employés
 
-** Partie de use case réalisé
+* *Partie de use case réalisé*
 
 Dans le use case, un cas s'utilisation nommé "Gérer les employés" a été créé. Il a été relié à l'acteur "Chef d'agence".
 
 
-** Partie du diagramme de classes de données nécessaires 
+* *Partie du diagramme de classes de données nécessaires* 
 
 La partie du diagramme de classes de données nécessaire est la classe Employe. 
 
 
-** Copies écrans principales de la fonctionnalité 
+* *Copies écrans principales de la fonctionnalité* 
 
 Les copies écrans sont disponibles dans https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[le document utilisateur]
 
 
-** Classes impliquées dans chaque package 
+* *Classes impliquées dans chaque package* 
 
 Package application.control : LoginDialog
 
@@ -272,7 +274,7 @@ Package model.orm : AccessEmploye, LogToDatabase
 Package model.orm.exception : toutes les classes sont impliquées
 
 
-** Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement
+* *Eléments essentiels à connaitre, spécificités nécessaires à la mise en oeuvre du développement*
 
 
 
