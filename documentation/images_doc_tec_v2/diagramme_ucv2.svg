@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1212px" preserveAspectRatio="none" style="width:844px;height:1212px;background:#FFFFFF;" version="1.1" viewBox="0 0 844 1212" width="844px" zoomAndPan="magnify"><defs/><g><!--MD5=[13c7745981a6abb6004f7738a8ca5078]
+entity 1--><g id="elem_1"><ellipse cx="325.5" cy="130" fill="#F1F1F1" rx="16" ry="16" style="stroke:#2F4F4F;stroke-width:1.5;"/><path d="M325.5,150 C329.5,150 332.5,150 336.5,146 C344.5,146 352.5,154 352.5,162 L352.5,166 C352.5,170 348.5,174 344.5,174 L306.5,174 C302.5,174 298.5,170 298.5,166 L298.5,162 C298.5,154 306.5,146 314.5,146 C318.5,150 321.5,150 325.5,150 " fill="#F1F1F1" style="stroke:#2F4F4F;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="273" y="188.4951">Chef d'Agence</text></g><!--MD5=[34413ead84916979ab18eea1b2c854c1]
+entity Guichetier--><g id="elem_Guichetier"><ellipse cx="43.5" cy="606" fill="#F1F1F1" rx="16" ry="16" style="stroke:#2F4F4F;stroke-width:1.5;"/><path d="M43.5,626 C47.5,626 50.5,626 54.5,622 C62.5,622 70.5,630 70.5,638 L70.5,642 C70.5,646 66.5,650 62.5,650 L24.5,650 C20.5,650 16.5,646 16.5,642 L16.5,638 C16.5,630 24.5,622 32.5,622 C36.5,626 39.5,626 43.5,626 " fill="#F1F1F1" style="stroke:#2F4F4F;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="6" y="664.4951">Guichetier</text></g><g id="elem_2"><ellipse cx="325.5567" cy="247.0113" fill="#F0F8FF" rx="90.5567" ry="20.5113" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="254.0567" y="249.858">Modifier infos client</text></g><g id="elem_3"><ellipse cx="325.7481" cy="325.8496" fill="#F0F8FF" rx="102.2481" ry="22.8496" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="241.2481" y="328.6963">Créer un nouveau client</text></g><g id="elem_4"><ellipse cx="325.6163" cy="405.2233" fill="#F0F8FF" rx="94.1163" ry="21.2233" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="250.1163" y="408.0699">Consulter un compte</text></g><g id="elem_5"><ellipse cx="325.3518" cy="481.0704" fill="#F0F8FF" rx="88.3518" ry="20.0704" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="256.3518" y="483.917">Débiter un compte</text></g><g id="elem_6"><ellipse cx="704.6177" cy="439.1235" fill="#F0F8FF" rx="103.6177" ry="23.1235" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="618.6177" y="441.9702">Rendre inactif un client</text></g><g id="elem_7"><ellipse cx="325.6144" cy="627.9229" fill="#F0F8FF" rx="90.1144" ry="20.4229" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="254.6144" y="630.7696">Créditer un compte</text></g><g id="elem_8"><ellipse cx="325.3518" cy="704.0704" fill="#F0F8FF" rx="88.3518" ry="20.0704" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="256.3518" y="706.917">Débiter un compte</text></g><g id="elem_9"><ellipse cx="325.5935" cy="783.8187" fill="#F0F8FF" rx="109.5935" ry="24.3187" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="185" x="233.0935" y="786.6654">Créer un nouveau compte</text></g><g id="elem_10"><ellipse cx="325.4998" cy="880.2" fill="#F0F8FF" rx="171.4998" ry="36.7" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="315" x="167.9998" y="883.0466">Effectuer un virement de compte à compte</text></g><g id="elem_11"><ellipse cx="325.6728" cy="971.8346" fill="#F0F8FF" rx="89.6728" ry="20.3346" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="255.1728" y="974.6812">Clôturer un compte</text></g><g id="elem_12"><ellipse cx="704.2915" cy="26.1583" fill="#F0F8FF" rx="88.7915" ry="20.1583" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="634.7915" y="29.005">Gérer les employés</text></g><g id="elem_13"><ellipse cx="325.6285" cy="1066.8257" fill="#F0F8FF" rx="184.6285" ry="39.3257" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="342" x="154.6285" y="1069.6724">Générer un relevé mensuel d'un compte en PDF</text></g><g id="elem_14"><ellipse cx="325.7292" cy="1174.0458" fill="#F0F8FF" rx="150.7292" ry="32.5458" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="272" x="189.7292" y="1176.8925">Gérer les prélèvements automatiques</text></g><g id="elem_15"><ellipse cx="704.649" cy="110.1298" fill="#F0F8FF" rx="131.149" ry="28.6298" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="231" x="589.149" y="112.9765">Effectuer un débit exceptionnel</text></g><g id="elem_16"><ellipse cx="704.6144" cy="193.9229" fill="#F0F8FF" rx="90.1144" ry="20.4229" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="633.6144" y="196.7696">Simuler un emprunt</text></g><g id="elem_17"><ellipse cx="704.4721" cy="278.7944" fill="#F0F8FF" rx="134.4721" ry="29.2944" style="stroke:#2F4F4F;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="238" x="585.4721" y="281.6411">Simuler une assurance d'emprunt</text></g><!--MD5=[b34acc79596267709f362f0375c19753]
+reverse link Guichetier to 1--><g id="link_Guichetier_1"><path d="M50.9165,568.339 C63.1349,465.492 92.8969,260.844 141,209 C174.808,172.56 231.424,159.23 272.845,154.45 " fill="none" id="Guichetier-backto-1" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="57.8533,569.289,48.6079,588.356,43.9455,567.685,57.8533,569.289" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c7a5b8548792c7e56ce454203d0d82b6]
+link Guichetier to 2--><g id="link_Guichetier_2"><path d="M50.4465,588.495 C63.4097,507.671 96.6446,327.537 141,286 C164.807,263.706 198.068,252.886 229.743,247.975 " fill="none" id="Guichetier-to-2" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="234.812,247.236,225.3297,244.5739,229.8641,247.9561,226.4819,252.4905,234.812,247.236" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ead67df82673af83ab35ce3909a62693]
+link Guichetier to 3--><g id="link_Guichetier_3"><path d="M47.5967,588.259 C54.2979,530.599 75.341,424.383 141,367 C162.751,347.991 191.39,337.225 219.558,331.274 " fill="none" id="Guichetier-to-3" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="224.81,330.218,215.198,328.071,219.9081,331.2038,216.7753,335.9139,224.81,330.218" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[cb0aaff206d3582dc82213e4e1147b20]
+link Guichetier to 4--><g id="link_Guichetier_4"><path d="M54.4318,588.408 C67.1912,545.997 93.5687,479.953 141,444 C165.781,425.216 197.602,415.018 227.764,409.615 " fill="none" id="Guichetier-to-4" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="232.981,408.725,223.4362,406.2967,228.0523,409.5664,224.7825,414.1826,232.981,408.725" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7a2f83e68a44122d2327adc8da1d24b5]
+link Guichetier to 5--><g id="link_Guichetier_5"><path d="M73.9689,588.157 C91.315,567.364 114.933,543.167 141,528 C171.893,510.024 209.63,498.841 242.831,491.921 " fill="none" id="Guichetier-to-5" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="248.119,490.847,238.5027,488.7193,243.2191,491.8427,240.0958,496.5591,248.119,490.847" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[02505a0919ee62f9cfb66f7cb1b05ba9]
+link Guichetier to 6--><g id="link_Guichetier_6"><path d="M81.0613,611.753 C98.8739,604.317 120.769,595.875 141,590 C301.383,543.427 350.016,566.926 510,519 C561.03,503.713 617.044,479.713 655.614,461.985 " fill="none" id="Guichetier-to-6" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="660.229,459.855,650.3811,459.9953,655.6893,461.9506,653.734,467.2587,660.229,459.855" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e7d0dbf36e87b42c37f78d776e04d268]
+link Guichetier to 7--><g id="link_Guichetier_7"><path d="M81.1051,628 C118.797,628 179.08,628 230.22,628 " fill="none" id="Guichetier-to-7" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="235.455,628,226.455,624,230.455,628,226.455,632,235.455,628" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4108b009f478b4070d22cab44784a6fb]
+link Guichetier to 8--><g id="link_Guichetier_8"><path d="M81.0984,644.121 C98.9194,651.528 120.811,659.983 141,666 C175.774,676.364 215.078,684.911 248.365,691.256 " fill="none" id="Guichetier-to-8" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="253.654,692.255,245.5535,686.6531,248.741,691.3264,244.0677,694.5139,253.654,692.255" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[07cc2b202fae1340161319940d65c937]
+link Guichetier to 9--><g id="link_Guichetier_9"><path d="M68.3742,667.579 C85.5222,692.639 110.874,723.667 141,742 C165.049,756.634 193.689,766.176 221.108,772.394 " fill="none" id="Guichetier-to-9" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="226.213,773.517,218.2827,767.6766,221.3298,772.4426,216.5637,775.4897,226.213,773.517" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f51f88b465c7bd1593c38f3d05ef4ead]
+link Guichetier to 10--><g id="link_Guichetier_10"><path d="M53.5859,667.803 C65.8659,712.646 92.0822,784.651 141,826 C155.141,837.953 171.827,847.261 189.279,854.509 " fill="none" id="Guichetier-to-10" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="194.22,856.499,187.3665,849.4258,189.5822,854.6307,184.3773,856.8464,194.22,856.499" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b456eca25220bc7f8a352b5ddcdc1a6d]
+link Guichetier to 11--><g id="link_Guichetier_11"><path d="M44.9192,667.75 C47.8868,733.429 63.8121,864.26 141,934 C165.289,955.945 198.831,966.51 230.602,971.25 " fill="none" id="Guichetier-to-11" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="235.684,971.962,227.3264,966.7513,230.7324,971.2679,226.2159,974.6739,235.684,971.962" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[129c6bdbeb6500cc646c8a0bcd342835]
+link Guichetier to 13--><g id="link_Guichetier_13"><path d="M49.5784,667.713 C61.5162,755.124 93.9488,960.35 141,1010 C152.333,1021.959 166.124,1031.426 181.002,1038.916 " fill="none" id="Guichetier-to-13" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="185.652,1041.177,179.3069,1033.6445,181.1553,1038.9908,175.8089,1040.8392,185.652,1041.177" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[95d43d2123fde860b055c0905b55696a]
+link Guichetier to 14--><g id="link_Guichetier_14"><path d="M46.9354,667.863 C54.1925,773.551 79.1372,1057.39 141,1124 C154.145,1138.1536 170.865,1148.4496 188.839,1155.9118 " fill="none" id="Guichetier-to-14" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="193.939,1157.9423,187.0556,1150.8982,189.2933,1156.0937,184.0978,1158.3313,193.939,1157.9423" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[cdf617eab9002347da401fb82c9c9ca2]
+link 1 to 6--><g id="link_1_6"><path d="M378.375,157.17 C418.277,163.53 472.719,177.66 510,209 C554.732,246.605 533.659,280.235 570,326 C597.806,361.018 637.796,393.139 666.752,414.11 " fill="none" id="1-to-6" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="670.941,417.122,665.968,408.6209,666.8811,414.2035,661.2985,415.1166,670.941,417.122" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6d92ce16f5629932b452ff9ae0cfeddc]
+link 1 to 12--><g id="link_1_12"><path d="M378.389,132.06 C427.442,113.5 503.264,85.53 570,64 C593.24,56.5 619,48.99 641.643,42.64 " fill="none" id="1-to-12" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="646.724,41.22,636.9798,39.7878,641.9082,42.5647,639.1314,47.4931,646.724,41.22" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4432f798f44655ada6039713bb8a4814]
+link 1 to 15--><g id="link_1_15"><path d="M378.13,146.25 C430.41,140.42 513.165,131.2 582.131,123.52 " fill="none" id="1-to-15" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="587.492,122.92,578.1042,119.9419,582.5228,123.474,578.9907,127.8926,587.492,122.92" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4c8ac97bac7300286807e853d8ba899c]
+link 1 to 16--><g id="link_1_16"><path d="M378.13,157.75 C439.869,164.63 544.11,176.24 617.949,184.47 " fill="none" id="1-to-16" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="623.212,185.06,614.7092,180.0898,618.2426,184.5074,613.825,188.0408,623.212,185.06" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[35ee9a0a9fbaa7b06a9aec3b1ee3192e]
+link 1 to 17--><g id="link_1_17"><path d="M378.204,167.08 C415.129,178.09 465.872,193.71 510,209 C536.984,218.352 543.195,222.146 570,232 C588.391,238.761 608.277,245.87 626.944,252.454 " fill="none" id="1-to-17" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="631.661,254.117,624.5016,247.3536,626.9451,252.4555,621.8432,254.899,631.661,254.117" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f0f78d95015d3efb6bb48896936b5890]
+@startuml
+left to right direction
+
+skinparam actorStyle awesome
+left to right direction
+
+skinparam usecase {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+}
+
+skinparam actor {
+	BorderColor DarkSlateGray
+}
+
+skinparam agent {
+	BorderColor DarkSlateGray
+}
+
+
+:Chef d'Agence: as 1
+Guichetier <|- - 1
+(Modifier infos client) as 2
+(Créer un nouveau client) as 3
+(Consulter un compte) as 4
+(Débiter un compte) as 5
+(Rendre inactif un client ) as 6
+(Créditer un compte) as 7
+(Débiter un compte) as 8
+(Créer un nouveau compte) as 9
+(Effectuer un virement de compte à compte) as 10
+(Clôturer un compte) as 11
+(Gérer les employés) as 12
+(Générer un relevé mensuel d'un compte en PDF) as 13
+(Gérer les prélèvements automatiques) as 14
+(Effectuer un débit exceptionnel) as 15
+(Simuler un emprunt) as 16
+(Simuler une assurance d'emprunt) as 17
+
+
+Guichetier - -> 2
+Guichetier - -> 3
+Guichetier - -> 4
+Guichetier - -> 5
+Guichetier - -> 6
+Guichetier - -> 7
+Guichetier - -> 8
+Guichetier - -> 9
+Guichetier - -> 10
+Guichetier - -> 11
+Guichetier - -> 13
+Guichetier - -> 14
+
+1 - -> 6
+1 - -> 12
+1 - -> 15
+1 - -> 16
+1 - -> 17
+@enduml
+
+PlantUML version 1.2022.6beta5(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
