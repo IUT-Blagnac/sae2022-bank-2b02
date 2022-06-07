@@ -122,8 +122,8 @@ public class OperationsManagement {
 	
 	public Operation enregistrerVirement() {
 
-		OperationEditorPane2 oep = new OperationEditorPane2(this.primaryStage, this.dbs);
-		Operation op = oep.doOperationEditorDialog(this.compteConcerne, CategorieOperation.VIREMENT);
+		OperationEditorPane2 oep2 = new OperationEditorPane2(this.primaryStage, this.dbs);
+		Operation op = oep2.doOperationEditorDialog(this.compteConcerne, CategorieOperation.VIREMENT);
 		if (op != null) {
 			try {
 				AccessOperation ao = new AccessOperation();
