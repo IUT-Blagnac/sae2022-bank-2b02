@@ -5,6 +5,7 @@ import application.DailyBankState;
 import application.tools.CategorieOperation;
 import application.tools.StageManagement;
 import application.view.OperationEditorPaneController;
+import application.view.OperationEditorPaneController2;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -16,7 +17,7 @@ import model.data.Operation;
 public class OperationEditorPane2 {
 
 	private Stage primaryStage;
-	private OperationEditorPaneController oepc;
+	private OperationEditorPaneController2 oepc;
 
 	public OperationEditorPane2(Stage _parentStage, DailyBankState _dbstate) {
 
@@ -50,7 +51,7 @@ public class OperationEditorPane2 {
 	 * @param cm : la cat�gorie de l'op�ration
 	 * @return l'op�ration qui a �t� effectu�e sur le compte
 	 */
-	public Operation doOperationEditorDialog(CompteCourant cpte, CategorieOperation cm) {
-		return this.oepc.displayDialog(cpte, cm);
+	public Operation doOperationEditorDialog(CompteCourant cpte) {
+		return this.oepc.displayDialog(cpte);
 	}
 }

@@ -52,31 +52,11 @@ public class OperationEditorPaneController2 implements Initializable {
 	/*
 	 * Permet de boite de dialogue des op�rations pouvant �tre effectu�es sur un compte
 	 */
-	public Operation displayDialog(CompteCourant cpte, CategorieOperation mode) {
-		this.categorieOperation = mode;
+	public Operation displayDialog(CompteCourant cpte) {
+		
 		this.compteEdite = cpte;
 
-		switch (mode) {
 		
-		case VIREMENT:
-			String info2 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
-					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
-					+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
-			this.lblMessage.setText(info2);
-
-			this.btnOk.setText("Effectuer Virement");
-			this.btnCancel.setText("Annuler Virement");
-
-			ObservableList<String> list2 = FXCollections.observableArrayList();
-
-			for (String tyOp2 : ConstantesIHM.OPERATIONS_VIREMENT_GUICHET) {
-				list2.add(tyOp2);
-			}
-
-			this.cbTypeOpe.setItems(list2);
-			this.cbTypeOpe.getSelectionModel().select(0);
-			break;
-		}
 
 		// Paramétrages spécifiques pour les chefs d'agences
 		if (ConstantesIHM.isAdmin(this.dbs.getEmpAct())) {
@@ -84,7 +64,7 @@ public class OperationEditorPaneController2 implements Initializable {
 		}
 
 		this.operationResultat = null;
-		this.cbTypeOpe.requestFocus();
+		
 
 		this.primaryStage.showAndWait();
 		return this.operationResultat;
@@ -103,7 +83,7 @@ public class OperationEditorPaneController2 implements Initializable {
 	@FXML
 	private Label lblMontant;
 	@FXML
-	private ComboBox<String> cbTypeOpe;
+	private TextField txtCompte;
 	@FXML
 	private TextField txtMontant;
 	@FXML
@@ -124,104 +104,8 @@ public class OperationEditorPaneController2 implements Initializable {
 		this.primaryStage.close();
 	}
 
-	/*
-	 * Permet d'ajouter une op�ration dans la liste
-	 */
-	@FXML
-	private void doAjouter() {
-		switch (this.categorieOperation) {
-		case DEBIT:
-			// règles de validation d'un débit :
-			// - le montant doit être un nombre valide
-			// - et si l'utilisateur n'est pas chef d'agence,
-			// - le débit ne doit pas amener le compte en dessous de son découvert autorisé
-			double montant;
-
-			this.txtMontant.getStyleClass().remove("borderred");
-			this.lblMontant.getStyleClass().remove("borderred");
-			this.lblMessage.getStyleClass().remove("borderred");
-			String info = "Cpt. : " + this.compteEdite.idNumCompte + "  "
-					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
-					+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
-			this.lblMessage.setText(info);
-
-			try {
-				montant = Double.parseDouble(this.txtMontant.getText().trim());
-				if (montant <= 0)
-					throw new NumberFormatException();
-			} catch (NumberFormatException nfe) {
-				this.txtMontant.getStyleClass().add("borderred");
-				this.lblMontant.getStyleClass().add("borderred");
-				this.txtMontant.requestFocus();
-				return;
-			}
-			if (this.compteEdite.solde - montant < this.compteEdite.debitAutorise) {
-				info = "Dépassement du découvert ! - Cpt. : " + this.compteEdite.idNumCompte + "  "
-						+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
-						+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
-				this.lblMessage.setText(info);
-				this.txtMontant.getStyleClass().add("borderred");
-				this.lblMontant.getStyleClass().add("borderred");
-				this.lblMessage.getStyleClass().add("borderred");
-				this.txtMontant.requestFocus();
-				return;
-			}
-			String typeOp = this.cbTypeOpe.getValue();
-			this.operationResultat = new Operation(-1, montant, null, null, this.compteEdite.idNumCli, typeOp);
-			this.primaryStage.close();
-			break;
-		case CREDIT:
-						double montant1;
-
-						this.txtMontant.getStyleClass().remove("borderred");
-						this.lblMontant.getStyleClass().remove("borderred");
-						this.lblMessage.getStyleClass().remove("borderred");
-						String info1 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
-								+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde);
-								
-						this.lblMessage.setText(info1);
-
-						try {
-							montant1 = Double.parseDouble(this.txtMontant.getText().trim());
-							if (montant1 <= 0)
-								throw new NumberFormatException();
-						} catch (NumberFormatException nfe) {
-							this.txtMontant.getStyleClass().add("borderred");
-							this.lblMontant.getStyleClass().add("borderred");
-							this.txtMontant.requestFocus();
-							return;
-						}
-						
-						String typeOp1 = this.cbTypeOpe.getValue();
-						this.operationResultat = new Operation(-1, montant1, null, null, this.compteEdite.idNumCli, typeOp1);
-						this.primaryStage.close();
-						break;
-		case VIREMENT:
-			double montant2;
-			this.txtMontant.getStyleClass().remove("borderred");
-			this.lblMontant.getStyleClass().remove("borderred");
-			this.lblMessage.getStyleClass().remove("borderred");
-			String info2 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
-					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde);
-					
-			this.lblMessage.setText(info2);
-
-			try {
-				montant2 = Double.parseDouble(this.txtMontant.getText().trim());
-				if (montant2 <= 0)
-					throw new NumberFormatException();
-			} catch (NumberFormatException nfe) {
-				this.txtMontant.getStyleClass().add("borderred");
-				this.lblMontant.getStyleClass().add("borderred");
-				this.txtMontant.requestFocus();
-				return;
-			}
-			
-			String typeOp2 = this.cbTypeOpe.getValue();
-			this.operationResultat = new Operation(-1, montant2, null, null, this.compteEdite.idNumCli, typeOp2);
-			this.primaryStage.close();
-			break;
-			
-		}
-	}
+	
+	
+	
+	
 }
