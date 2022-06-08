@@ -184,7 +184,7 @@ public class DailyBankMainFrameController implements Initializable {
 	}
 
 	/*
-	 * Permet de quitter la base de donn�es
+	 * Permet de quitter la base de donn�ses
 	 */
 	private void actionQuitterBD() {
 		this.dbmf.disconnect();
