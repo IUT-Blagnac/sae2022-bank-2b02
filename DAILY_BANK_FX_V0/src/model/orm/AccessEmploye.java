@@ -4,7 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
+import model.data.Client;
 import model.data.Employe;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
@@ -74,5 +76,63 @@ public class AccessEmploye {
 		} catch (SQLException e) {
 			throw new DataAccessException(Table.Employe, Order.SELECT, "Erreur accès", e);
 		}
+	}
+
+	public ArrayList<Employe> getEmployes(int idAg, int _idEmploye, String _debutNom, String _debutPrenom) throws DataAccessException, DatabaseConnexionException {
+		ArrayList<Employe> alResult = new ArrayList<>();
+
+		try {
+			Connection con = LogToDatabase.getConnexion();
+
+			PreparedStatement pst;
+
+			String query;
+			if (_idEmploye != -1) {
+				query = "SELECT * FROM Employe where idAg = ?";
+				query += " AND IDEMPLOYE = ?";
+				query += " ORDER BY nom";
+				pst = con.prepareStatement(query);
+				pst.setInt(1, idAg);
+				pst.setInt(2, _idEmploye);
+
+			} else if (!_debutNom.equals("")) {
+				_debutNom = _debutNom.toUpperCase() + "%";
+				_debutPrenom = _debutPrenom.toUpperCase() + "%";
+				query = "SELECT * FROM Employe where idAg = ?";
+				query += " AND UPPER(nom) like ?" + " AND UPPER(prenom) like ?";
+				query += " ORDER BY nom";
+				pst = con.prepareStatement(query);
+				pst.setInt(1, idAg);
+				pst.setString(2, _debutNom);
+				pst.setString(3, _debutPrenom);
+			} else {
+				query = "SELECT * FROM Employe where idAg = ?";
+				query += " ORDER BY nom";
+				pst = con.prepareStatement(query);
+				pst.setInt(1, idAg);
+			}
+			System.err.println(query + " nom : " + _debutNom + " prenom : " + _debutPrenom + "#");
+
+			ResultSet rs = pst.executeQuery();
+			while (rs.next()) {
+				int idEmploye = rs.getInt("IDEMPLOYE");
+				String nom = rs.getString("nom");
+				String prenom = rs.getString("prenom");
+				String droitsAccess = rs.getString("droitsAccess");
+				droitsAccess = (droitsAccess == null ? "" : droitsAccess);
+				String login = rs.getString("login");
+				String motpasse= rs.getString("motpasse");
+				int idAgCli = rs.getInt("idAg");
+
+				alResult.add(
+						new Employe(idEmploye, nom, prenom, droitsAccess, login, motpasse, idAgCli));
+			}
+			rs.close();
+			pst.close();
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accès", e);
+		}
+
+		return alResult;
 	}
 }

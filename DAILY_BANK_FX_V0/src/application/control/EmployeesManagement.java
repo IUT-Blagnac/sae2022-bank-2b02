@@ -7,14 +7,16 @@ import application.DailyBankState;
 import application.tools.EditionMode;
 import application.tools.StageManagement;
 import application.view.ClientsManagementController;
-import application.view.EmployeesManagementController;
+import application.view.EmployeManagementController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.data.Client;
+import model.data.Employe;
 import model.orm.AccessClient;
+import model.orm.AccessEmploye;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
 
@@ -22,13 +24,13 @@ public class EmployeesManagement {
 
 	private Stage primaryStage;
 	private DailyBankState dbs;
-	private EmployeesManagementController emc;
+	private EmployeManagementController emc;
 
 	
 	public EmployeesManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
-			FXMLLoader loader = new FXMLLoader(EmployeesManagementController.class.getResource("employeesmanagement.fxml"));
+			FXMLLoader loader = new FXMLLoader(EmployeManagementController.class.getResource("employeesmanagement.fxml"));
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, root.getPrefWidth()+50, root.getPrefHeight()+10);
@@ -64,9 +66,9 @@ public class EmployeesManagement {
 	 * @param c : le client
 	 * @return le client
 	 */
-	public Client modifierClient(Client c) {
-		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
-		Client result = cep.doClientEditorDialog(c, EditionMode.MODIFICATION);
+	public Client modifierEmploye(Employe employeMod) {
+		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
+		Employe result = cep.doClientEditorDialog(employeMod, EditionMode.MODIFICATION);
 		if (result != null) {
 			try {
 				AccessClient ac = new AccessClient();
@@ -84,6 +86,7 @@ public class EmployeesManagement {
 		}
 		return result;
 	}
+	
 
 	/*
 	 * Permet de cr�er un nouveau client
@@ -91,7 +94,7 @@ public class EmployeesManagement {
 	 */
 	public Client nouveauClient() {
 		Client client;
-		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
+		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
 		client = cep.doClientEditorDialog(null, EditionMode.CREATION);
 		if (client != null) {
 			try {
@@ -112,14 +115,6 @@ public class EmployeesManagement {
 		return client;
 	}
 
-	/*
-	 * Permet de g�rer les comptes d'un client
-	 * @param c : le client pour lequel on veut g�rer les comptes
-	 */
-	public void gererComptesClient(Client c) {
-		ComptesManagement cm = new ComptesManagement(this.primaryStage, this.dbs, c);
-		cm.doComptesManagementDialog();
-	}
 
 	/*
 	 * Permet de trouver les clients qui sont li�s � un certain compte
@@ -128,27 +123,27 @@ public class EmployeesManagement {
 	 * @param _debutPrenom : le d�but du pr�nom du client
 	 * @return une ArrayList de clients 
 	 */
-	public ArrayList<Client> getlisteComptes(int _numCompte, String _debutNom, String _debutPrenom) {
-		ArrayList<Client> listeCli = new ArrayList<>();
+	public ArrayList<Employe> getlisteComptes(int _idEmploye, String _debutNom, String _debutPrenom) {
+		ArrayList<Employe> listeEmploye = new ArrayList<>();
 		try {
 			// Recherche des clients en BD. cf. AccessClient > getClients(.)
 			// numCompte != -1 => recherche sur numCompte
 			// numCompte != -1 et debutNom non vide => recherche nom/prenom
 			// numCompte != -1 et debutNom vide => recherche tous les clients
 
-			AccessClient ac = new AccessClient();
-			listeCli = ac.getClients(this.dbs.getEmpAct().idAg, _numCompte, _debutNom, _debutPrenom);
+			AccessEmploye ae = new AccessEmploye();
+			listeEmploye = ae.getEmployes(this.dbs.getEmpAct().idAg, _idEmploye, _debutNom, _debutPrenom);
 
 		} catch (DatabaseConnexionException e) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 			ed.doExceptionDialog();
 			this.primaryStage.close();
-			listeCli = new ArrayList<>();
+			listeEmploye = new ArrayList<>();
 		} catch (ApplicationException ae) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
 			ed.doExceptionDialog();
-			listeCli = new ArrayList<>();
+			listeEmploye = new ArrayList<>();
 		}
-		return listeCli;
+		return listeEmploye;
 	}
 }

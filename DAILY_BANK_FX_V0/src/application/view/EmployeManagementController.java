@@ -18,8 +18,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.data.Client;
+import model.data.Employe;
 
-public class EmployeesManagementController implements Initializable {
+public class EmployeManagementController implements Initializable {
 
 	// Etat application
 	private DailyBankState dbs;
@@ -29,7 +30,7 @@ public class EmployeesManagementController implements Initializable {
 	private Stage primaryStage;
 
 	// Données de la fenêtre
-	private ObservableList<Client> olc;
+	private ObservableList<Employe> olc;
 
 	// Manipulation de la fenêtre
 	public void initContext(Stage _primaryStage, EmployeesManagement _em, DailyBankState _dbstate) {
@@ -69,7 +70,7 @@ public class EmployeesManagementController implements Initializable {
 
 	// Attributs de la scene + actions
 	@FXML
-	private TextField txtNum;
+	private TextField txtId;
 	@FXML
 	private TextField txtNom;
 	@FXML
@@ -77,11 +78,10 @@ public class EmployeesManagementController implements Initializable {
 	@FXML
 	private ListView<Client> lvClients;
 	@FXML
-	private Button btnDesactClient;
+	private Button btnSupprEmploye;
 	@FXML
-	private Button btnModifClient;
-	@FXML
-	private Button btnComptesClient;
+	private Button btnModifEmploye;
+	
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -96,24 +96,24 @@ public class EmployeesManagementController implements Initializable {
 	}
 
 	/*
-	 * Permet de rechercher un client 
+	 * Permet de rechercher un employé 
 	 */
 	@FXML
 	private void doRechercher() {
 		int numCompte;
 		try {
-			String nc = this.txtNum.getText();
+			String nc = this.txtId.getText();
 			if (nc.equals("")) {
 				numCompte = -1;
 			} else {
 				numCompte = Integer.parseInt(nc);
 				if (numCompte < 0) {
-					this.txtNum.setText("");
+					this.txtId.setText("");
 					numCompte = -1;
 				}
 			}
 		} catch (NumberFormatException nfe) {
-			this.txtNum.setText("");
+			this.txtId.setText("");
 			numCompte = -1;
 		}
 
@@ -133,28 +133,17 @@ public class EmployeesManagementController implements Initializable {
 		// numCompte != -1 => recherche sur numCompte
 		// numCompte != -1 et debutNom non vide => recherche nom/prenom
 		// numCompte != -1 et debutNom vide => recherche tous les clients
-		ArrayList<Client> listeCli;
-		listeCli = this.em.getlisteComptes(numCompte, debutNom, debutPrenom);
+		ArrayList<Employe> listeEmploye;
+		listeEmploye = this.em.getlisteComptes(numCompte, debutNom, debutPrenom);
 
 		this.olc.clear();
-		for (Client cli : listeCli) {
-			this.olc.add(cli);
+		for (Employe employe : listeEmploye) {
+			this.olc.add(employe);
 		}
 
 		this.validateComponentState();
 	}
 
-	/*
-	 * Permet d'afficher les comptes d'un client
-	 */
-	@FXML
-	private void doComptesClient() {
-		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
-		if (selectedIndice >= 0) {
-			Client client = this.olc.get(selectedIndice);
-			this.em.gererComptesClient(client);
-		}
-	}
 
 	/*
 	 * Permet de modifier les informations li�es � un client
@@ -164,13 +153,14 @@ public class EmployeesManagementController implements Initializable {
 
 		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
-			Client cliMod = this.olc.get(selectedIndice);
-			Client result = this.em.modifierClient(cliMod);
+			Employe employeMod = this.olc.get(selectedIndice);
+			Employe result = this.em.modifierClient(employeMod);
 			if (result != null) {
 				this.olc.set(selectedIndice, result);
 			}
 		}
 	}
+	
 
 	/*
 	 * Permet de d�sactiver un client
@@ -196,14 +186,12 @@ public class EmployeesManagementController implements Initializable {
 	 */
 	private void validateComponentState() {
 		// Non implémenté => désactivé
-		this.btnDesactClient.setDisable(true);
+		this.btnSupprEmploye.setDisable(true);
 		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
-			this.btnModifClient.setDisable(false);
-			this.btnComptesClient.setDisable(false);
+			this.btnModifEmploye.setDisable(false);
 		} else {
-			this.btnModifClient.setDisable(true);
-			this.btnComptesClient.setDisable(true);
+			this.btnModifEmploye.setDisable(true);
 		}
 	}
 }
