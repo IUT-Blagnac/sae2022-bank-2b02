@@ -37,5 +37,9 @@ public class CompteCourant {
 		}
 		return s;
 	}
+	
+	public int getClient() {
+		return this.idNumCli;
+	}
 
 }

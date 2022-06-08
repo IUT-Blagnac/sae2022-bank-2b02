@@ -35,6 +35,8 @@ public class OperationsManagementController implements Initializable {
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
 	private ObservableList<Operation> olOperation;
+	
+	private ComptesManagementController cmc;
 
 	// Manipulation de la fenêtre
 	public void initContext(Stage _primaryStage, OperationsManagement _om, DailyBankState _dbstate, Client client, CompteCourant compte) {
@@ -64,6 +66,10 @@ public class OperationsManagementController implements Initializable {
 	 */
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
+	}
+	
+	public ComptesManagementController getCompteManagementController() {
+		return this.cmc;
 	}
 
 	// Gestion du stage
@@ -140,7 +146,6 @@ public class OperationsManagementController implements Initializable {
 	}
 
 	private void validateComponentState() {
-		// Non implémenté => désactivé
 		this.btnCredit.setDisable(false);
 		this.btnDebit.setDisable(false);
 		this.btnVirement.setDisable(false);

@@ -44,6 +44,10 @@ public class ComptesManagementController implements Initializable {
 		this.clientDesComptes = client;
 		this.configure();
 	}
+	
+	public ObservableList<CompteCourant> getOl() {
+		return this.olCompteCourant;
+	}
 
 	/*
 	 * Permet de configurer la fen�tre

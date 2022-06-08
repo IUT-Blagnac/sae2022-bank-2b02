@@ -29,7 +29,6 @@ public class OperationsManagement {
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
 	
-	
 
 	public OperationsManagement(Stage _parentStage, DailyBankState _dbstate, Client client, CompteCourant compte) {
 
@@ -129,7 +128,24 @@ public class OperationsManagement {
 			try {
 				AccessOperation ao = new AccessOperation();
 				
-				ao.insertVirement(this.compteConcerne.idNumCompte, oep2.getCtrl().getNumCompte() , op.montant); // A modifier
+				
+				
+				System.out.println(this.compteConcerne.idNumCli);
+				System.out.println(oep2.getCtrl().getCompte().getClient());
+				
+				if(this.compteConcerne.idNumCli != this.clientDuCompte.idNumCli) {
+					System.out.println("test");
+					
+				}
+				
+				else {
+					ao.insertVirement(this.compteConcerne.idNumCompte, oep2.getCtrl().getNumCompte() , op.montant); 
+
+					
+				}
+				
+				
+				
 				
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
