@@ -51,7 +51,7 @@
                </GridPane.margin>
             </Label>
             <TextField fx:id="txtMontant" layoutX="171.0" layoutY="23.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ComboBox prefHeight="25.0" prefWidth="270.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="cbTypeOpe" prefHeight="25.0" prefWidth="270.0" GridPane.columnIndex="1" />
             <TextField fx:id="txtCompte" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label text="Numéro du compte" GridPane.rowIndex="2" />
          </children>

@@ -5,6 +5,7 @@ import application.DailyBankState;
 import application.tools.CategorieOperation;
 import application.tools.StageManagement;
 import application.view.OperationEditorPaneController;
+import application.view.OperationEditorPaneController2;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -22,7 +23,7 @@ public class OperationEditorPane2 {
 
 		try {
 			FXMLLoader loader = new FXMLLoader(
-					OperationEditorPaneController.class.getResource("operationeditorpane.fxml"));
+					OperationEditorPaneController.class.getResource("operationeditorpane2.fxml"));
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, 500 + 20, 250 + 10);
