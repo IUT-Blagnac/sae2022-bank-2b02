@@ -45,7 +45,7 @@ public class DailyBankMainFrameController implements Initializable {
 	}
 
 	/*
-	 * Permet de configurer la fenêtre
+	 * Permet de configurer la fenï¿½tre
 	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
@@ -89,7 +89,7 @@ public class DailyBankMainFrameController implements Initializable {
 	}
 
 	/*
-	 * Permet de quitter l'application principale en demandant une confirmation avant de fermet la fenêtre
+	 * Permet de quitter l'application principale en demandant une confirmation avant de fermet la fenï¿½tre
 	 */
 	@FXML
 	private void doQuit() {
@@ -103,7 +103,7 @@ public class DailyBankMainFrameController implements Initializable {
 	}
 
 	/*
-	 * Permet d'afficher la fenêtre d'aide
+	 * Permet d'afficher la fenï¿½tre d'aide
 	 */
 	@FXML
 	private void doActionAide() {
@@ -112,7 +112,7 @@ public class DailyBankMainFrameController implements Initializable {
 	}
 
 	/*
-	 * Permet de vérifier que les informations du login soient valides
+	 * Permet de vï¿½rifier que les informations du login soient valides
 	 */
 	@FXML
 	private void doLogin() {
@@ -122,7 +122,7 @@ public class DailyBankMainFrameController implements Initializable {
 	}
 
 	/*
-	 * Permet de se déconncter
+	 * Permet de se dï¿½conncter
 	 */
 	@FXML
 	private void doDisconnect() {
@@ -131,7 +131,7 @@ public class DailyBankMainFrameController implements Initializable {
 	}
 
 	/*
-	 * Permet de vérifier que les informations d'un compte soient valides
+	 * Permet de vï¿½rifier que les informations d'un compte soient valides
 	 */
 	private void validateComponentState() {
 		Employe e = this.dbs.getEmpAct();
@@ -167,32 +167,24 @@ public class DailyBankMainFrameController implements Initializable {
 	}
 
 	/*
-	 * Affiche la fenêtre de gestion des clients
+	 * Affiche la fenï¿½tre de gestion des clients
 	 */
 	@FXML
 	private void doClientOption() {
 		this.dbmf.gestionClients();
 	}
 	
+
 	/*
-	 * Affiche la fenêtre de gestion des clients
+	 * Permet de gï¿½rer les informations liï¿½es aux employï¿½s
 	 */
 	@FXML
-	private void doEmployeesOption() {
+	private void doEmployeOption() {
 		this.dbmf.gestionEmployees();
 	}
 
 	/*
-	 * Permet de gérer les informations liées aux employés
-	 */
-	@FXML
-	private void doEmployeOption() {
-		AlertUtilities.showAlert(this.primaryStage, "Gestion des EmployÃ©", "En cours de dÃ©veloppement",
-				"Livraison prÃ©vue\nEn juin 2022", AlertType.INFORMATION);
-	}
-
-	/*
-	 * Permet de quitter la base de données
+	 * Permet de quitter la base de donnï¿½es
 	 */
 	private void actionQuitterBD() {
 		this.dbmf.disconnect();
