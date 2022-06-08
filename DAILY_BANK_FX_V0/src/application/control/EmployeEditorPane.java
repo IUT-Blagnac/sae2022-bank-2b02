@@ -6,20 +6,22 @@ import application.tools.EditionMode;
 import application.tools.StageManagement;
 import application.view.ClientEditorPaneController;
 import application.view.ClientsManagementController;
+import application.view.EmployeEditorPaneController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.data.Client;
+import model.data.Employe;
 
-public class ClientEditorPane {
+public class EmployeEditorPane {
 
 	private Stage primaryStage;
-	private ClientEditorPaneController cepc;
+	private EmployeEditorPaneController eepc;
 
 	
-	public ClientEditorPane(Stage _parentStage, DailyBankState _dbstate) {
+	public EmployeEditorPane(Stage _parentStage, DailyBankState _dbstate) {
 
 		try {
 			FXMLLoader loader = new FXMLLoader(ClientsManagementController.class.getResource("clienteditorpane.fxml"));
@@ -36,8 +38,8 @@ public class ClientEditorPane {
 			this.primaryStage.setTitle("Gestion d'un client");
 			this.primaryStage.setResizable(false);
 
-			this.cepc = loader.getController();
-			this.cepc.initContext(this.primaryStage, _dbstate);
+			this.eepc = loader.getController();
+			this.eepc.initContext(this.primaryStage, _dbstate);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -45,11 +47,11 @@ public class ClientEditorPane {
 	}
 
 	/*
-	 * Permet de retourner les informations d'un cessaye de mon côté lient
+	 * Permet de retourner les informations d'un cessaye de mon cï¿½tï¿½ lient
 	 * @param client : le client
-	 * @param em : le mode éditeur
+	 * @param em : le mode ï¿½diteur
 	 */
-	public Client doClientEditorDialog(Client client, EditionMode em) {
-		return this.cepc.displayDialog(client, em);
+	public Employe doClientEditorDialog(Employe employeMod, EditionMode em) {
+		return this.eepc.displayDialog(employeMod, em);
 	}
 }

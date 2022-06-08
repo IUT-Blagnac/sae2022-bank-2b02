@@ -59,12 +59,12 @@ public class ClientsManagement {
 	
 
 	/*
-	 * Permet de modifier les informations liées à un client
+	 * Permet de modifier les informations liï¿½es ï¿½ un client
 	 * @param c : le client
 	 * @return le client
 	 */
 	public Client modifierClient(Client c) {
-		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
+		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
 		Client result = cep.doClientEditorDialog(c, EditionMode.MODIFICATION);
 		if (result != null) {
 			try {
@@ -85,12 +85,12 @@ public class ClientsManagement {
 	}
 
 	/*
-	 * Permet de créer un nouveau client
-	 * @return le client créé
+	 * Permet de crï¿½er un nouveau client
+	 * @return le client crï¿½ï¿½
 	 */
 	public Client nouveauClient() {
 		Client client;
-		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
+		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
 		client = cep.doClientEditorDialog(null, EditionMode.CREATION);
 		if (client != null) {
 			try {
@@ -112,8 +112,8 @@ public class ClientsManagement {
 	}
 
 	/*
-	 * Permet de gérer les comptes d'un client
-	 * @param c : le client pour lequel on veut gérer les comptes
+	 * Permet de gï¿½rer les comptes d'un client
+	 * @param c : le client pour lequel on veut gï¿½rer les comptes
 	 */
 	public void gererComptesClient(Client c) {
 		ComptesManagement cm = new ComptesManagement(this.primaryStage, this.dbs, c);
@@ -121,10 +121,10 @@ public class ClientsManagement {
 	}
 
 	/*
-	 * Permet de trouver les clients qui sont liés à un certain compte
-	 * @param numCompte : le numéro de compte
-	 * @param _debutNom : le début du nom du client
-	 * @param _debutPrenom : le début du prénom du client
+	 * Permet de trouver les clients qui sont liï¿½s ï¿½ un certain compte
+	 * @param numCompte : le numï¿½ro de compte
+	 * @param _debutNom : le dï¿½but du nom du client
+	 * @param _debutPrenom : le dï¿½but du prï¿½nom du client
 	 * @return une ArrayList de clients 
 	 */
 	public ArrayList<Client> getlisteComptes(int _numCompte, String _debutNom, String _debutPrenom) {
