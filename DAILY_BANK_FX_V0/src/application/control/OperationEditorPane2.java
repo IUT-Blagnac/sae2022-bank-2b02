@@ -5,7 +5,6 @@ import application.DailyBankState;
 import application.tools.CategorieOperation;
 import application.tools.StageManagement;
 import application.view.OperationEditorPaneController;
-import application.view.OperationEditorPaneController2;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -23,7 +22,7 @@ public class OperationEditorPane2 {
 
 		try {
 			FXMLLoader loader = new FXMLLoader(
-					OperationEditorPaneController.class.getResource("operationeditorpane2.fxml"));
+					OperationEditorPaneController.class.getResource("operationeditorpane.fxml"));
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, 500 + 20, 250 + 10);
@@ -51,7 +50,7 @@ public class OperationEditorPane2 {
 	 * @param cm : la cat�gorie de l'op�ration
 	 * @return l'op�ration qui a �t� effectu�e sur le compte
 	 */
-	public Operation doOperationEditorDialog(CompteCourant cpte) {
-		return this.oepc.displayDialog(cpte);
+	public Operation doOperationEditorDialog(CompteCourant cpte, CategorieOperation cm) {
+		return this.oepc.displayDialog(cpte, cm);
 	}
 }
