@@ -7,6 +7,7 @@ import application.DailyBankState;
 import application.tools.EditionMode;
 import application.tools.StageManagement;
 import application.view.ClientsManagementController;
+import application.view.EmployeesManagementController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -21,13 +22,13 @@ public class EmployeesManagement {
 
 	private Stage primaryStage;
 	private DailyBankState dbs;
-	private ClientsManagementController cmc;
+	private EmployeesManagementController emc;
 
 	
 	public EmployeesManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
-			FXMLLoader loader = new FXMLLoader(ClientsManagementController.class.getResource("clientsmanagement.fxml"));
+			FXMLLoader loader = new FXMLLoader(ClientsManagementController.class.getResource("employeesmanagement.fxml"));
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, root.getPrefWidth()+50, root.getPrefHeight()+10);
@@ -41,8 +42,8 @@ public class EmployeesManagement {
 			this.primaryStage.setTitle("Gestion des clients");
 			this.primaryStage.setResizable(false);
 
-			this.cmc = loader.getController();
-			this.cmc.initContext(this.primaryStage, this, _dbstate);
+			this.emc = loader.getController();
+			this.emc.initContext(this.primaryStage, this, _dbstate);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -53,7 +54,7 @@ public class EmployeesManagement {
 	 * Permet d'afficher la boite de dialogue de management du client 
 	 */
 	public void doClientManagementDialog() {
-		this.cmc.displayDialog();
+		this.emc.displayDialog();
 	}
 	
 	

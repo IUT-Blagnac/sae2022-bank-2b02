@@ -173,6 +173,14 @@ public class DailyBankMainFrameController implements Initializable {
 	private void doClientOption() {
 		this.dbmf.gestionClients();
 	}
+	
+	/*
+	 * Affiche la fenêtre de gestion des clients
+	 */
+	@FXML
+	private void doEmployeesOption() {
+		this.dbmf.gestionEmployees();
+	}
 
 	/*
 	 * Permet de gérer les informations liées aux employés

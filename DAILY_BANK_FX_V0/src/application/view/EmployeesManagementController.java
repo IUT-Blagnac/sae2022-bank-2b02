@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import application.DailyBankState;
 import application.control.ClientsManagement;
+import application.control.EmployeesManagement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -22,7 +23,7 @@ public class EmployeesManagementController implements Initializable {
 
 	// Etat application
 	private DailyBankState dbs;
-	private ClientsManagement cm;
+	private EmployeesManagement em;
 
 	// Fenêtre physique
 	private Stage primaryStage;
@@ -31,8 +32,8 @@ public class EmployeesManagementController implements Initializable {
 	private ObservableList<Client> olc;
 
 	// Manipulation de la fenêtre
-	public void initContext(Stage _primaryStage, ClientsManagement _cm, DailyBankState _dbstate) {
-		this.cm = _cm;
+	public void initContext(Stage _primaryStage, EmployeesManagement _em, DailyBankState _dbstate) {
+		this.em = _em;
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
 		this.configure();
@@ -133,7 +134,7 @@ public class EmployeesManagementController implements Initializable {
 		// numCompte != -1 et debutNom non vide => recherche nom/prenom
 		// numCompte != -1 et debutNom vide => recherche tous les clients
 		ArrayList<Client> listeCli;
-		listeCli = this.cm.getlisteComptes(numCompte, debutNom, debutPrenom);
+		listeCli = this.em.getlisteComptes(numCompte, debutNom, debutPrenom);
 
 		this.olc.clear();
 		for (Client cli : listeCli) {
@@ -151,7 +152,7 @@ public class EmployeesManagementController implements Initializable {
 		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			Client client = this.olc.get(selectedIndice);
-			this.cm.gererComptesClient(client);
+			this.em.gererComptesClient(client);
 		}
 	}
 
@@ -164,7 +165,7 @@ public class EmployeesManagementController implements Initializable {
 		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			Client cliMod = this.olc.get(selectedIndice);
-			Client result = this.cm.modifierClient(cliMod);
+			Client result = this.em.modifierClient(cliMod);
 			if (result != null) {
 				this.olc.set(selectedIndice, result);
 			}
@@ -184,7 +185,7 @@ public class EmployeesManagementController implements Initializable {
 	@FXML
 	private void doNouveauClient() {
 		Client client;
-		client = this.cm.nouveauClient();
+		client = this.em.nouveauClient();
 		if (client != null) {
 			this.olc.add(client);
 		}
