@@ -57,6 +57,7 @@ public class OperationEditorPaneController2 implements Initializable {
 		this.compteEdite = cpte;
 
 		switch (mode) {
+		
 		case VIREMENT:
 			String info2 = "Cpt. : " + this.compteEdite.idNumCompte + "  "
 					+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
@@ -117,6 +118,10 @@ public class OperationEditorPaneController2 implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
+	
+	public int getNumCompte() {
+		return Integer.valueOf(this.txtCompte.getText().trim());
+	}
 
 	/*
 	 * Permet de fermer la fen�tre d'�dition des op�rations
@@ -136,6 +141,7 @@ public class OperationEditorPaneController2 implements Initializable {
 		
 		case VIREMENT:
 						double montant2;
+						
 	
 						this.txtMontant.getStyleClass().remove("borderred");
 						this.lblMontant.getStyleClass().remove("borderred");
@@ -147,6 +153,7 @@ public class OperationEditorPaneController2 implements Initializable {
 	
 						try {
 							montant2 = Double.parseDouble(this.txtMontant.getText().trim());
+							
 							if (montant2 <= 0)
 								throw new NumberFormatException();
 						} catch (NumberFormatException nfe) {

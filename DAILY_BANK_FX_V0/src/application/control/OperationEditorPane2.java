@@ -54,4 +54,11 @@ public class OperationEditorPane2 {
 	public Operation doOperationEditorDialog(CompteCourant cpte, CategorieOperation cm) {
 		return this.oepc.displayDialog(cpte, cm);
 	}
+	
+	public OperationEditorPaneController2 getCtrl() {
+		return this.oepc;
+		
+	}
+	
+	
 }

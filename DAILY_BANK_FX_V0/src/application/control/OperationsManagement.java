@@ -28,7 +28,8 @@ public class OperationsManagement {
 	private OperationsManagementController omc;
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
-	private CompteCourant compteConcerne2;
+	
+	
 
 	public OperationsManagement(Stage _parentStage, DailyBankState _dbstate, Client client, CompteCourant compte) {
 
@@ -127,10 +128,9 @@ public class OperationsManagement {
 		if (op != null) {
 			try {
 				AccessOperation ao = new AccessOperation();
-
-				ao.insertDebit(this.compteConcerne.idNumCompte, op.montant, op.idTypeOp);
-				ao.insertCredit(this.compteConcerne2.idNumCompte, op.montant, op.idTypeOp);
-
+				
+				ao.insertVirement(this.compteConcerne.idNumCompte, oep2.getCtrl().getNumCompte() , op.montant); // A modifier
+				
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 				ed.doExceptionDialog();
