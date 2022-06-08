@@ -28,7 +28,7 @@ public class EmployeesManagement {
 	public EmployeesManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
-			FXMLLoader loader = new FXMLLoader(ClientsManagementController.class.getResource("employeesmanagement.fxml"));
+			FXMLLoader loader = new FXMLLoader(EmployeesManagementController.class.getResource("employeesmanagement.fxml"));
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, root.getPrefWidth()+50, root.getPrefHeight()+10);
@@ -39,7 +39,7 @@ public class EmployeesManagement {
 			this.primaryStage.initOwner(_parentStage);
 			StageManagement.manageCenteringStage(_parentStage, this.primaryStage);
 			this.primaryStage.setScene(scene);
-			this.primaryStage.setTitle("Gestion des clients");
+			this.primaryStage.setTitle("Gestion des employées");
 			this.primaryStage.setResizable(false);
 
 			this.emc = loader.getController();
