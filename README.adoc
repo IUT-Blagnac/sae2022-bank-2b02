@@ -43,7 +43,7 @@ Le projet est en cours de réalisation.
 [cols="1,2,2,5",options=header]
 |===
 | Date    | Nom         |  Lien                             | Retour
-| 03/04   | Gantt V1    |                                                              |détailler par exemple crediter compte, debiter compte (CRUD compte) penser au code à l'interface et aux tests ... vous devez aussi affecter les tâches de la même façn que les issues ... bref détailler cela vous aidera aussi à l'estimation des coûts. Vous devez attribuer les tâches.
+| 03/04   | Gantt V1    |  https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Gantt/GANTT%20V1%20%C3%A0%20jour.pdf[GANTT V1 à jour] |détailler par exemple crediter compte, debiter compte (CRUD compte) penser au code à l'interface et aux tests ... vous devez aussi affecter les tâches de la même façn que les issues ... bref détailler cela vous aidera aussi à l'estimation des coûts. Vous devez attribuer les tâches.
 |         | CdC V1      |                                   |   https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Retour%20CDCU.adoc
 |         | Suivi Projet |                                   |    bons types de fichiers ok
 pour d'arborescence ... Il faut peut être y réfléchir.   Les issues sont affectées mais pareil que sur le gantt pas assez détaillés pas de priorité mais possible dans l'état actuel.      
@@ -62,12 +62,12 @@ pour d'arborescence ... Il faut peut être y réfléchir.   Les issues sont affe
 |         | Doc User V1    | https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[Doc. User V1]       |lien ne marche pas
 |         | Recette V1  |   https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Recette-V1.adoc[Recette V1]    | 
 |         | Suivi projet|   | 
-| 22/05   | Gantt V2  à jour    |https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Gantt/Gantt_V3%20%C3%A0%20jour.pdf[Gantt V2  à jour]| 
+| 22/05   | Gantt V2  à jour    || 
 |         | Doc. Util. V1 |         |         
 |         | Doc. Tec. V1 | https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-Tec-V1.adoc[Doc-Tec-V1]                 |     
 |         | Code V1     |                     | 
 |         | Recette V1 |                      | 
-|         | Gantt V3 à jour   |https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Gantt/Gantt_V3%20%C3%A0%20jour.pdf[Gantt V3  à jour]| 
+|         | Gantt V3 à jour   || 
 |         | `jar` projet |    | 
 | 05/06   | Gantt V3 à Jour  |    |  
 |         | Doc. Util. V2 |         |           
