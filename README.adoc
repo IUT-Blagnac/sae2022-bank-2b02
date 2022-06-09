@@ -43,7 +43,7 @@ Le projet est en cours de réalisation.
 [cols="1,2,2,5",options=header]
 |===
 | Date    | Nom         |  Lien                             | Retour
-| 03/04   | Gantt V1    |  https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Gantt/GANTT%20V1%20%C3%A0%20jour.pdf  [GANTT V1 à jour] |détailler par exemple crediter compte, debiter compte (CRUD compte) penser au code à l'interface et aux tests ... vous devez aussi affecter les tâches de la même façn que les issues ... bref détailler cela vous aidera aussi à l'estimation des coûts. Vous devez attribuer les tâches.
+| 03/04   | Gantt V1    |  https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Gantt/GANTT%20V1%20%C3%A0%20jour.pdf[GANTT V1 à jour] |détailler par exemple crediter compte, debiter compte (CRUD compte) penser au code à l'interface et aux tests ... vous devez aussi affecter les tâches de la même façn que les issues ... bref détailler cela vous aidera aussi à l'estimation des coûts. Vous devez attribuer les tâches.
 |         | CdC V1      |                                   |   https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Retour%20CDCU.adoc
 |         | Suivi Projet |                                   |    bons types de fichiers ok
 pour d'arborescence ... Il faut peut être y réfléchir.   Les issues sont affectées mais pareil que sur le gantt pas assez détaillés pas de priorité mais possible dans l'état actuel.      
