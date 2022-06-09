@@ -45,16 +45,16 @@ public class ClientEditorPaneController implements Initializable {
 	}
 
 	/*
-	 * Permet de configurer la fenêtre
+	 * Permet de configurer la fenï¿½tre
 	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 	}
 
 	/*
-	 * Permet d'éditer les informations liées à un client
+	 * Permet d'ï¿½diter les informations liï¿½es ï¿½ un client
 	 * @param client : le client
-	 * @param mode : le mode éditeur
+	 * @param mode : le mode ï¿½diteur
 	 */
 	public Client displayDialog(Client client, EditionMode mode) {
 
