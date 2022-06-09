@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import application.DailyBankState;
-import application.control.ClientsManagement;
 import application.control.EmployeesManagement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,7 +16,6 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import model.data.Client;
 import model.data.Employe;
 
 public class EmployeManagementController implements Initializable {
@@ -47,10 +45,10 @@ public class EmployeManagementController implements Initializable {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 
 		this.olc = FXCollections.observableArrayList();
-		this.lvClients.setItems(this.olc);
-		this.lvClients.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
-		this.lvClients.getFocusModel().focus(-1);
-		this.lvClients.getSelectionModel().selectedItemProperty().addListener(e -> this.validateComponentState());
+		this.lvEmployes.setItems(this.olc);
+		this.lvEmployes.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+		this.lvEmployes.getFocusModel().focus(-1);
+		this.lvEmployes.getSelectionModel().selectedItemProperty().addListener(e -> this.validateComponentState());
 		this.validateComponentState();
 	}
 
@@ -76,7 +74,7 @@ public class EmployeManagementController implements Initializable {
 	@FXML
 	private TextField txtPrenom;
 	@FXML
-	private ListView<Client> lvClients;
+	private ListView<Employe> lvEmployes;
 	@FXML
 	private Button btnSupprEmploye;
 	@FXML
@@ -149,12 +147,12 @@ public class EmployeManagementController implements Initializable {
 	 * Permet de modifier les informations li�es � un client
 	 */
 	@FXML
-	private void doModifierClient() {
+	private void doModifierEmploye() {
 
-		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
+		int selectedIndice = this.lvEmployes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			Employe employeMod = this.olc.get(selectedIndice);
-			Employe result = this.em.modifierClient(employeMod);
+			Employe result = this.em.modifierEmploye(employeMod);
 			if (result != null) {
 				this.olc.set(selectedIndice, result);
 			}
@@ -166,18 +164,19 @@ public class EmployeManagementController implements Initializable {
 	 * Permet de d�sactiver un client
 	 */
 	@FXML
-	private void doDesactiverClient() {
+	private void doSupprimerEmploye() {
+		System.out.println("dac");
 	}
 
 	/*
 	 * Permet de cr�er un nouveau client
 	 */
 	@FXML
-	private void doNouveauClient() {
-		Client client;
-		client = this.em.nouveauClient();
-		if (client != null) {
-			this.olc.add(client);
+	private void doNouveauEmploye() {
+		Employe employe;
+		employe = this.em.nouveauEmploye();
+		if (employe != null) {
+			this.olc.add(employe);
 		}
 	}
 
@@ -187,7 +186,7 @@ public class EmployeManagementController implements Initializable {
 	private void validateComponentState() {
 		// Non implémenté => désactivé
 		this.btnSupprEmploye.setDisable(true);
-		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
+		int selectedIndice = this.lvEmployes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			this.btnModifEmploye.setDisable(false);
 		} else {

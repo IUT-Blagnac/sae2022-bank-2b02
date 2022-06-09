@@ -6,16 +6,13 @@ import application.DailyBankApp;
 import application.DailyBankState;
 import application.tools.EditionMode;
 import application.tools.StageManagement;
-import application.view.ClientsManagementController;
 import application.view.EmployeManagementController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import model.data.Client;
 import model.data.Employe;
-import model.orm.AccessClient;
 import model.orm.AccessEmploye;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
@@ -30,7 +27,7 @@ public class EmployeesManagement {
 	public EmployeesManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
-			FXMLLoader loader = new FXMLLoader(EmployeManagementController.class.getResource("employeesmanagement.fxml"));
+			FXMLLoader loader = new FXMLLoader(EmployeManagementController.class.getResource("employemanagement.fxml"));
 			BorderPane root = loader.load();
 
 			Scene scene = new Scene(root, root.getPrefWidth()+50, root.getPrefHeight()+10);
@@ -66,13 +63,13 @@ public class EmployeesManagement {
 	 * @param c : le client
 	 * @return le client
 	 */
-	public Client modifierEmploye(Employe employeMod) {
+	public Employe modifierEmploye(Employe employeMod) {
 		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
 		Employe result = cep.doClientEditorDialog(employeMod, EditionMode.MODIFICATION);
 		if (result != null) {
 			try {
-				AccessClient ac = new AccessClient();
-				ac.updateClient(result);
+				AccessEmploye ae = new AccessEmploye();
+				ae.updateEmploye(result);
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 				ed.doExceptionDialog();
@@ -92,27 +89,27 @@ public class EmployeesManagement {
 	 * Permet de cr�er un nouveau client
 	 * @return le client cr��
 	 */
-	public Client nouveauClient() {
-		Client client;
+	public Employe nouveauEmploye() {
+		Employe employe;
 		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
-		client = cep.doClientEditorDialog(null, EditionMode.CREATION);
-		if (client != null) {
+		employe = cep.doClientEditorDialog(null, EditionMode.CREATION);
+		if (employe != null) {
 			try {
-				AccessClient ac = new AccessClient();
+				AccessEmploye ae = new AccessEmploye();
 
-				ac.insertClient(client);
+				ae.insertEmploye(employe);
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 				ed.doExceptionDialog();
 				this.primaryStage.close();
-				client = null;
+				employe = null;
 			} catch (ApplicationException ae) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
 				ed.doExceptionDialog();
-				client = null;
+				employe = null;
 			}
 		}
-		return client;
+		return employe;
 	}
 
 

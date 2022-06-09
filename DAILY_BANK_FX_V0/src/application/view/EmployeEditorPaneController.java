@@ -19,7 +19,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import model.data.Client;
 import model.data.Employe;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.Order;
@@ -73,14 +72,14 @@ public class EmployeEditorPaneController implements Initializable {
 			this.txtPrenom.setDisable(false);
 			this.txtMotPasse.setDisable(false);
 			this.txtLogin.setDisable(false);
-			this.rbActif.setSelected(true);
-			this.rbInactif.setSelected(false);
+			this.rbChefAg.setSelected(true);
+			this.rbGuichetier.setSelected(false);
 			if (ConstantesIHM.isAdmin(this.dbs.getEmpAct())) {
-				this.rbActif.setDisable(false);
-				this.rbInactif.setDisable(false);
+				this.rbChefAg.setDisable(false);
+				this.rbGuichetier.setDisable(false);
 			} else {
-				this.rbActif.setDisable(true);
-				this.rbInactif.setDisable(true);
+				this.rbChefAg.setDisable(true);
+				this.rbGuichetier.setDisable(true);
 			}
 			this.lblMessage.setText("Informations sur le nouveau client");
 			this.butOk.setText("Ajouter");
@@ -92,14 +91,14 @@ public class EmployeEditorPaneController implements Initializable {
 			this.txtPrenom.setDisable(false);
 			this.txtMotPasse.setDisable(false);
 			this.txtLogin.setDisable(false);
-			this.rbActif.setSelected(true);
-			this.rbInactif.setSelected(false);
+			this.rbChefAg.setSelected(true);
+			this.rbGuichetier.setSelected(false);
 			if (ConstantesIHM.isAdmin(this.dbs.getEmpAct())) {
-				this.rbActif.setDisable(false);
-				this.rbInactif.setDisable(false);
+				this.rbChefAg.setDisable(false);
+				this.rbGuichetier.setDisable(false);
 			} else {
-				this.rbActif.setDisable(true);
-				this.rbInactif.setDisable(true);
+				this.rbChefAg.setDisable(true);
+				this.rbGuichetier.setDisable(true);
 			}
 			this.lblMessage.setText("Informations client");
 			this.butOk.setText("Modifier");
@@ -124,11 +123,15 @@ public class EmployeEditorPaneController implements Initializable {
 		this.txtIdEmploye.setText("" + this.employeEdite.idEmploye);
 		this.txtNom.setText(this.employeEdite.nom);
 		this.txtPrenom.setText(this.employeEdite.prenom);
-		this.txtDroitAccess.setText(this.employeEdite.droitsAccess);
 		this.txtLogin.setText(this.employeEdite.login);
 		this.txtMotPasse.setText(this.employeEdite.motPasse);
 
-
+		if (ConstantesIHM.isAdmin(this.employeEdite)) {
+			this.rbChefAg.setSelected(true);
+		} else {
+			this.rbChefAg.setSelected(false);
+		}
+		
 		this.employeResult = null;
 
 		this.primaryStage.showAndWait();
@@ -152,17 +155,15 @@ public class EmployeEditorPaneController implements Initializable {
 	@FXML
 	private TextField txtPrenom;
 	@FXML
-	private TextField txtDroitAccess;
-	@FXML
 	private TextField txtMotPasse;
 	@FXML
 	private TextField txtLogin;
 	@FXML
-	private RadioButton rbActif;
+	private RadioButton rbChefAg;
 	@FXML
-	private RadioButton rbInactif;
+	private RadioButton rbGuichetier;
 	@FXML
-	private ToggleGroup actifInactif;
+	private ToggleGroup chefAgGuichetier;
 	@FXML
 	private Button butOk;
 	@FXML
@@ -204,9 +205,13 @@ public class EmployeEditorPaneController implements Initializable {
 	private boolean isSaisieValide() {
 		this.employeEdite.nom = this.txtNom.getText().trim();
 		this.employeEdite.prenom = this.txtPrenom.getText().trim();
-		this.employeEdite.droitsAccess = this.txtDroitAccess.getText().trim();
 		this.employeEdite.motPasse = this.txtMotPasse.getText().trim();
 		this.employeEdite.login = this.txtLogin.getText().trim();
+		if (this.rbChefAg.isSelected()) {
+			this.employeEdite.droitsAccess = ConstantesIHM.AGENCE_CHEF;
+		} else {
+			this.employeEdite.droitsAccess = ConstantesIHM.AGENCE_GUICHETIER;
+		}
 
 		if (this.employeEdite.nom.isEmpty()) {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le nom ne doit pas être vide",
@@ -222,18 +227,17 @@ public class EmployeEditorPaneController implements Initializable {
 		}
 
 		String regex = "[A-Za-z]";
-		if (!Pattern.matches(regex, this.employeEdite.login) || this.employeEdite.login.length() > 2) {
-			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le téléphone n'est pas valable",
-					AlertType.WARNING);
-			this.txtMotPasse.requestFocus();
-			return false;
-		}
-		regex = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
-				+ "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
-		if (!Pattern.matches(regex, this.employeEdite.email) || this.employeEdite.email.length() > 20) {
-			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le mail n'est pas valable",
+		if (!Pattern.matches(regex, this.employeEdite.login) || this.employeEdite.login.length() < 2) {
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le Login n'est pas valable",
 					AlertType.WARNING);
 			this.txtLogin.requestFocus();
+			return false;
+		}
+		
+		if (this.employeEdite.motPasse.length() < 5) {
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le mot de passe n'est pas valable (au moins 5 caract�res)",
+					AlertType.WARNING);
+			this.txtMotPasse.requestFocus();
 			return false;
 		}
 

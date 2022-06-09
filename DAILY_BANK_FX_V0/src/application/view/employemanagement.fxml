@@ -24,7 +24,7 @@
             </Button>
          </top>
          <bottom>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doNouveauClient" text="Nouveau employées" BorderPane.alignment="CENTER">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doNouveauClient" text="Nouvel employé" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="10.0" right="10.0" top="10.0" />
                </BorderPane.margin>
@@ -42,12 +42,12 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="btnModifClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierClient" text="Modifier employées">
+                        <Button fx:id="btnModifEmploye" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doModifierEmploye" text="Modifier employé">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button fx:id="btnDesactClient" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doDesactiverClient" text="Supprimer employées" GridPane.rowIndex="1">
+                        <Button fx:id="btnSupprEmploye" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doDesactiverClient" text="Supprimer employé" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </GridPane.margin>
@@ -78,8 +78,8 @@
          <top>
             <FlowPane BorderPane.alignment="CENTER">
                <children>
-                  <Label text="Numéro" />
-                  <TextField fx:id="txtNum" prefColumnCount="5">
+                  <Label text="Id Employé" />
+                  <TextField fx:id="txtId" prefColumnCount="5">
                      <FlowPane.margin>
                         <Insets left="5.0" />
                      </FlowPane.margin>
@@ -111,7 +111,7 @@
             </FlowPane>
          </top>
          <center>
-            <ListView fx:id="lvClients" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <ListView fx:id="lvEmployes" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
                </BorderPane.margin>
