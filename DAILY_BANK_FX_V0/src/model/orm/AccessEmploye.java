@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import model.data.Client;
 import model.data.Employe;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
@@ -214,5 +213,22 @@ public class AccessEmploye {
 		}
 	}
 
+	public void supprEmploye(Employe employeSuppr) 
+			throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
+		try {
+			Connection con = LogToDatabase.getConnexion();
+
+			String query = "DELETE FROM EMPLOYE WHERE idemploye = ?";
+
+			PreparedStatement pst = con.prepareStatement(query);
+			pst.setInt(1, employeSuppr.idEmploye);
+			System.err.println(query);
+			
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.Employe, Order.UPDATE, "Erreur accès", e);
+		}
+		
+	}
 }
+
 
