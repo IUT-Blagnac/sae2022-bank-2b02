@@ -116,6 +116,13 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 Le solde initiale doit être supérieur à 50€.
 
+=== Clôturer un compte
+
+Vous pouvez clôturer un compte en selectionnant un compte et en cliquant sur le bouton "Clôturer le compte". Cela changera l'état de ce compte qui passera d'ouvert à clôturer.
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_gestion_compte_cloturer.png[Cloturer Compte]
+
+
 === Opérations
 
 Depuis la page de gestion des comptes, en en sélectionnant un, il vous sera possible d'accéder aux opérations. Sur cette page apparaissent les opérations de débit et de crédit avec leurs moyens de paiments et leurs date de réalisation.
@@ -124,9 +131,21 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 === Débit
 
-Vous pourrez réaliser un débit depuis la page de gestion des opération en cliquant sur le bouton dédié. Vous pourrez alors choisir un moyen de paiment ainsi qu'un montant.
+Vous pouvez réaliser un débit depuis la page de gestion des opération en cliquant sur le bouton dédié. Vous pourrez alors choisir un moyen de paiment ainsi qu'un montant.
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_gestion_compte_operations_debit.png[Operations debit]
 
 === Crédit
+
+Vous pouvez réaliser un crédit depuis la page de gestion des opération en cliquant sur le bouton dédié. Vous pourrez alors choisir un moyen de paiment ainsi qu'un montant.
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_gestion_compte_operations_credit.png[Operations credit]
+
+=== Virement de compte à compte
+
+Vous pouvez réaliser un virement entre deux comptes consistant à un débit du compte depuis lequel il est effectué et un crédit sur le compte selectionné. Les virement ne peuvent être effectué qu'entre les comptes d'une même agence. 
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_gestion_compte_operations_virement.png[Operations virement]
 
 === Déconnexion
 
@@ -139,6 +158,28 @@ Un autre moyen de se déconnecter est de cliquer sur Utilisateur puis sur décon
 image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_connecte_barre_deconnexion.png[Bouton déconnexion]
 
 Après la déconnexion, la page se trouve dans son état initial. (voir "Écran d'accueil")
+
+== Chef d'agence
+
+Les chefs d'agence ont un rôle particulier et des droits supplémentaire par rapport aux guichetier. Ces accées seront décrit dans cette partie.
+
+=== Rendre inactif un client
+
+Un chef d'agence peut, depuis la page de getion des clients, désactivé un client préalablement selectionnée. Ce dernier hangera de statut en passant d'actif à inactif.
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_client_inactif.png[Client inactif]
+
+=== Gérer les employés
+
+Le chef d'agence peut accéder à la page de gestion des employés depuis la page principale une fois connecté à l'aide du bouton *Gestion -> Employé*. Sur cette page aparraissent tous les employés avec leurs informations. Il est aussi possible de rechercher un employé en fonction de son id, son nom et son prénom.
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_client_inactif.png[Client inactif]
+
+=== Créer un employé
+
+=== Modifier un employé
+
+=== Supprimer un employé
 
 == Quitter
 
