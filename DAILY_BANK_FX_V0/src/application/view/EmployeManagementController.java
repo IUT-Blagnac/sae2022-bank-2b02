@@ -165,7 +165,11 @@ public class EmployeManagementController implements Initializable {
 	 */
 	@FXML
 	private void doSupprimerEmploye() {
-		System.out.println("dac");
+		int selectedIndice = this.lvEmployes.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			Employe employeSuppr = this.olc.get(selectedIndice);
+			this.em.supprimerEmploye(employeSuppr);
+		}
 	}
 
 	/*

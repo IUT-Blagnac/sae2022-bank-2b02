@@ -102,7 +102,7 @@ public class DailyBankMainFrame extends Application {
 	}
 
 	/*
-	 * Permet de se déconnecter
+	 * Permet de se dï¿½connecter
 	 */
 	public void disconnect() {
 		this.dbs.setAgAct(null);
@@ -148,7 +148,7 @@ public class DailyBankMainFrame extends Application {
 	}
 
 	/*
-	 * Permet de créer une fenêtre de gestion des clients
+	 * Permet de crï¿½er une fenï¿½tre de gestion des clients
 	 */
 	public void gestionClients() {
 		ClientsManagement cm = new ClientsManagement(this.primaryStage, this.dbs);
@@ -157,6 +157,6 @@ public class DailyBankMainFrame extends Application {
 
 	public void gestionEmployees() {
 		EmployeesManagement em = new EmployeesManagement(this.primaryStage, this.dbs);
-		em.doClientManagementDialog();
+		em.doEmployeManagementDialog();
 	}
 }

@@ -52,7 +52,7 @@ public class EmployeesManagement {
 	/*
 	 * Permet d'afficher la boite de dialogue de management du client 
 	 */
-	public void doClientManagementDialog() {
+	public void doEmployeManagementDialog() {
 		this.emc.displayDialog();
 	}
 	
@@ -142,5 +142,25 @@ public class EmployeesManagement {
 			listeEmploye = new ArrayList<>();
 		}
 		return listeEmploye;
+	}
+
+	public void supprimerEmploye(Employe employeSuppr) {
+		
+		if (employeSuppr != null) {
+			try {
+				AccessEmploye ae = new AccessEmploye();
+				ae.supprEmploye(employeSuppr);
+			} catch (DatabaseConnexionException e) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+				ed.doExceptionDialog();
+				employeSuppr = null;
+				this.primaryStage.close();
+			} catch (ApplicationException ae) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+				ed.doExceptionDialog();
+				employeSuppr = null;
+			}
+		}
+		
 	}
 }

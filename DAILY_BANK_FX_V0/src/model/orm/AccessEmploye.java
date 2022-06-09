@@ -129,7 +129,7 @@ public class AccessEmploye {
 			rs.close();
 			pst.close();
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accès", e);
+			throw new DataAccessException(Table.Employe, Order.SELECT, "Erreur accès", e);
 		}
 
 		return alResult;
@@ -187,7 +187,7 @@ public class AccessEmploye {
 		try {
 			Connection con = LogToDatabase.getConnexion();
 
-			String query = "UPDATE CLIENT SET " + "nom = " + "? , " + "prenom = " + "? , " + "droitaccess = "
+			String query = "UPDATE EMPLOYE SET " + "nom = " + "? , " + "prenom = " + "? , " + "droitaccess = "
 					+ "? , " + "login = " + "? , " + "motpasse = " + "? " +  "WHERE idemploye = ? ";
 
 			PreparedStatement pst = con.prepareStatement(query);

@@ -81,7 +81,7 @@ public class EmployeEditorPaneController implements Initializable {
 				this.rbChefAg.setDisable(true);
 				this.rbGuichetier.setDisable(true);
 			}
-			this.lblMessage.setText("Informations sur le nouveau client");
+			this.lblMessage.setText("Informations sur le nouvel employé");
 			this.butOk.setText("Ajouter");
 			this.butCancel.setText("Annuler");
 			break;
@@ -100,7 +100,7 @@ public class EmployeEditorPaneController implements Initializable {
 				this.rbChefAg.setDisable(true);
 				this.rbGuichetier.setDisable(true);
 			}
-			this.lblMessage.setText("Informations client");
+			this.lblMessage.setText("Informations employé");
 			this.butOk.setText("Modifier");
 			this.butCancel.setText("Annuler");
 			break;
