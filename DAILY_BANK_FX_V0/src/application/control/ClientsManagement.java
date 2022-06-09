@@ -64,7 +64,7 @@ public class ClientsManagement {
 	 * @return le client
 	 */
 	public Client modifierClient(Client c) {
-		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
+		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
 		Client result = cep.doClientEditorDialog(c, EditionMode.MODIFICATION);
 		if (result != null) {
 			try {
@@ -90,7 +90,7 @@ public class ClientsManagement {
 	 */
 	public Client nouveauClient() {
 		Client client;
-		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
+		ClientEditorPane cep = new ClientEditorPane(this.primaryStage, this.dbs);
 		client = cep.doClientEditorDialog(null, EditionMode.CREATION);
 		if (client != null) {
 			try {
