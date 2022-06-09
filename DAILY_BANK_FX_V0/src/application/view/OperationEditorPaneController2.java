@@ -187,9 +187,25 @@ public class OperationEditorPaneController2 implements Initializable {
 				return;
 			}
 			
+			if (Integer.valueOf(this.txtCompte.getText().trim()) != this.compteEdite.idNumCli) {
+				info = "Numéro de compte invalide ! - Cpt. : " + this.compteEdite.idNumCompte + "  "
+						+ String.format(Locale.ENGLISH, "%12.02f", this.compteEdite.solde) + "  /  "
+						+ String.format(Locale.ENGLISH, "%8d", this.compteEdite.debitAutorise);
+				this.lblMessage.setText(info);
+				this.txtCompte.getStyleClass().add("borderred");
+				this.lblMontant.getStyleClass().add("borderred");
+				this.lblMessage.getStyleClass().add("borderred");
+				this.txtCompte.requestFocus();
+				return;
+			}
+			
+			
+			
+			
 			
 			String typeOp = this.cbTypeOpe.getValue();
 			this.operationResultat = new Operation(-1, montant, null, null, this.compteEdite.idNumCli, typeOp);
+			
 			this.primaryStage.close();
 			break;
 
