@@ -91,7 +91,7 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 * *Partie de use case réalisé*
 
-Dans le use case, un cas s'utilisation nommé "Créditer un compte" a été créé. Il a été relié à l'acteur "Guichetier".
+Dans le use case, un cas s'utilisation nommé "Générer un relevé mensuel d'un compte en PDF" a été créé. Il a été relié à l'acteur "Guichetier".
 
 * *Partie du diagramme de classe de données nécessaires*
 
