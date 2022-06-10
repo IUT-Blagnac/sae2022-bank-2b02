@@ -173,13 +173,39 @@ image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/
 
 Le chef d'agence peut accéder à la page de gestion des employés depuis la page principale une fois connecté à l'aide du bouton *Gestion -> Employé*. Sur cette page aparraissent tous les employés avec leurs informations. Il est aussi possible de rechercher un employé en fonction de son id, son nom et son prénom.
 
-image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_client_inactif.png[Client inactif]
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_employe.png[Employe]
 
 === Créer un employé
 
+Vous pouvez créer un employé en cliquant sur le bouton *nouvel employé*. Un pop-up permettant de remplir les informations de l'employé apparraît.
+
+Afin de créer un employé:
+
+* Toutes les informations doivent être complété
+* Le mot de passe doit contenir plus de 5 caractères  
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_creer_employe.png[Creer employe]
+
 === Modifier un employé
 
+Vous pouvez modifier les informations d'un employé en cliquant sur le bouton *Modifier employé* une fois un employé selectionné. Une page pop-up avec les informations de l'employé apparaît.
+
+Afin de modifier un employé:
+
+* Toutes les informations doivent être complété
+* Le mot de passe doit contenir plus de 5 caractères  
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_modifier_employe.png[Modifier employe]
+
 === Supprimer un employé
+
+Vous pouvez supprimer un employé après avoir selectionné un employé en cliquant sur le bouton *supprimer employé*. 
+
+*/!\* A la différence de la désactivation d'un client ou d'un compte, la suppression d'un employé supprime toutes les informations de ce-dernier.
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_supprimer_employe1.png[Supprimer employe]
+
+image::https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/images_doc_utilisateur/page_employe.png[Employé supprimé]
 
 == Quitter
 
