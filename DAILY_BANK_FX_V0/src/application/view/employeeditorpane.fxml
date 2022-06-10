@@ -83,13 +83,14 @@
                <children>
                   <RadioButton fx:id="rbChefAg" mnemonicParsing="false" text="Chef d'agence">
                      <toggleGroup>
-                        <ToggleGroup fx:id="actifInactif" />
+                        <ToggleGroup fx:id="chefAgGuichetier" />
                      </toggleGroup>
                      <padding>
                         <Insets right="20.0" />
                      </padding>
                   </RadioButton>
-                  <RadioButton fx:id="rbGuichetier" layoutX="131.0" layoutY="17.0" mnemonicParsing="false" text="Guichetier" toggleGroup="$actifInactif" />
+                  <RadioButton fx:id="rbGuichetier" layoutX="131.0" layoutY="17.0" mnemonicParsing="false" text="Guichetier" toggleGroup="$chefAgGuichetier">
+                     </RadioButton>
                </children>
             </HBox>
          </children>

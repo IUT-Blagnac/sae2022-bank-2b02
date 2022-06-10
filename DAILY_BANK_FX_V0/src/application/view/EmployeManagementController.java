@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import application.DailyBankState;
-import application.control.EmployeesManagement;
+import application.control.EmployeManagement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -22,7 +22,7 @@ public class EmployeManagementController implements Initializable {
 
 	// Etat application
 	private DailyBankState dbs;
-	private EmployeesManagement em;
+	private EmployeManagement em;
 
 	// Fenêtre physique
 	private Stage primaryStage;
@@ -31,7 +31,7 @@ public class EmployeManagementController implements Initializable {
 	private ObservableList<Employe> olc;
 
 	// Manipulation de la fenêtre
-	public void initContext(Stage _primaryStage, EmployeesManagement _em, DailyBankState _dbstate) {
+	public void initContext(Stage _primaryStage, EmployeManagement _em, DailyBankState _dbstate) {
 		this.em = _em;
 		this.primaryStage = _primaryStage;
 		this.dbs = _dbstate;
@@ -170,6 +170,8 @@ public class EmployeManagementController implements Initializable {
 			Employe employeSuppr = this.olc.get(selectedIndice);
 			this.em.supprimerEmploye(employeSuppr);
 		}
+		doRechercher();
+		
 	}
 
 	/*
@@ -189,12 +191,14 @@ public class EmployeManagementController implements Initializable {
 	 */
 	private void validateComponentState() {
 		// Non implémenté => désactivé
-		this.btnSupprEmploye.setDisable(true);
+		
 		int selectedIndice = this.lvEmployes.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			this.btnModifEmploye.setDisable(false);
+			this.btnSupprEmploye.setDisable(false);
 		} else {
 			this.btnModifEmploye.setDisable(true);
+			this.btnSupprEmploye.setDisable(true);
 		}
 	}
 }

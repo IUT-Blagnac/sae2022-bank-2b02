@@ -187,7 +187,7 @@ public class AccessEmploye {
 		try {
 			Connection con = LogToDatabase.getConnexion();
 
-			String query = "UPDATE EMPLOYE SET " + "nom = " + "? , " + "prenom = " + "? , " + "droitaccess = "
+			String query = "UPDATE EMPLOYE SET " + "nom = " + "? , " + "prenom = " + "? , " + "droitsaccess = "
 					+ "? , " + "login = " + "? , " + "motpasse = " + "? " +  "WHERE idemploye = ? ";
 
 			PreparedStatement pst = con.prepareStatement(query);
@@ -223,9 +223,10 @@ public class AccessEmploye {
 			PreparedStatement pst = con.prepareStatement(query);
 			pst.setInt(1, employeSuppr.idEmploye);
 			System.err.println(query);
-			
+			pst.executeUpdate();
+			con.commit();
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Employe, Order.UPDATE, "Erreur accès", e);
+			throw new DataAccessException(Table.Employe, Order.DELETE, "Erreur accès", e);
 		}
 		
 	}

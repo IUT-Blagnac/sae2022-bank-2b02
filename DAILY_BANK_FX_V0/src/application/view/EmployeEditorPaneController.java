@@ -74,6 +74,7 @@ public class EmployeEditorPaneController implements Initializable {
 			this.txtLogin.setDisable(false);
 			this.rbChefAg.setSelected(true);
 			this.rbGuichetier.setSelected(false);
+			
 			if (ConstantesIHM.isAdmin(this.dbs.getEmpAct())) {
 				this.rbChefAg.setDisable(false);
 				this.rbGuichetier.setDisable(false);
@@ -81,6 +82,7 @@ public class EmployeEditorPaneController implements Initializable {
 				this.rbChefAg.setDisable(true);
 				this.rbGuichetier.setDisable(true);
 			}
+			
 			this.lblMessage.setText("Informations sur le nouvel employé");
 			this.butOk.setText("Ajouter");
 			this.butCancel.setText("Annuler");
@@ -93,6 +95,7 @@ public class EmployeEditorPaneController implements Initializable {
 			this.txtLogin.setDisable(false);
 			this.rbChefAg.setSelected(true);
 			this.rbGuichetier.setSelected(false);
+			
 			if (ConstantesIHM.isAdmin(this.dbs.getEmpAct())) {
 				this.rbChefAg.setDisable(false);
 				this.rbGuichetier.setDisable(false);
@@ -100,6 +103,7 @@ public class EmployeEditorPaneController implements Initializable {
 				this.rbChefAg.setDisable(true);
 				this.rbGuichetier.setDisable(true);
 			}
+			
 			this.lblMessage.setText("Informations employé");
 			this.butOk.setText("Modifier");
 			this.butCancel.setText("Annuler");
@@ -128,8 +132,10 @@ public class EmployeEditorPaneController implements Initializable {
 
 		if (ConstantesIHM.isAdmin(this.employeEdite)) {
 			this.rbChefAg.setSelected(true);
+			this.rbGuichetier.setSelected(false);
 		} else {
 			this.rbChefAg.setSelected(false);
+			this.rbGuichetier.setSelected(true);
 		}
 		
 		this.employeResult = null;
@@ -207,6 +213,7 @@ public class EmployeEditorPaneController implements Initializable {
 		this.employeEdite.prenom = this.txtPrenom.getText().trim();
 		this.employeEdite.motPasse = this.txtMotPasse.getText().trim();
 		this.employeEdite.login = this.txtLogin.getText().trim();
+		
 		if (this.rbChefAg.isSelected()) {
 			this.employeEdite.droitsAccess = ConstantesIHM.AGENCE_CHEF;
 		} else {
@@ -226,8 +233,7 @@ public class EmployeEditorPaneController implements Initializable {
 			return false;
 		}
 
-		String regex = "[A-Za-z]";
-		if (!Pattern.matches(regex, this.employeEdite.login) || this.employeEdite.login.length() < 2) {
+		if (this.employeEdite.login.length() < 2) {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le Login n'est pas valable",
 					AlertType.WARNING);
 			this.txtLogin.requestFocus();

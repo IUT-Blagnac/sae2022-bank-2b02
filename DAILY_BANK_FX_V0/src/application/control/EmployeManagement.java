@@ -17,14 +17,14 @@ import model.orm.AccessEmploye;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
 
-public class EmployeesManagement {
+public class EmployeManagement {
 
 	private Stage primaryStage;
 	private DailyBankState dbs;
 	private EmployeManagementController emc;
 
 	
-	public EmployeesManagement(Stage _parentStage, DailyBankState _dbstate) {
+	public EmployeManagement(Stage _parentStage, DailyBankState _dbstate) {
 		this.dbs = _dbstate;
 		try {
 			FXMLLoader loader = new FXMLLoader(EmployeManagementController.class.getResource("employemanagement.fxml"));
@@ -65,7 +65,7 @@ public class EmployeesManagement {
 	 */
 	public Employe modifierEmploye(Employe employeMod) {
 		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
-		Employe result = cep.doClientEditorDialog(employeMod, EditionMode.MODIFICATION);
+		Employe result = cep.doEmployeEditorDialog(employeMod, EditionMode.MODIFICATION);
 		if (result != null) {
 			try {
 				AccessEmploye ae = new AccessEmploye();
@@ -92,7 +92,7 @@ public class EmployeesManagement {
 	public Employe nouveauEmploye() {
 		Employe employe;
 		EmployeEditorPane cep = new EmployeEditorPane(this.primaryStage, this.dbs);
-		employe = cep.doClientEditorDialog(null, EditionMode.CREATION);
+		employe = cep.doEmployeEditorDialog(null, EditionMode.CREATION);
 		if (employe != null) {
 			try {
 				AccessEmploye ae = new AccessEmploye();
