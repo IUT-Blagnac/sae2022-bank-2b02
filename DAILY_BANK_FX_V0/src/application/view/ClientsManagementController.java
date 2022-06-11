@@ -180,9 +180,7 @@ public class ClientsManagementController implements Initializable {
 		if (selectedIndice >= 0) {
 			Client cliSup = this.olc.get(selectedIndice);
 			this.cm.supprimerClient(cliSup);
-			/*if (result != null) {
-				this.olc.set(selectedIndice, result);
-			}*/
+			
 		}
 	}
 

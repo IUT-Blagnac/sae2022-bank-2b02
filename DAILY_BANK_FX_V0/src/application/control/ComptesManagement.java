@@ -1,6 +1,11 @@
 package application.control;
 
+import java.io.FileOutputStream;
 import java.util.ArrayList;
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 
 import application.DailyBankApp;
 import application.DailyBankState;
@@ -106,6 +111,8 @@ public class ComptesManagement {
 		}
 		return compte;
 	}
+	
+	
 
 	/*
 	 * Permet de connaitre la liste des comptes courants d'un client

@@ -1,8 +1,13 @@
 package application.view;
 
+import java.io.FileOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 
 import application.DailyBankState;
 import application.control.ComptesManagement;
@@ -96,6 +101,7 @@ public class ComptesManagementController implements Initializable {
 	private Button btnModifierCompte;
 	@FXML
 	private Button btnSupprCompte;
+	
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -140,6 +146,9 @@ public class ComptesManagementController implements Initializable {
 			this.olCompteCourant.add(compte);
 		}
 	}
+	
+	
+	
 
 	private void loadList () {
 		ArrayList<CompteCourant> listeCpt;
@@ -163,6 +172,7 @@ public class ComptesManagementController implements Initializable {
 		} else {
 			this.btnVoirOpes.setDisable(true);
 			this.btnSupprCompte.setDisable(true);
+
 
 		}
 	}

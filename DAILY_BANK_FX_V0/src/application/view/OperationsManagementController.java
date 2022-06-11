@@ -1,9 +1,19 @@
 package application.view;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
+
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 
 import application.DailyBankState;
 import application.control.OperationsManagement;
@@ -92,6 +102,8 @@ public class OperationsManagementController implements Initializable {
 	private Button btnCredit;
 	@FXML
 	private Button btnVirement;
+	@FXML
+	private Button btnGenererPdf;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -144,11 +156,33 @@ public class OperationsManagementController implements Initializable {
 			this.validateComponentState();
 		}
 	}
+	
+	@FXML
+	private void doGenererPDF() throws DocumentException, MalformedURLException, IOException {
+			
+			Document document = new Document (PageSize.A4 , 50, 50, 50 , 50);
+	        try {
+	            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream("ReleveCompte.pdf"));
+	                pdfWriter.setViewerPreferences(PdfWriter.PageLayoutTwoColumnLeft);
+	                document.open();
+	                document.add(new Chunk("")); 
+	                Paragraph p1 = new Paragraph("Relevé de comptes de" + " " + this.clientDuCompte.nom + " " + this.clientDuCompte.prenom);
+
+	                Paragraph p = new Paragraph(this.lvOperations.getItems().toString());
+	                document.add(p1);
+	                document.add(p);
+	               document.close();
+		     }catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	    	
+		}
 
 	private void validateComponentState() {
 		this.btnCredit.setDisable(false);
 		this.btnDebit.setDisable(false);
 		this.btnVirement.setDisable(false);
+		this.btnGenererPdf.setDisable(false);
 	}
 
 	private void updateInfoCompteClient() {
