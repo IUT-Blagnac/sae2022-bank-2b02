@@ -64,7 +64,7 @@ public class PrelevementsManagement {
 	
 	public Prelevement modifierPrelevement(Prelevement p) {
 		PrelevementEditorPane cep = new PrelevementEditorPane(this.primaryStage, this.dbs);
-		Prelevement result = cep.doClientEditorDialog(p, EditionMode.MODIFICATION);
+		Prelevement result = cep.doPrelevementEditorDialog(p, EditionMode.MODIFICATION);
 		if (result != null) {
 			try {
 				AccessPrelevement ap = new AccessPrelevement();
@@ -122,23 +122,20 @@ public class PrelevementsManagement {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 			ed.doExceptionDialog();
 			this.primaryStage.close();
-			listeCli = new ArrayList<>();
+			listePrel = new ArrayList<>();
 		} catch (ApplicationException ae) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
 			ed.doExceptionDialog();
-			listeCli = new ArrayList<>();
+			listePrel = new ArrayList<>();
 		}
-		return listeCli;
+		return listePrel;
 	}
 	
-	/*
-	 * Permet de clôturer tous les comptes d'un client
-	 * @param c : le client pour lequel on veut clôturer les comptes
-	 */
-	public void supprimerClient(Client c) {		
+	
+	public void supprimerPrelevement(Prelevement p) {		
 			try {
-				AccessClient ac = new AccessClient();
-				ac.deleteClient(c);
+				AccessPrelevement ap = new AccessPrelevement();
+				ap.deletePrelevement(p);
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
 				ed.doExceptionDialog();

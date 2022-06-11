@@ -51,74 +51,56 @@ public class AccessPrelevement {
 				pst.setString(2, debutMontant);
 				pst.setString(3, debutDate);
 			} else {
-				query = "SELECT * FROM PrelevementAutomatique where idAg = ?";
-				query += " ORDER BY nom";
+				query = "SELECT * FROM PrelevementAutomatique where idNumCompte = ?";
+				query += " ORDER BY montant";
 				pst = con.prepareStatement(query);
-				pst.setInt(1, idAg);
+				pst.setInt(1, idNumCompte);
 			}
-			System.err.println(query + " nom : " + debutNom + " prenom : " + debutPrenom + "#");
+			System.err.println(query + " nom : " + debutMontant + " prenom : " + debutDate + "#");
 
 			ResultSet rs = pst.executeQuery();
 			while (rs.next()) {
-				int idNumCliTR = rs.getInt("idNumCli");
-				String nom = rs.getString("nom");
-				String prenom = rs.getString("prenom");
-				String adressePostale = rs.getString("adressePostale");
-				adressePostale = (adressePostale == null ? "" : adressePostale);
-				String email = rs.getString("email");
-				email = (email == null ? "" : email);
-				String telephone = rs.getString("telephone");
-				telephone = (telephone == null ? "" : telephone);
-				String estInactif = rs.getString("estInactif");
-				int idAgCli = rs.getInt("idAg");
+				int idPrelevTR = rs.getInt("idPrelev");
+				String montant = rs.getString("montant");
+				String date = rs.getString("datecurrente");
+				String beneficiaire = rs.getString("beneficiaire");
+				beneficiaire = (beneficiaire == null ? "" : beneficiaire);
+				int idNumCompte2 = rs.getInt("idNumCompte");
 
 				alResult.add(
-						new Client(idNumCliTR, nom, prenom, adressePostale, email, telephone, estInactif, idAgCli));
+						new Prelevement(idPrelevTR, montant, date, beneficiaire, idNumCompte2));
 			}
 			rs.close();
 			pst.close();
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accÃ¨s", e);
+			throw new DataAccessException(Table.PrelevementAutomatique, Order.SELECT, "Erreur accÃ¨s", e);
 		}
 
 		return alResult;
 	}
 
-	/**
-	 * Recherche de client par son id.
-	 *
-	 * @return un Client ou null si non trouvÃ©
-	 * @param idCli id du client recherchÃ© (clÃ© primaire)
-	 * @throws RowNotFoundOrTooManyRowsException
-	 * @throws DataAccessException
-	 * @throws DatabaseConnexionException
-	 */
-	public Client getPrelevement(int idCli)
+
+	public Prelevement getPrelevement(int idPrelev)
 			throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
-		Client clientTrouve;
+		Prelevement prelevementTrouve;
 
 		try {
 			Connection con = LogToDatabase.getConnexion();
-			String query = "SELECT * FROM Client where" + " idNumCli = ?";
+			String query = "SELECT * FROM PrelevementAutomatique where" + " idPrelev = ?";
 			PreparedStatement pst = con.prepareStatement(query);
-			pst.setInt(1, idCli);
+			pst.setInt(1, idPrelev);
 			ResultSet rs = pst.executeQuery();
 
 			if (rs.next()) {
 				// TrouvÃ© ...
-				int idNumCli = rs.getInt("idNumCli");
-				String nom = rs.getString("nom");
-				String prenom = rs.getString("prenom");
-				String adressePostale = rs.getString("adressePostale");
-				adressePostale = (adressePostale == null ? "" : adressePostale);
-				String email = rs.getString("email");
-				email = (email == null ? "" : email);
-				String telephone = rs.getString("telephone");
-				telephone = (telephone == null ? "" : telephone);
-				String estInactif = rs.getString("estInactif");
-				int idAgCli = rs.getInt("idAg");
+				int idPrelev1 = rs.getInt("idPrelev");
+				String montant = rs.getString("montant");
+				String date = rs.getString("datecurrente");
+				String beneficiaire = rs.getString("beneficiaire");
+				beneficiaire = (beneficiaire == null ? "" : beneficiaire);
+				int idNumCompte = rs.getInt("idNumCompte");
 
-				clientTrouve = new Client(idNumCli, nom, prenom, adressePostale, email, telephone, estInactif, idAgCli);
+				prelevementTrouve = new Prelevement(idPrelev, montant, date, beneficiaire, idNumCompte);
 			} else {
 				// Non trouvÃ© ...
 				rs.close();
@@ -130,41 +112,31 @@ public class AccessPrelevement {
 				// Plus de 2 ? Bizarre ...
 				rs.close();
 				pst.close();
-				throw new RowNotFoundOrTooManyRowsException(Table.Client, Order.SELECT,
+				throw new RowNotFoundOrTooManyRowsException(Table.PrelevementAutomatique, Order.SELECT,
 						"Recherche anormale (en trouve au moins 2)", null, 2);
 			}
 			rs.close();
 			pst.close();
-			return clientTrouve;
+			return prelevementTrouve;
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accÃ¨s", e);
+			throw new DataAccessException(Table.PrelevementAutomatique, Order.SELECT, "Erreur accÃ¨s", e);
 		}
 	}
 
-	/**
-	 * Insertion d'un client.
-	 *
-	 * @param client IN/OUT Tous les attributs IN sauf idNumCli en OUT
-	 * @throws RowNotFoundOrTooManyRowsException
-	 * @throws DataAccessException
-	 * @throws DatabaseConnexionException
-	 */
+
 	public void insertPrelevement(Prelevement prelevement)
 			throws RowNotFoundOrTooManyRowsException, DataAccessException, DatabaseConnexionException {
 		try {
 
 			Connection con = LogToDatabase.getConnexion();
 
-			String query = "INSERT INTO PRELEVEMENTAUTOMATIQUE VALUES (" + "seq_id_client.NEXTVAL" + ", " + "?" + ", " + "?" + ", "
+			String query = "INSERT INTO PRELEVEMENTAUTOMATIQUE VALUES (" + "seq_id_prelev.NEXTVAL" + ", " + "?" + ", " + "?" + ", "
 					+ "?" + ", " + "?" + ", " + "?" + ", " + "?" + ", " + "?" + ")";
 			PreparedStatement pst = con.prepareStatement(query);
-			pst.setString(1, client.nom);
-			pst.setString(2, client.prenom);
-			pst.setString(3, client.adressePostale);
-			pst.setString(4, client.email);
-			pst.setString(5, client.telephone);
-			pst.setString(6, "" + client.estInactif.charAt(0));
-			pst.setInt(7, client.idAg);
+			pst.setString(1, prelevement.montant);
+			pst.setString(2, prelevement.dateRecurrente);
+			pst.setString(3, prelevement.beneficiaire);
+			pst.setInt(4, prelevement.idNumCompte);
 
 			System.err.println(query);
 
@@ -173,26 +145,26 @@ public class AccessPrelevement {
 
 			if (result != 1) {
 				con.rollback();
-				throw new RowNotFoundOrTooManyRowsException(Table.Client, Order.INSERT,
+				throw new RowNotFoundOrTooManyRowsException(Table.PrelevementAutomatique, Order.INSERT,
 						"Insert anormal (insert de moins ou plus d'une ligne)", null, result);
 			}
 
-			query = "SELECT seq_id_client.CURRVAL from DUAL";
+			query = "SELECT seq_id_prelev.CURRVAL from DUAL";
 
 			System.err.println(query);
 			PreparedStatement pst2 = con.prepareStatement(query);
 
 			ResultSet rs = pst2.executeQuery();
 			rs.next();
-			int numCliBase = rs.getInt(1);
+			int numPrelBase = rs.getInt(1);
 
 			con.commit();
 			rs.close();
 			pst2.close();
 
-			client.idNumCli = numCliBase;
+			prelevement.idPrelev = numPrelBase;
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.INSERT, "Erreur accÃ¨s", e);
+			throw new DataAccessException(Table.PrelevementAutomatique, Order.INSERT, "Erreur accÃ¨s", e);
 		}
 	}
 
@@ -227,22 +199,16 @@ public class AccessPrelevement {
 		}
 	}
 	
-	/*
-	 * Clôturer tous les comptes d'un client
-	 * 
-	 * @param client IN client.idNumCli (clÃ© primaire) doit exister
-	 * @throws DataAccessException
-	 * @throws DatabaseConnexionException
-	 */
-	public void deleteClient(Prelevement prelevement)
+	
+	public void deletePrelevement(Prelevement prelevement)
 			throws DataAccessException, DatabaseConnexionException {
 		try {
 			Connection con = LogToDatabase.getConnexion();
 
-			String query = "UPDATE CompteCourant SET estCloture = 'O' " + "WHERE idNumCli = ? ";
+			String query = "DELETE FROM PRELEVEMENTAUTOMATIQUE " + "WHERE idPrelev = ? ";
 
 			PreparedStatement pst = con.prepareStatement(query);
-			pst.setInt(1, client.idNumCli);
+			pst.setInt(1, prelevement.idPrelev);
 
 			System.err.println(query);
 			
@@ -252,7 +218,7 @@ public class AccessPrelevement {
 			
 			con.commit();
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.UPDATE, "Erreur accÃ¨s", e);
+			throw new DataAccessException(Table.PrelevementAutomatique, Order.DELETE, "Erreur accÃ¨s", e);
 		}
 	}
 }

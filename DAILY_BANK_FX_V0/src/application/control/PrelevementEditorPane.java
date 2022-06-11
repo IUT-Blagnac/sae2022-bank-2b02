@@ -48,7 +48,7 @@ public class PrelevementEditorPane {
 	}
 
 
-	public Prelevement doClientEditorDialog(Prelevement prelevement, EditionMode em) {
+	public Prelevement doPrelevementEditorDialog(Prelevement prelevement, EditionMode em) {
 		return this.pepc.displayDialog(prelevement, em);
 	}
 }

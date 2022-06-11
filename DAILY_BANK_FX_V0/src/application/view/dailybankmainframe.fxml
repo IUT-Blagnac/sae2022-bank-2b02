@@ -40,7 +40,7 @@
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem fx:id="mitemEmploye" disable="true" mnemonicParsing="false" onAction="#doEmployeOption" text="Employés" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem fx:id="mitemPrelevements" mnemonicParsing="false" text="Prélèvements automatiques" />
+                        <MenuItem fx:id="mitemPrelevements" mnemonicParsing="false" onAction="#doPrelevementsOption" text="Prélèvements automatiques" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="?">

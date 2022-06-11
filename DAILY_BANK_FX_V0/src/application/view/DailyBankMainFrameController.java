@@ -187,6 +187,8 @@ public class DailyBankMainFrameController implements Initializable {
 	
 	@FXML
 	private void doPrelevementsOption() {
+		this.dbmf.gestionPrelevements();
+
 		
 	}
 

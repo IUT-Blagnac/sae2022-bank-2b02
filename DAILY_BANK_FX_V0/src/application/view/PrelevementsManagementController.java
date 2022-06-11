@@ -134,6 +134,8 @@ public class PrelevementsManagementController implements Initializable {
 		// numCompte != -1 et debutNom non vide => recherche nom/prenom
 		// numCompte != -1 et debutNom vide => recherche tous les clients
 		ArrayList<Prelevement> listePrel;
+		listePrel = this.pm.getlistePrelevements(numCompte, debutMontant, debutDate);
+
 
 		this.olp.clear();
 		for (Prelevement prel : listePrel) {
@@ -154,7 +156,7 @@ public class PrelevementsManagementController implements Initializable {
 		int selectedIndice = this.lvPrelevements.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			Prelevement prelMod = this.olp.get(selectedIndice);
-			Prelevement result = this.pm.modifierClient(prelMod);
+			Prelevement result = this.pm.modifierPrelevement(prelMod);
 			if (result != null) {
 				this.olp.set(selectedIndice, result);
 			}
@@ -169,7 +171,7 @@ public class PrelevementsManagementController implements Initializable {
 		int selectedIndice = this.lvPrelevements.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			Prelevement prelSup = this.olp.get(selectedIndice);
-			this.pm.supprimerClient(prelSup);
+			this.pm.supprimerPrelevement(prelSup);
 			
 		}
 	}
@@ -180,7 +182,7 @@ public class PrelevementsManagementController implements Initializable {
 	@FXML
 	private void doNouveauPrelevement() {
 		Prelevement prelevement;
-		prelevement = this.pm.nouveauClient();
+		prelevement = this.pm.nouveauPrelevement();
 		if (prelevement != null) {
 			this.olp.add(prelevement);
 		}

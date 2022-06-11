@@ -20,6 +20,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import model.data.Client;
+import model.data.Prelevement;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.Order;
 import model.orm.exception.Table;
@@ -33,9 +34,9 @@ public class PrelevementEditorPaneController implements Initializable {
 	private Stage primaryStage;
 
 	// Données de la fenêtre
-	private Client clientEdite;
+	private Prelevement prelevementEdite;
 	private EditionMode em;
-	private Client clientResult;
+	private Prelevement prelevementResult;
 
 	// Manipulation de la fenêtre
 	public void initContext(Stage _primaryStage, DailyBankState _dbstate) {
@@ -51,64 +52,41 @@ public class PrelevementEditorPaneController implements Initializable {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
 	}
 
-	/*
-	 * Permet d'�diter les informations li�es � un client
-	 * @param client : le client
-	 * @param mode : le mode �diteur
-	 */
-	public Client displayDialog(Client client, EditionMode mode) {
+	
+	public Prelevement displayDialog(Prelevement prelevement, EditionMode mode) {
 
 		this.em = mode;
-		if (client == null) {
-			this.clientEdite = new Client(0, "", "", "", "", "", "N", this.dbs.getEmpAct().idAg);
+		if (prelevement == null) {
+			this.prelevementEdite = new Prelevement(0, "", "", "", 0);
 		} else {
-			this.clientEdite = new Client(client);
+			this.prelevementEdite = new Prelevement(prelevement);
 		}
-		this.clientResult = null;
+		this.prelevementResult = null;
 		switch (mode) {
 		case CREATION:
-			this.txtIdcli.setDisable(true);
-			this.txtNom.setDisable(false);
-			this.txtPrenom.setDisable(false);
-			this.txtTel.setDisable(false);
-			this.txtMail.setDisable(false);
-			this.rbActif.setSelected(true);
-			this.rbInactif.setSelected(false);
-			if (ConstantesIHM.isAdmin(this.dbs.getEmpAct())) {
-				this.rbActif.setDisable(false);
-				this.rbInactif.setDisable(false);
-			} else {
-				this.rbActif.setDisable(true);
-				this.rbInactif.setDisable(true);
-			}
-			this.lblMessage.setText("Informations sur le nouveau client");
+			this.txtIdPrel.setDisable(true);
+			this.txtMontant.setDisable(false);
+			this.txtDate.setDisable(false);
+			this.txtBeneficiaire.setDisable(false);
+	
+			this.lblMessage.setText("Informations sur le nouveau prélèvement");
 			this.butOk.setText("Ajouter");
 			this.butCancel.setText("Annuler");
 			break;
 		case MODIFICATION:
-			this.txtIdcli.setDisable(true);
-			this.txtNom.setDisable(false);
-			this.txtPrenom.setDisable(false);
-			this.txtTel.setDisable(false);
-			this.txtMail.setDisable(false);
-			this.rbActif.setSelected(true);
-			this.rbInactif.setSelected(false);
-			if (ConstantesIHM.isAdmin(this.dbs.getEmpAct())) {
-				this.rbActif.setDisable(false);
-				this.rbInactif.setDisable(false);
-			} else {
-				this.rbActif.setDisable(true);
-				this.rbInactif.setDisable(true);
-			}
-			this.lblMessage.setText("Informations client");
+			this.txtIdPrel.setDisable(true);
+			this.txtMontant.setDisable(false);
+			this.txtDate.setDisable(false);
+			this.txtBeneficiaire.setDisable(false);
+			this.lblMessage.setText("Informations prélèvement");
 			this.butOk.setText("Modifier");
 			this.butCancel.setText("Annuler");
 			break;
 		case SUPPRESSION:
-			// ce mode n'est pas utilisé pour les Clients :
+			// ce mode n'est pas utilisé pour les Prélèvements :
 			// la suppression d'un client n'existe pas il faut que le chef d'agence
 			// bascule son état "Actif" à "Inactif"
-			ApplicationException ae = new ApplicationException(Table.NONE, Order.OTHER, "SUPPRESSION CLIENT NON PREVUE",
+			ApplicationException ae = new ApplicationException(Table.NONE, Order.OTHER, "SUPPRESSION PRELEVEMENT AUTOMATIQUE NON PREVUE",
 					null);
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
 			ed.doExceptionDialog();
@@ -120,23 +98,18 @@ public class PrelevementEditorPaneController implements Initializable {
 			// rien pour l'instant
 		}
 		// initialisation du contenu des champs
-		this.txtIdcli.setText("" + this.clientEdite.idNumCli);
-		this.txtNom.setText(this.clientEdite.nom);
-		this.txtPrenom.setText(this.clientEdite.prenom);
-		this.txtAdr.setText(this.clientEdite.adressePostale);
-		this.txtMail.setText(this.clientEdite.email);
-		this.txtTel.setText(this.clientEdite.telephone);
+		this.txtIdPrel.setText("" + this.prelevementEdite.idPrelev);
+		this.txtMontant.setText(this.prelevementEdite.montant);
+		this.txtDate.setText(this.prelevementEdite.dateRecurrente);
+		this.txtBeneficiaire.setText(this.prelevementEdite.beneficiaire);
+		
 
-		if (ConstantesIHM.estInactif(this.clientEdite)) {
-			this.rbInactif.setSelected(true);
-		} else {
-			this.rbInactif.setSelected(false);
-		}
+		
 
-		this.clientResult = null;
+		this.prelevementResult = null;
 
 		this.primaryStage.showAndWait();
-		return this.clientResult;
+		return this.prelevementResult;
 	}
 
 	// Gestion du stage
@@ -150,23 +123,13 @@ public class PrelevementEditorPaneController implements Initializable {
 	@FXML
 	private Label lblMessage;
 	@FXML
-	private TextField txtIdcli;
+	private TextField txtIdPrel;
 	@FXML
-	private TextField txtNom;
+	private TextField txtMontant;
 	@FXML
-	private TextField txtPrenom;
+	private TextField txtDate;
 	@FXML
-	private TextField txtAdr;
-	@FXML
-	private TextField txtTel;
-	@FXML
-	private TextField txtMail;
-	@FXML
-	private RadioButton rbActif;
-	@FXML
-	private RadioButton rbInactif;
-	@FXML
-	private ToggleGroup actifInactif;
+	private TextField txtBeneficiaire;
 	@FXML
 	private Button butOk;
 	@FXML
@@ -178,7 +141,7 @@ public class PrelevementEditorPaneController implements Initializable {
 
 	@FXML
 	private void doCancel() {
-		this.clientResult = null;
+		this.prelevementResult = null;
 		this.primaryStage.close();
 	}
 
@@ -187,18 +150,18 @@ public class PrelevementEditorPaneController implements Initializable {
 		switch (this.em) {
 		case CREATION:
 			if (this.isSaisieValide()) {
-				this.clientResult = this.clientEdite;
+				this.prelevementResult = this.prelevementEdite;
 				this.primaryStage.close();
 			}
 			break;
 		case MODIFICATION:
 			if (this.isSaisieValide()) {
-				this.clientResult = this.clientEdite;
+				this.prelevementResult = this.prelevementEdite;
 				this.primaryStage.close();
 			}
 			break;
 		case SUPPRESSION:
-			this.clientResult = this.clientEdite;
+			this.prelevementResult = this.prelevementEdite;
 			this.primaryStage.close();
 			break;
 		}
@@ -206,45 +169,23 @@ public class PrelevementEditorPaneController implements Initializable {
 	}
 
 	private boolean isSaisieValide() {
-		this.clientEdite.nom = this.txtNom.getText().trim();
-		this.clientEdite.prenom = this.txtPrenom.getText().trim();
-		this.clientEdite.adressePostale = this.txtAdr.getText().trim();
-		this.clientEdite.telephone = this.txtTel.getText().trim();
-		this.clientEdite.email = this.txtMail.getText().trim();
-		if (this.rbActif.isSelected()) {
-			this.clientEdite.estInactif = ConstantesIHM.CLIENT_ACTIF;
-		} else {
-			this.clientEdite.estInactif = ConstantesIHM.CLIENT_INACTIF;
-		}
+		this.prelevementEdite.montant = this.txtMontant.getText().trim();
+		this.prelevementEdite.dateRecurrente = this.txtDate.getText().trim();
+		this.prelevementEdite.beneficiaire = this.txtBeneficiaire.getText().trim();
 
-		if (this.clientEdite.nom.isEmpty()) {
-			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le nom ne doit pas être vide",
+		if (this.prelevementEdite.montant.isEmpty()) {
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le montant ne doit pas être vide",
 					AlertType.WARNING);
-			this.txtNom.requestFocus();
+			this.txtMontant.requestFocus();
 			return false;
 		}
-		if (this.clientEdite.prenom.isEmpty()) {
-			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le prénom ne doit pas être vide",
+		if (this.prelevementEdite.dateRecurrente.isEmpty()) {
+			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "La date récurrente ne doit pas être vide",
 					AlertType.WARNING);
-			this.txtPrenom.requestFocus();
+			this.txtDate.requestFocus();
 			return false;
 		}
 
-		String regex = "(0)[1-9][0-9]{8}";
-		if (!Pattern.matches(regex, this.clientEdite.telephone) || this.clientEdite.telephone.length() > 10) {
-			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le téléphone n'est pas valable",
-					AlertType.WARNING);
-			this.txtTel.requestFocus();
-			return false;
-		}
-		regex = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
-				+ "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
-		if (!Pattern.matches(regex, this.clientEdite.email) || this.clientEdite.email.length() > 20) {
-			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le mail n'est pas valable",
-					AlertType.WARNING);
-			this.txtMail.requestFocus();
-			return false;
-		}
 
 		return true;
 	}
