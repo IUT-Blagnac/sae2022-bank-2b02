@@ -150,4 +150,24 @@ public class ClientsManagement {
 		}
 		return listeCli;
 	}
+	
+	/*
+	 * Permet de clôturer tous les comptes d'un client
+	 * @param c : le client pour lequel on veut clôturer les comptes
+	 */
+	public void supprimerClient(Client c) {		
+			try {
+				AccessClient ac = new AccessClient();
+				ac.deleteClient(c);
+			} catch (DatabaseConnexionException e) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
+				ed.doExceptionDialog();
+				this.primaryStage.close();
+			} catch (ApplicationException ae) {
+				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, ae);
+				ed.doExceptionDialog();
+			}
+		
+		
+	}
 }
