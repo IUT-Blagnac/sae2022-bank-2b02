@@ -74,6 +74,8 @@ public class DailyBankMainFrameController implements Initializable {
 	@FXML
 	private MenuItem mitemEmploye;
 	@FXML
+	private MenuItem mitemPrelevements;
+	@FXML
 	private MenuItem mitemConnexion;
 	@FXML
 	private MenuItem mitemDeConnexion;
@@ -181,6 +183,11 @@ public class DailyBankMainFrameController implements Initializable {
 	@FXML
 	private void doEmployeOption() {
 		this.dbmf.gestionEmployees();
+	}
+	
+	@FXML
+	private void doPrelevementsOption() {
+		
 	}
 
 	/*
