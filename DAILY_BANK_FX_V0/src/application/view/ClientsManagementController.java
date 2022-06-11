@@ -39,7 +39,7 @@ public class ClientsManagementController implements Initializable {
 	}
 
 	/*
-	 * Permet de configurer la fenêtre
+	 * Permet de configurer la fenï¿½tre
 	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
@@ -87,7 +87,7 @@ public class ClientsManagementController implements Initializable {
 	}
 
 	/*
-	 * Permet de fermer la fenêtre 
+	 * Permet de fermer la fenï¿½tre 
 	 */
 	@FXML
 	private void doCancel() {
@@ -156,7 +156,7 @@ public class ClientsManagementController implements Initializable {
 	}
 
 	/*
-	 * Permet de modifier les informations liées à un client
+	 * Permet de modifier les informations liï¿½es ï¿½ un client
 	 */
 	@FXML
 	private void doModifierClient() {
@@ -172,14 +172,22 @@ public class ClientsManagementController implements Initializable {
 	}
 
 	/*
-	 * Permet de désactiver un client
+	 * Permet de dï¿½sactiver un client
 	 */
 	@FXML
 	private void doDesactiverClient() {
+		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			Client cliSup = this.olc.get(selectedIndice);
+			this.cm.supprimerClient(cliSup);
+			/*if (result != null) {
+				this.olc.set(selectedIndice, result);
+			}*/
+		}
 	}
 
 	/*
-	 * Permet de créer un nouveau client
+	 * Permet de crï¿½er un nouveau client
 	 */
 	@FXML
 	private void doNouveauClient() {
@@ -191,18 +199,20 @@ public class ClientsManagementController implements Initializable {
 	}
 
 	/*
-	 * Permet d'activer les boutons du premier client de la liste et de désactiver ceux des autres
+	 * Permet d'activer les boutons du premier client de la liste et de dï¿½sactiver ceux des autres
 	 */
 	private void validateComponentState() {
 		// Non implÃ©mentÃ© => dÃ©sactivÃ©
-		this.btnDesactClient.setDisable(true);
+		
 		int selectedIndice = this.lvClients.getSelectionModel().getSelectedIndex();
 		if (selectedIndice >= 0) {
 			this.btnModifClient.setDisable(false);
 			this.btnComptesClient.setDisable(false);
+			this.btnDesactClient.setDisable(false);
 		} else {
 			this.btnModifClient.setDisable(true);
 			this.btnComptesClient.setDisable(true);
+			this.btnDesactClient.setDisable(true);
 		}
 	}
 }
