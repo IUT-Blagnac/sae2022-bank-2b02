@@ -19,17 +19,17 @@ public class AccessClient {
 	}
 
 	/**
-	 * Recherche des clients paramétrée (tous/un seul par id/par nom-prénom).
+	 * Recherche des clients paramÃ©trÃ©e (tous/un seul par id/par nom-prÃ©nom).
 	 *
-	 * On recherche : - un client précis si idNumCli <> -1 - des clients par début
-	 * nom/prénom si debutNom donné - tous les clients de idAg sinon
+	 * On recherche : - un client prÃ©cis si idNumCli <> -1 - des clients par dÃ©but
+	 * nom/prÃ©nom si debutNom donnÃ© - tous les clients de idAg sinon
 	 *
 	 * @param idAg        : id de l'agence dont on cherche les clients
-	 * @param idNumCli    : vaut -1 si il n'est pas spécifié sinon numéro recherché
-	 * @param debutNom    : vaut "" si il n'est pas spécifié sinon sera le
-	 *                    nom/prenom recherchés
+	 * @param idNumCli    : vaut -1 si il n'est pas spÃ©cifiÃ© sinon numÃ©ro recherchÃ©
+	 * @param debutNom    : vaut "" si il n'est pas spÃ©cifiÃ© sinon sera le
+	 *                    nom/prenom recherchÃ©s
 	 * @param debutPrenom cf. @param debutNom
-	 * @return Le ou les clients recherchés, liste vide si non trouvé
+	 * @return Le ou les clients recherchÃ©s, liste vide si non trouvÃ©
 	 * @throws DataAccessException
 	 * @throws DatabaseConnexionException
 	 */
@@ -89,7 +89,7 @@ public class AccessClient {
 			rs.close();
 			pst.close();
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accès", e);
+			throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accÃ¨s", e);
 		}
 
 		return alResult;
@@ -98,8 +98,8 @@ public class AccessClient {
 	/**
 	 * Recherche de client par son id.
 	 *
-	 * @return un Client ou null si non trouvé
-	 * @param idCli id du client recherché (clé primaire)
+	 * @return un Client ou null si non trouvÃ©
+	 * @param idCli id du client recherchÃ© (clÃ© primaire)
 	 * @throws RowNotFoundOrTooManyRowsException
 	 * @throws DataAccessException
 	 * @throws DatabaseConnexionException
@@ -116,7 +116,7 @@ public class AccessClient {
 			ResultSet rs = pst.executeQuery();
 
 			if (rs.next()) {
-				// Trouvé ...
+				// TrouvÃ© ...
 				int idNumCli = rs.getInt("idNumCli");
 				String nom = rs.getString("nom");
 				String prenom = rs.getString("prenom");
@@ -131,7 +131,7 @@ public class AccessClient {
 
 				clientTrouve = new Client(idNumCli, nom, prenom, adressePostale, email, telephone, estInactif, idAgCli);
 			} else {
-				// Non trouvé ...
+				// Non trouvÃ© ...
 				rs.close();
 				pst.close();
 				return null;
@@ -148,7 +148,7 @@ public class AccessClient {
 			pst.close();
 			return clientTrouve;
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accès", e);
+			throw new DataAccessException(Table.Client, Order.SELECT, "Erreur accÃ¨s", e);
 		}
 	}
 
@@ -203,18 +203,18 @@ public class AccessClient {
 
 			client.idNumCli = numCliBase;
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.INSERT, "Erreur accès", e);
+			throw new DataAccessException(Table.Client, Order.INSERT, "Erreur accÃ¨s", e);
 		}
 	}
 
 	/**
-	 * Mise à jour d'un Client.
+	 * Mise Ã  jour d'un Client.
 	 *
-	 * client.idNumCli est la clé primaire et doit exister tous les autres champs
-	 * sont des mises à jour. client.idAg non mis à jour (un client ne change
+	 * client.idNumCli est la clÃ© primaire et doit exister tous les autres champs
+	 * sont des mises Ã  jour. client.idAg non mis Ã  jour (un client ne change
 	 * d'agence que par delete/insert)
 	 *
-	 * @param client IN client.idNumCli (clé primaire) doit exister
+	 * @param client IN client.idNumCli (clÃ© primaire) doit exister
 	 * @throws RowNotFoundOrTooManyRowsException
 	 * @throws DataAccessException
 	 * @throws DatabaseConnexionException
@@ -248,7 +248,35 @@ public class AccessClient {
 			}
 			con.commit();
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Client, Order.UPDATE, "Erreur accès", e);
+			throw new DataAccessException(Table.Client, Order.UPDATE, "Erreur accÃ¨s", e);
+		}
+	}
+	
+	/*
+	 * Clôturer tous les comptes d'un client
+	 * 
+	 * @param client IN client.idNumCli (clÃ© primaire) doit exister
+	 * @throws DataAccessException
+	 * @throws DatabaseConnexionException
+	 */
+	public void deleteClient(Client client)
+			throws DataAccessException, DatabaseConnexionException {
+		try {
+			Connection con = LogToDatabase.getConnexion();
+
+			String query = "UPDATE CompteCourant SET estCloture = 'O' " + "WHERE idNumCli = ? ";
+
+			PreparedStatement pst = con.prepareStatement(query);
+			pst.setInt(1, client.idNumCli);
+
+			System.err.println(query);
+
+			int result = pst.executeUpdate();
+			pst.close();
+			
+			con.commit();
+		} catch (SQLException e) {
+			throw new DataAccessException(Table.Client, Order.UPDATE, "Erreur accÃ¨s", e);
 		}
 	}
 }
