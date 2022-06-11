@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import model.data.Operation;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
@@ -216,7 +218,14 @@ public class AccessOperation {
 						"Erreur de règle de gestion : découvert autorisé dépassé", null);
 			}
 		} catch (SQLException e) {
-			throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);
+			//throw new DataAccessException(Table.Operation, Order.INSERT, "Erreur accès", e);
+			System.out.print("test");
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Boite de dialogue");
+			alert.setHeaderText(null);
+			alert.setContentText("Le numéro de compte n'est pas valide !");
+
+			alert.showAndWait();
 		}
 	}
 	
