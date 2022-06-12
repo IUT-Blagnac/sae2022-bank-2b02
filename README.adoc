@@ -65,10 +65,10 @@ pour d'arborescence ... Il faut peut être y réfléchir.   Les issues sont affe
 | 22/05   | Gantt V2  à jour    || 
 |         | Doc. Util. V1 |         |         
 |         | Doc. Tec. V1 | https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-Tec-V1.adoc[Doc-Tec-V1]                 |     
-|         | Code V1     |                     | 
+|         | Code V1     | https://github.com/IUT-Blagnac/sae2022-bank-2b02/tree/main/V1[Code source V1]| 
 |         | Recette V1 |                      | 
 |         | Gantt V3 à jour   || 
-|         | `jar` projet |    | 
+|         | `jar` projet | https://github.com/IUT-Blagnac/sae2022-bank-2b02/tree/main/V1[Jar de l'application V1 | 
 | 05/06   | Gantt V3 à Jour  |    |  
 |         | Doc. Util. V2 |         |           
 |         | Doc. Tec. V2 |    |     
