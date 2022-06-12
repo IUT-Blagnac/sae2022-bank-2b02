@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 import model.data.Client;
 import model.data.Prelevement;
 import model.orm.AccessClient;
-import model.orm.AccessPrelevement;
+import model.orm.AccessPrelevementAutomatique;
 import model.orm.exception.ApplicationException;
 import model.orm.exception.DatabaseConnexionException;
 
@@ -67,7 +67,7 @@ public class PrelevementsManagement {
 		Prelevement result = cep.doPrelevementEditorDialog(p, EditionMode.MODIFICATION);
 		if (result != null) {
 			try {
-				AccessPrelevement ap = new AccessPrelevement();
+				AccessPrelevementAutomatique ap = new AccessPrelevementAutomatique();
 				ap.updatePrelevement(result);
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
@@ -90,7 +90,7 @@ public class PrelevementsManagement {
 		prelevement = pep.doPrelevementEditorDialog(null, EditionMode.CREATION);
 		if (prelevement != null) {
 			try {
-				AccessPrelevement ap = new AccessPrelevement();
+				AccessPrelevementAutomatique ap = new AccessPrelevementAutomatique();
 
 				ap.insertPrelevement(prelevement);
 			} catch (DatabaseConnexionException e) {
@@ -110,13 +110,13 @@ public class PrelevementsManagement {
 	
 
 	
-	public ArrayList<Prelevement> getlistePrelevements(int _numCompte, String _debutNom, String _debutPrenom) {
+	public ArrayList<Prelevement> getlistePrelevements(int _numCompte, String debutMontant, String debutDate) {
 		ArrayList<Prelevement> listePrel = new ArrayList<>();
 		try {
 			
 
-			AccessPrelevement ap = new AccessPrelevement();
-			listePrel = ap.getPrelevements(this.dbs.getEmpAct().idAg, _numCompte, _debutNom, _debutPrenom);
+			AccessPrelevementAutomatique ap = new AccessPrelevementAutomatique();
+			listePrel = ap.getPrelevements(this.dbs.getEmpAct().idAg, _numCompte, debutMontant, debutDate);
 
 		} catch (DatabaseConnexionException e) {
 			ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
@@ -134,7 +134,7 @@ public class PrelevementsManagement {
 	
 	public void supprimerPrelevement(Prelevement p) {		
 			try {
-				AccessPrelevement ap = new AccessPrelevement();
+				AccessPrelevementAutomatique ap = new AccessPrelevementAutomatique();
 				ap.deletePrelevement(p);
 			} catch (DatabaseConnexionException e) {
 				ExceptionDialog ed = new ExceptionDialog(this.primaryStage, this.dbs, e);
@@ -147,4 +147,6 @@ public class PrelevementsManagement {
 		
 		
 	}
+
+	
 }
