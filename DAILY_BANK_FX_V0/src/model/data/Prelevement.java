@@ -2,12 +2,11 @@ package model.data;
 
 public class Prelevement {
 
-	public int idPrelev, idNumCompte;
-	public String dateRecurrente, beneficiaire;
-	public String montant;
+	public int idPrelev, idNumCompte, montant, dateRecurrente;
+	public String  beneficiaire;
 
 
-	public Prelevement(int idPrelev, String montant2, String dateRecurrente, String beneficiaire, int idNumCompte) {
+	public Prelevement(int idPrelev, int montant2, int dateRecurrente, String beneficiaire, int idNumCompte) {
 		super();
 		this.idPrelev = idPrelev;
 		this.montant = montant2;
@@ -21,7 +20,7 @@ public class Prelevement {
 	}
 
 	public Prelevement() {
-		this(-1000, null, null, null, -1000);
+		this(-1000, -1000, -1000, null, -1000);
 	}
 
 	@Override
