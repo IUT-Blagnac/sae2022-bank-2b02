@@ -162,14 +162,19 @@ public class OperationsManagementController implements Initializable {
 			
 			Document document = new Document (PageSize.A4 , 50, 50, 50 , 50);
 	        try {
-	            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream("ReleveCompte.pdf"));
+	            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream("ReleveCompte"+this.clientDuCompte.nom+this.compteConcerne.idNumCompte+".pdf"));
 	                pdfWriter.setViewerPreferences(PdfWriter.PageLayoutTwoColumnLeft);
 	                document.open();
 	                document.add(new Chunk("")); 
-	                Paragraph p1 = new Paragraph("Relevé de comptes de" + " " + this.clientDuCompte.nom + " " + this.clientDuCompte.prenom);
-
-	                Paragraph p = new Paragraph(this.lvOperations.getItems().toString());
+	                Paragraph p1 = new Paragraph("Relevé de comptes de" + " " + this.clientDuCompte.nom + " " + this.clientDuCompte.prenom + " : \n\n");
 	                document.add(p1);
+	                int taille = this.lvOperations.getItems().size();
+	                Paragraph p;
+	                for (int i = 0;i<taille;i++) {
+	                	p = new Paragraph (this.lvOperations.getItems().get(i).toString());
+	                	document.add(p);
+	                }
+	                p = new Paragraph("\nSolde du comtpe : " + this.compteConcerne.solde);
 	                document.add(p);
 	               document.close();
 		     }catch (Exception e) {
