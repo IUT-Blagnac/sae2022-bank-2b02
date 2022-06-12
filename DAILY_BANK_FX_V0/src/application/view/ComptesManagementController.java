@@ -1,13 +1,8 @@
 package application.view;
 
-import java.io.FileOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-import com.itextpdf.text.Document;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfWriter;
 
 import application.DailyBankState;
 import application.control.ComptesManagement;
@@ -101,6 +96,8 @@ public class ComptesManagementController implements Initializable {
 	private Button btnModifierCompte;
 	@FXML
 	private Button btnSupprCompte;
+	@FXML
+	private Button btnPrelevementAuto;
 	
 
 	@Override
@@ -123,6 +120,18 @@ public class ComptesManagementController implements Initializable {
 		this.validateComponentState();
 	}
 
+	@FXML
+	private void doPrelevementsOption() {
+		int selectedIndice = this.lvComptes.getSelectionModel().getSelectedIndex();
+		if (selectedIndice >= 0) {
+			CompteCourant cpt = this.olCompteCourant.get(selectedIndice);
+			this.cm.gestionPrelevements(cpt);
+		}
+		
+
+	}
+
+	
 	@FXML
 	private void doModifierCompte() {
 	}
@@ -168,10 +177,12 @@ public class ComptesManagementController implements Initializable {
 		if (selectedIndice >= 0) {
 			this.btnVoirOpes.setDisable(false);
 			this.btnSupprCompte.setDisable(false);
+			this.btnPrelevementAuto.setDisable(false);
 
 		} else {
 			this.btnVoirOpes.setDisable(true);
 			this.btnSupprCompte.setDisable(true);
+			this.btnPrelevementAuto.setDisable(true);
 
 
 		}

@@ -1,5 +1,6 @@
 package application.view;
 
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -73,8 +74,6 @@ public class DailyBankMainFrameController implements Initializable {
 	private MenuItem mitemClient;
 	@FXML
 	private MenuItem mitemEmploye;
-	@FXML
-	private MenuItem mitemPrelevements;
 	@FXML
 	private MenuItem mitemConnexion;
 	@FXML
@@ -185,12 +184,6 @@ public class DailyBankMainFrameController implements Initializable {
 		this.dbmf.gestionEmployees();
 	}
 	
-	@FXML
-	private void doPrelevementsOption() {
-		this.dbmf.gestionPrelevements();
-
-		
-	}
 
 	/*
 	 * Permet de quitter la base de donn�ses

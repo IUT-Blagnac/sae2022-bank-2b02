@@ -112,7 +112,10 @@ public class ComptesManagement {
 		return compte;
 	}
 	
-	
+	public void gestionPrelevements(CompteCourant cpt) {
+		PrelevementsManagement pm = new PrelevementsManagement(this.primaryStage, this.dbs);
+		pm.doPrelevementsManagementDialog();
+	}
 
 	/*
 	 * Permet de connaitre la liste des comptes courants d'un client
