@@ -57,7 +57,7 @@ public class PrelevementEditorPaneController implements Initializable {
 
 		this.em = mode;
 		if (prelevement == null) {
-			this.prelevementEdite = new Prelevement(0, "", "", "", 0);
+			this.prelevementEdite = new Prelevement(0, 0, 0, "", 0);
 		} else {
 			this.prelevementEdite = new Prelevement(prelevement);
 		}
@@ -99,8 +99,8 @@ public class PrelevementEditorPaneController implements Initializable {
 		}
 		// initialisation du contenu des champs
 		this.txtIdPrel.setText("" + this.prelevementEdite.idPrelev);
-		this.txtMontant.setText(this.prelevementEdite.montant);
-		this.txtDate.setText(this.prelevementEdite.dateRecurrente);
+		this.txtMontant.setText(""+this.prelevementEdite.montant);
+		this.txtDate.setText(""+this.prelevementEdite.dateRecurrente);
 		this.txtBeneficiaire.setText(this.prelevementEdite.beneficiaire);
 		
 
@@ -169,17 +169,17 @@ public class PrelevementEditorPaneController implements Initializable {
 	}
 
 	private boolean isSaisieValide() {
-		this.prelevementEdite.montant = this.txtMontant.getText().trim();
-		this.prelevementEdite.dateRecurrente = this.txtDate.getText().trim();
+		this.prelevementEdite.montant = Integer.valueOf(this.txtMontant.getText().trim());
+		this.prelevementEdite.dateRecurrente = Integer.valueOf(this.txtDate.getText().trim());
 		this.prelevementEdite.beneficiaire = this.txtBeneficiaire.getText().trim();
 
-		if (this.prelevementEdite.montant.isEmpty()) {
+		if (String.valueOf(this.prelevementEdite.montant).isEmpty()) {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "Le montant ne doit pas être vide",
 					AlertType.WARNING);
 			this.txtMontant.requestFocus();
 			return false;
 		}
-		if (this.prelevementEdite.dateRecurrente.isEmpty()) {
+		if (String.valueOf(this.prelevementEdite.dateRecurrente).isEmpty()) {
 			AlertUtilities.showAlert(this.primaryStage, "Erreur de saisie", null, "La date récurrente ne doit pas être vide",
 					AlertType.WARNING);
 			this.txtDate.requestFocus();

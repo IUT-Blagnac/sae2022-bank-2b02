@@ -117,8 +117,9 @@ public class PrelevementsManagementController implements Initializable {
 			numCompte = -1;
 		}
 
+		
 		String debutMontant = this.txtMontant.getText();
-		String debutDate = this.txtDate.getText();
+		String  debutDate = this.txtDate.getText();
 
 		if (numCompte != -1) {
 			this.txtMontant.setText("");
@@ -128,11 +129,8 @@ public class PrelevementsManagementController implements Initializable {
 				this.txtDate.setText("");
 			}
 		}
-
-		// Recherche des clients en BD. cf. AccessClient > getClients(.)
-		// numCompte != -1 => recherche sur numCompte
-		// numCompte != -1 et debutNom non vide => recherche nom/prenom
-		// numCompte != -1 et debutNom vide => recherche tous les clients
+		
+		
 		ArrayList<Prelevement> listePrel;
 		listePrel = this.pm.getlistePrelevements(numCompte, debutMontant, debutDate);
 
@@ -172,6 +170,7 @@ public class PrelevementsManagementController implements Initializable {
 		if (selectedIndice >= 0) {
 			Prelevement prelSup = this.olp.get(selectedIndice);
 			this.pm.supprimerPrelevement(prelSup);
+			this.lvPrelevements.getItems().remove(prelSup);
 			
 		}
 	}
