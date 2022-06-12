@@ -36,7 +36,7 @@ public class OperationsManagementController implements Initializable {
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
 	private ObservableList<Operation> olOperation;
-	
+
 	private ComptesManagementController cmc;
 
 	// Manipulation de la fenêtre
@@ -68,7 +68,7 @@ public class OperationsManagementController implements Initializable {
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
 	}
-	
+
 	public ComptesManagementController getCompteManagementController() {
 		return this.cmc;
 	}
@@ -124,21 +124,21 @@ public class OperationsManagementController implements Initializable {
 	 */
 	@FXML
 	private void doCredit() {
-		
+
 		Operation op = this.om.enregistrerCredit();
 		if (op != null) {
 			this.updateInfoCompteClient();
 			this.validateComponentState();
 		}
 	}
-	
+
 
 	/*
 	 * Permet d'enregistrer une autre op�ration
 	 */
 	@FXML
 	private void doAutre() {
-		
+
 		Operation op = this.om.enregistrerVirement();
 		if (op != null) {
 			this.updateInfoCompteClient();
@@ -150,6 +150,12 @@ public class OperationsManagementController implements Initializable {
 		this.btnCredit.setDisable(false);
 		this.btnDebit.setDisable(false);
 		this.btnVirement.setDisable(false);
+		String etat=this.compteConcerne.estCloture;
+		if(etat.compareToIgnoreCase("0")==0|| etat == null){
+			this.btnCredit.setDisable(true);
+			this.btnDebit.setDisable(true);
+			this.btnVirement.setDisable(true);
+		}
 	}
 
 	private void updateInfoCompteClient() {
