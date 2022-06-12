@@ -4,7 +4,6 @@ import application.DailyBankApp;
 import application.DailyBankState;
 import application.tools.EditionMode;
 import application.tools.StageManagement;
-import application.view.ClientsManagementController;
 import application.view.EmployeEditorPaneController;
 import application.view.EmployeManagementController;
 import javafx.fxml.FXMLLoader;

@@ -35,7 +35,7 @@ public class ExceptionDialogController implements Initializable {
 	}
 
 	/*
-	 * Permet de configurer la fenêtre
+	 * Permet de configurer la fenï¿½tre
 	 */
 	private void configure() {
 		this.primaryStage.setOnCloseRequest(e -> this.closeWindow(e));
@@ -78,7 +78,7 @@ public class ExceptionDialogController implements Initializable {
 	}
 
 	/*
-	 * Permet de fermer la fenêtre principale
+	 * Permet de fermer la fenï¿½tre principale
 	 */
 	@FXML
 	private void doOK() {

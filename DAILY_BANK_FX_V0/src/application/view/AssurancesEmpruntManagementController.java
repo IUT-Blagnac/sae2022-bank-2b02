@@ -6,8 +6,6 @@ import java.util.ResourceBundle;
 
 import application.DailyBankState;
 import application.control.AssurancesEmpruntManagement;
-import application.control.ClientsManagement;
-import application.control.PrelevementsManagement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -18,7 +16,6 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import model.data.Client;
 import model.data.Prelevement;
 
 public class AssurancesEmpruntManagementController implements Initializable {

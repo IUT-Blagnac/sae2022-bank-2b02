@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.itextpdf.text.pdf.PdfWriter;
-
 import model.data.Client;
 import model.orm.exception.DataAccessException;
 import model.orm.exception.DatabaseConnexionException;
@@ -273,8 +271,6 @@ public class AccessClient {
 
 			System.err.println(query);
 			
-			
-			int result = pst.executeUpdate();
 			pst.close();
 			
 			con.commit();

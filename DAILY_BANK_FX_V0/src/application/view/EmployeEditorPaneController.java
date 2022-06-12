@@ -2,7 +2,6 @@ package application.view;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.regex.Pattern;
 
 import application.DailyBankState;
 import application.control.ExceptionDialog;
