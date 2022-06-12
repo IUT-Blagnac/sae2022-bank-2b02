@@ -60,7 +60,7 @@ public class AccessPrelevementAutomatique {
 
 			ResultSet rs = pst.executeQuery();
 			while (rs.next()) {
-				int idPrelevTR = rs.getInt("idPrelev");
+				int idPrelevTR = rs.getInt("idPrelev"); 
 				int montant = rs.getInt("montant");
 				int date = rs.getInt("daterecurrente");
 				String beneficiaire = rs.getString("beneficiaire");
