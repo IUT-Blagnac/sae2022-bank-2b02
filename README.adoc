@@ -63,7 +63,7 @@ pour d'arborescence ... Il faut peut être y réfléchir.   Les issues sont affe
 |         | Recette V1  |   https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/Recette-V1.adoc[Recette V1]    | 
 |         | Suivi projet|   | 
 | 22/05   | Gantt V2  à jour    || 
-|         | Doc. Util. V1 |         |         
+|         | Doc. Util. V1 | https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-User-V1.adoc[Doc-Util-V1] |         
 |         | Doc. Tec. V1 | https://github.com/IUT-Blagnac/sae2022-bank-2b02/blob/main/documentation/Doc-Tec-V1.adoc[Doc-Tec-V1]                 |     
 |         | Code V1     | https://github.com/IUT-Blagnac/sae2022-bank-2b02/tree/main/V1[Code source V1]| 
 |         | Recette V1 |                      | 
