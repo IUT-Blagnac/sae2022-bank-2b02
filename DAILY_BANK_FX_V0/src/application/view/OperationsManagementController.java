@@ -45,7 +45,7 @@ public class OperationsManagementController implements Initializable {
 	private Client clientDuCompte;
 	private CompteCourant compteConcerne;
 	private ObservableList<Operation> olOperation;
-	
+
 	private ComptesManagementController cmc;
 
 	// Manipulation de la fenêtre
@@ -77,7 +77,7 @@ public class OperationsManagementController implements Initializable {
 	public void displayDialog() {
 		this.primaryStage.showAndWait();
 	}
-	
+
 	public ComptesManagementController getCompteManagementController() {
 		return this.cmc;
 	}
@@ -135,53 +135,53 @@ public class OperationsManagementController implements Initializable {
 	 */
 	@FXML
 	private void doCredit() {
-		
+
 		Operation op = this.om.enregistrerCredit();
 		if (op != null) {
 			this.updateInfoCompteClient();
 			this.validateComponentState();
 		}
 	}
-	
+
 
 	/*
 	 * Permet d'enregistrer une autre op�ration
 	 */
 	@FXML
 	private void doAutre() {
-		
+
 		Operation op = this.om.enregistrerVirement();
 		if (op != null) {
 			this.updateInfoCompteClient();
 			this.validateComponentState();
 		}
 	}
-	
+
 	@FXML
 	private void doGenererPDF() throws DocumentException, MalformedURLException, IOException {
-			
-			Document document = new Document (PageSize.A4 , 50, 50, 50 , 50);
-	        try {
-	            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream("ReleveCompte"+this.clientDuCompte.nom+this.compteConcerne.idNumCompte+".pdf"));
-	                pdfWriter.setViewerPreferences(PdfWriter.PageLayoutTwoColumnLeft);
-	                document.open();
-	                document.add(new Chunk("")); 
-	                Paragraph p1 = new Paragraph("Relevé de comptes de" + " " + this.clientDuCompte.nom + " " + this.clientDuCompte.prenom + " : \n\n");
-	                document.add(p1);
-	                int taille = this.lvOperations.getItems().size();
-	                Paragraph p;
-	                for (int i = 0;i<taille;i++) {
-	                	p = new Paragraph (this.lvOperations.getItems().get(i).toString());
-	                	document.add(p);
-	                }
-	                p = new Paragraph("\nSolde du comtpe : " + this.compteConcerne.solde);
-	                document.add(p);
-	               document.close();
-		     }catch (Exception e) {
-	            e.printStackTrace();
-	        }
-	    	
+
+		Document document = new Document (PageSize.A4 , 50, 50, 50 , 50);
+		try {
+			PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream("ReleveCompte"+this.clientDuCompte.nom+this.compteConcerne.idNumCompte+".pdf"));
+			pdfWriter.setViewerPreferences(PdfWriter.PageLayoutTwoColumnLeft);
+			document.open();
+			document.add(new Chunk("")); 
+			Paragraph p1 = new Paragraph("Relevé de comptes de" + " " + this.clientDuCompte.nom + " " + this.clientDuCompte.prenom + " : \n\n");
+			document.add(p1);
+			int taille = this.lvOperations.getItems().size();
+			Paragraph p;
+			for (int i = 0;i<taille;i++) {
+				p = new Paragraph (this.lvOperations.getItems().get(i).toString());
+				document.add(p);
+			}
+			p = new Paragraph("\nSolde du compte : " + this.compteConcerne.solde);
+			document.add(p);
+			document.close();
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
+
+	}
 
 	private void validateComponentState() {
 		this.btnCredit.setDisable(false);
